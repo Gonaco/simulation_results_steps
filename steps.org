@@ -9,9 +9,9 @@
 
 * First Step
 
-#+caption: Information of the first benchmark used
+#+caption: Benchmark used
 #+NAME: tab:bench1
-#+ATTR_LATEX: :booktabs :environment :width \textwidth :float t :align |c|c|c|
+#+ATTR_LATEX: :booktabs :environment
 |-----------+----------+---------|
 | Benchmark | # qubits | # gates |
 |-----------+----------+---------|
@@ -20,7 +20,7 @@
 
 #+caption: Step 1 results
 #+NAME: tab:step1
-#+ATTR_LATEX: :booktabs :environment :width \textwidth :float t :align |p{2cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{2cm}|p{1cm}|
+#+ATTR_LATEX: :booktabs :environment
 |-------------+-------------+------+------+------------+------------+-----------+-------|
 | Mapper      | Init. place |   t1 |   t2 | meas. err. | P. success |       $f$ | $V_Q$ |
 |-------------+-------------+------+------+------------+------------+-----------+-------|
@@ -33,7 +33,7 @@
 
 #+caption: Other mapper statistics
 #+NAME: tab:step1_other
-#+ATTR_LATEX: :booktabs :environment :width \textwidth :float t :align |p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|
+#+ATTR_LATEX: :booktabs :environment
 |-------------+-------------+--------------------------+-------+---------|
 | Mapper      | Init. place | # qubits (after mapping) | depth | # SWAPS |
 |-------------+-------------+--------------------------+-------+---------|
