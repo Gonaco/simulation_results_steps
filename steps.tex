@@ -1,4 +1,4 @@
-% Created 2018-11-20 Tue 15:45
+% Created 2018-11-20 Tue 16:04
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -36,20 +36,53 @@
 \maketitle
 
 
-\section{Step 1}
-\label{sec:orga88001e}
+\section{First Step}
+\label{sec:orgd73546b}
 
-\begin{center}
-\begin{tabular}{llrrrrrr}
+\begin{table}[htbp]
+\caption{\label{tab:org286ee49}
+Information of the first benchmark used}
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+Benchmark & \# qubits & \# gates\\
+\hline
+4gt11\(_{\text{82}}\) & 5 & 27\\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\caption{\label{tab:org2f9c7e2}
+Step 1 results}
+\centering
+\begin{tabular}{|p{2cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{2cm}|p{1cm}|}
 \hline
 Mapper & Init. place & t1 & t2 & meas. err. & P. success & \(f\) & \(V_Q\)\\
 \hline
 No & No & 3500 & 1500 & 0.03 & 0.98 & 0.970122 & 390\\
 minextendrc & No & 3500 & 1500 & 0.03 & 0.92 & 0.8793333 & 1582\\
-minextendrc & Yes & 3500 & 1500 & 0.03 &  &  & \\
-minextend & No & 3500 & 1500 & 0.03 &  &  & \\
-minextend & Yes & 3500 & 1500 & 0.03 &  &  & \\
+minextendrc & Yes & 3500 & 1500 & 0.03 & 0.95 & 0.92134 & 1038\\
+minextend & No & 3500 & 1500 & 0.03 & 0.97 & 0.9294102 & 1264\\
+minextend & Yes & 3500 & 1500 & 0.03 & 0.98 & 0.9502046 & 834\\
 \hline
 \end{tabular}
-\end{center}
+\end{table}
+
+\begin{table}[htbp]
+\caption{\label{tab:orgceaf20c}
+Other mapper statistics}
+\centering
+\begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
+\hline
+Mapper & Init. place & \# qubits (after mapping) & depth & \# SWAPS\\
+\hline
+No & No & 5 & 84 & 0\\
+minextendrc & No & 7 & 237 & 17\\
+minextendrc & Yes & 6 & 174 & 10\\
+minextend & No & 8 & 228 & 16\\
+minextend & Yes & 6 & 165 & 9\\
+\hline
+\end{tabular}
+\end{table}
 \end{document}
