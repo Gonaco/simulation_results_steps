@@ -1,0 +1,24 @@
+#+TITLE: Simulation Results steps
+#+AUTHOR: Daniel Moreno Manzano
+
+#+LATEX_HEADER: \usepackage{geometry}
+#+LATEX_HEADER: \geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+
+#+OPTIONS: toc:nil
+
+
+* First Step
+
+#+caption: Step 1 results
+#+NAME: tab:step1
+#+ATTR_LATEX: :booktabs :environment :font \tiny :width \textwidth :float t :align |p{2cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{2cm}|p{1cm}|
+
+|-------------+-------------+------+------+------------+------------+-----------+-------|
+| Mapper      | Init. place |   t1 |   t2 | meas. err. | P. success |       $f$ | $V_Q$ |
+|-------------+-------------+------+------+------------+------------+-----------+-------|
+| No          | No          | 3500 | 1500 |       0.03 |       0.98 |  0.970122 |   390 |
+| minextendrc | No          | 3500 | 1500 |       0.03 |       0.92 | 0.8793333 |  1582 |
+| minextendrc | Yes         | 3500 | 1500 |       0.03 |            |           |       |
+| minextend   | No          | 3500 | 1500 |       0.03 |            |           |       |
+| minextend   | Yes         | 3500 | 1500 |       0.03 |            |           |       |
+|-------------+-------------+------+------+------------+------------+-----------+-------|
