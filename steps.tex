@@ -1,4 +1,4 @@
-% Created 2018-11-21 Wed 17:29
+% Created 2018-11-21 Wed 17:33
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -37,10 +37,10 @@
 
 
 \section{First Step}
-\label{sec:org5219626}
+\label{sec:org6bffe80}
 
 \begin{table}[htbp]
-\caption{\label{tab:org05e25c0}
+\caption{\label{tab:orgb8eb756}
 Benchmark used}
 \centering
 \begin{tabular}{lrrr}
@@ -53,7 +53,7 @@ Benchmark & \# qubits & \# gates & two-qubit gates (\%)\\
 \end{table}
 
 \begin{table}[htbp]
-\caption{\label{tab:orgb525a01}
+\caption{\label{tab:org1ffa50e}
 Step 1 results after 100 iterations}
 \centering
 \begin{tabular}{llrrrrrr}
@@ -73,7 +73,7 @@ base & Yes & 3000 & 3000 & 0.03 & 0.97 & 0.92331 & 1062\\
 \end{table}
 
 \begin{table}[htbp]
-\caption{\label{tab:orgb925419}
+\caption{\label{tab:org24feebc}
 Other mapper statistics}
 \centering
 \begin{tabular}{llrrrr}
@@ -95,16 +95,16 @@ base & Yes & 6 & 228 & 16 & \\
 
 
 \subsection{Routing comparison}
-\label{sec:orgbb2c7c3}
+\label{sec:org75af56c}
 
 \subsubsection{No initial placement}
-\label{sec:org5d94941}
+\label{sec:orgf5604b9}
 
 \begin{minipage}[t]{.45\textwidth}
 
 \begin{enumerate}
 \item With Resource constraints
-\label{sec:org84ea619}
+\label{sec:orgc940e56}
 
 \begin{minted}[frame=lines,fontsize=\scriptsize,linenos,breaklines,breakanywhere]{shell}
 ... the minimally extending path with swaps is: cycleExtend=10
@@ -150,7 +150,7 @@ base & Yes & 6 & 228 & 16 & \\
 \begin{minipage}[t]{.45\textwidth}
 
 \item Without Resource constraints
-\label{sec:org4c177e4}
+\label{sec:orge480b7a}
 
 \begin{minted}[frame=lines,fontsize=\scriptsize,linenos,breaklines,breakanywhere]{shell}
 
@@ -198,15 +198,16 @@ base & Yes & 6 & 228 & 16 & \\
 
 
 \subsubsection{With initial placement}
-\label{sec:orga42acc5}
+\label{sec:org54cf6bd}
 
 \begin{minipage}[t]{.45\textwidth}
 
 \begin{enumerate}
 \item With Resource constraints
-\label{sec:org499b25b}
+\label{sec:orgc7493cc}
 
 \begin{minted}[frame=lines,fontsize=\scriptsize,linenos,breaklines,breakanywhere]{shell}
+
 ... Virt2Real(v->r) ... result Virt2Real map of InitialPlace before adding unused virtual qubits and unused locations : (0->10) (1->4) (2->1) (3->5) (4->7) (5->2147483647) (6->2147483647) (7->2147483647) (8->2147483647) (9->2147483647) (10->2147483647) (11->2147483647) (12->2147483647) (13->2147483647) (14->2147483647) (15->2147483647) (16->2147483647)
 ... Virt2Real(v->r) ... final result Virt2Real map of InitialPlace: (0->10) (1->4) (2->1) (3->5) (4->7) (5->0) (6->2) (7->3) (8->6) (9->8) (10->9) (11->11) (12->12) (13->13) (14->14) (15->15) (16->16)
 ... the minimally extending path with swaps is: cycleExtend=10
@@ -240,9 +241,10 @@ base & Yes & 6 & 228 & 16 & \\
 \begin{minipage}[t]{.45\textwidth}
 
 \item Without Resource constraints
-\label{sec:orgd6207b1}
+\label{sec:org0dd3c0c}
 
 \begin{minted}[frame=lines,fontsize=\scriptsize,linenos,breaklines,breakanywhere]{shell}
+
 ... Virt2Real(v->r) ... result Virt2Real map of InitialPlace before adding unused virtual qubits and unused locations : (0->10) (1->4) (2->1) (3->5) (4->7) (5->2147483647) (6->2147483647) (7->2147483647) (8->2147483647) (9->2147483647) (10->2147483647) (11->2147483647) (12->2147483647) (13->2147483647) (14->2147483647) (15->2147483647) (16->2147483647)
 ... Virt2Real(v->r) ... final result Virt2Real map of InitialPlace: (0->10) (1->4) (2->1) (3->5) (4->7) (5->0) (6->2) (7->3) (8->6) (9->8) (10->9) (11->11) (12->12) (13->13) (14->14) (15->15) (16->16)
 ... the minimally extending path with swaps is: cycleExtend=10
@@ -276,7 +278,7 @@ base & Yes & 6 & 228 & 16 & \\
 \end{enumerate}
 
 \section{1000 iterations}
-\label{sec:org80cc328}
+\label{sec:orgce577d6}
 \section{Simplest benchmarks results}
-\label{sec:org6be4e43}
+\label{sec:org7f1ebfd}
 \end{document}
