@@ -60,7 +60,7 @@
 \begin{minipage}[t]{.45\textwidth}
 #+END_EXPORT
 
-**** With Resource constraints
+_With Resource constraints_
 
 #+BEGIN_SRC shell
 ... the minimally extending path with swaps is: cycleExtend=10
@@ -107,7 +107,7 @@
 \begin{minipage}[t]{.45\textwidth}
 #+END_EXPORT
 
-**** Without Resource constraints
+_Without Resource constraints_
 
 #+BEGIN_SRC shell
 
@@ -161,7 +161,7 @@
 \begin{minipage}[t]{.45\textwidth}
 #+END_EXPORT
 
-**** With Resource constraints
+_With Resource constraints_
 
 #+BEGIN_SRC shell
 
@@ -199,7 +199,7 @@
 \begin{minipage}[t]{.45\textwidth}
 #+END_EXPORT
 
-**** Without Resource constraints
+_Without Resource constraints_
 
 #+BEGIN_SRC shell
 

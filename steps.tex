@@ -1,4 +1,4 @@
-% Created 2018-11-21 Wed 17:33
+% Created 2018-11-21 Wed 17:40
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -37,10 +37,10 @@
 
 
 \section{First Step}
-\label{sec:org6bffe80}
+\label{sec:orga5d042f}
 
 \begin{table}[htbp]
-\caption{\label{tab:orgb8eb756}
+\caption{\label{tab:org3615718}
 Benchmark used}
 \centering
 \begin{tabular}{lrrr}
@@ -53,7 +53,7 @@ Benchmark & \# qubits & \# gates & two-qubit gates (\%)\\
 \end{table}
 
 \begin{table}[htbp]
-\caption{\label{tab:org1ffa50e}
+\caption{\label{tab:org6a1608d}
 Step 1 results after 100 iterations}
 \centering
 \begin{tabular}{llrrrrrr}
@@ -73,7 +73,7 @@ base & Yes & 3000 & 3000 & 0.03 & 0.97 & 0.92331 & 1062\\
 \end{table}
 
 \begin{table}[htbp]
-\caption{\label{tab:org24feebc}
+\caption{\label{tab:org560eb0c}
 Other mapper statistics}
 \centering
 \begin{tabular}{llrrrr}
@@ -95,16 +95,14 @@ base & Yes & 6 & 228 & 16 & \\
 
 
 \subsection{Routing comparison}
-\label{sec:org75af56c}
+\label{sec:org1889cbd}
 
 \subsubsection{No initial placement}
-\label{sec:orgf5604b9}
+\label{sec:org29a9912}
 
 \begin{minipage}[t]{.45\textwidth}
 
-\begin{enumerate}
-\item With Resource constraints
-\label{sec:orgc940e56}
+\uline{With Resource constraints}
 
 \begin{minted}[frame=lines,fontsize=\scriptsize,linenos,breaklines,breakanywhere]{shell}
 ... the minimally extending path with swaps is: cycleExtend=10
@@ -149,8 +147,7 @@ base & Yes & 6 & 228 & 16 & \\
 \hfill %\hspace{1cm}
 \begin{minipage}[t]{.45\textwidth}
 
-\item Without Resource constraints
-\label{sec:orge480b7a}
+\uline{Without Resource constraints}
 
 \begin{minted}[frame=lines,fontsize=\scriptsize,linenos,breaklines,breakanywhere]{shell}
 
@@ -194,17 +191,14 @@ base & Yes & 6 & 228 & 16 & \\
 \end{minted}
 
 \end{minipage}
-\end{enumerate}
 
 
 \subsubsection{With initial placement}
-\label{sec:org54cf6bd}
+\label{sec:org7624cdc}
 
 \begin{minipage}[t]{.45\textwidth}
 
-\begin{enumerate}
-\item With Resource constraints
-\label{sec:orgc7493cc}
+\uline{With Resource constraints}
 
 \begin{minted}[frame=lines,fontsize=\scriptsize,linenos,breaklines,breakanywhere]{shell}
 
@@ -240,8 +234,7 @@ base & Yes & 6 & 228 & 16 & \\
 \hfill %\hspace{1cm}
 \begin{minipage}[t]{.45\textwidth}
 
-\item Without Resource constraints
-\label{sec:org0dd3c0c}
+\uline{Without Resource constraints}
 
 \begin{minted}[frame=lines,fontsize=\scriptsize,linenos,breaklines,breakanywhere]{shell}
 
@@ -275,10 +268,9 @@ base & Yes & 6 & 228 & 16 & \\
 
 
 \end{minipage}
-\end{enumerate}
 
 \section{1000 iterations}
-\label{sec:orgce577d6}
+\label{sec:orgd10900a}
 \section{Simplest benchmarks results}
-\label{sec:org7f1ebfd}
+\label{sec:org33a65c5}
 \end{document}
