@@ -18,7 +18,7 @@
 | 4gt11_82  |        5 |      27 | 67                  |
 |-----------+----------+---------+---------------------|
 
-#+caption: Step 1 results
+#+caption: Step 1 results after 100 iterations
 #+NAME: tab:step1
 #+ATTR_LATEX: :booktabs :environment
 |-------------+-------------+-------+-------+------------+------------+-----------+-------|
@@ -49,3 +49,7 @@
 | base        | No          |                        6 |   228 |      16 |
 | base        | Yes         |                        6 |   228 |      16 |
 |-------------+-------------+--------------------------+-------+---------|
+
+** 1000 iterations
+
+* Simplest benchmarks results
