@@ -1,4 +1,4 @@
-% Created 2018-11-21 Wed 14:53
+% Created 2018-11-21 Wed 17:29
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -37,10 +37,10 @@
 
 
 \section{First Step}
-\label{sec:orgf8a61e2}
+\label{sec:org5219626}
 
 \begin{table}[htbp]
-\caption{\label{tab:org964b5bd}
+\caption{\label{tab:org05e25c0}
 Benchmark used}
 \centering
 \begin{tabular}{lrrr}
@@ -53,7 +53,7 @@ Benchmark & \# qubits & \# gates & two-qubit gates (\%)\\
 \end{table}
 
 \begin{table}[htbp]
-\caption{\label{tab:org698deda}
+\caption{\label{tab:orgb525a01}
 Step 1 results after 100 iterations}
 \centering
 \begin{tabular}{llrrrrrr}
@@ -73,28 +73,210 @@ base & Yes & 3000 & 3000 & 0.03 & 0.97 & 0.92331 & 1062\\
 \end{table}
 
 \begin{table}[htbp]
-\caption{\label{tab:orge21b4d4}
+\caption{\label{tab:orgb925419}
 Other mapper statistics}
 \centering
-\begin{tabular}{llrrr}
+\begin{tabular}{llrrrr}
 \hline
-Mapper & Init. place & \# qubits (after mapping) & depth & \# SWAPS\\
+Mapper & Init. place & \# qubits (after mapping) & depth & \# SWAPS & \# meetings in between\\
 \hline
-No & No & 5 & 84 & 0\\
+No & No & 5 & 84 & 0 & 0\\
 \hline
-minextendrc & No & 7 & 237 & 17\\
-minextendrc & Yes & 6 & 174 & 10\\
-minextend & No & 8 & 228 & 16\\
-minextend & Yes & 6 & 165 & 9\\
-base & No & 6 & 228 & 16\\
-base & Yes & 6 & 228 & 16\\
+minextendrc & No & 7 & 237 & 17 & 3\\
+minextendrc & Yes & 6 & 174 & 10 & 2\\
+minextend & No & 8 & 228 & 16 & 1\\
+minextend & Yes & 6 & 165 & 9 & 0\\
+base & No & 6 & 228 & 16 & \\
+base & Yes & 6 & 228 & 16 & \\
 \hline
 \end{tabular}
 \end{table}
 
-\subsection{1000 iterations}
-\label{sec:org3658833}
 
+
+\subsection{Routing comparison}
+\label{sec:orgbb2c7c3}
+
+\subsubsection{No initial placement}
+\label{sec:org5d94941}
+
+\begin{minipage}[t]{.45\textwidth}
+
+\begin{enumerate}
+\item With Resource constraints
+\label{sec:org84ea619}
+
+\begin{minted}[frame=lines,fontsize=\scriptsize,linenos,breaklines,breakanywhere]{shell}
+... the minimally extending path with swaps is: cycleExtend=10
+	path from source[1]=[2]
+	path from target[2]=[1->5] implying: swap(q1,q5)
+... the minimally extending path with swaps is: cycleExtend=9
+	path from source[1]=[3]
+	path from target[2]=[2->0] implying: swap(q2,q0)
+... the minimally extending path with swaps is: cycleExtend=20
+	path from source[3]=[4->7->5] implying: swap(q4,q7) swap(q7,q5)
+	path from target[3]=[3->0->2] implying: swap(q3,q0) swap(q0,q2)
+... the minimally extending path with swaps is: cycleExtend=9
+	path from source[1]=[0]
+	path from target[2]=[5->2] implying: swap(q5,q2)
+... the minimally extending path with swaps is: cycleExtend=12
+	path from source[2]=[7->5] implying: swap(q7,q5)
+	path from target[2]=[0->2] implying: swap(q0,q2)
+... the minimally extending path with swaps is: cycleExtend=9
+	path from source[1]=[5]
+	path from target[2]=[0->2] implying: swap(q0,q2)
+... the minimally extending path with swaps is: cycleExtend=9
+	path from source[1]=[5]
+	path from target[2]=[0->2] implying: swap(q0,q2)
+... the minimally extending path with swaps is: cycleExtend=10
+	path from source[1]=[0]
+	path from target[2]=[5->2] implying: swap(q5,q2)
+... the minimally extending path with swaps is: cycleExtend=13
+	path from source[2]=[0->2] implying: swap(q0,q2)
+	path from target[2]=[7->5] implying: swap(q7,q5)
+... the minimally extending path with swaps is: cycleExtend=10
+	path from source[1]=[2]
+	path from target[2]=[3->0] implying: swap(q3,q0)
+... the minimally extending path with swaps is: cycleExtend=10
+	path from source[1]=[2]
+	path from target[2]=[3->0] implying: swap(q3,q0)
+... the minimally extending path with swaps is: cycleExtend=10
+	path from source[1]=[7]
+	path from target[2]=[2->5] implying: swap(q2,q5)
+\end{minted}
+
+\end{minipage}
+\hfill %\hspace{1cm}
+\begin{minipage}[t]{.45\textwidth}
+
+\item Without Resource constraints
+\label{sec:org4c177e4}
+
+\begin{minted}[frame=lines,fontsize=\scriptsize,linenos,breaklines,breakanywhere]{shell}
+
+... the minimally extending path with swaps is: cycleExtend=10
+	path from source[1]=[2]
+	path from target[2]=[1->5] implying: swap(q1,q5)
+... the minimally extending path with swaps is: cycleExtend=0
+	path from source[2]=[3->0] implying: swap(q3,q0)
+	path from target[1]=[2]
+... the minimally extending path with swaps is: cycleExtend=9
+	path from source[3]=[4->1->5] implying: swap(q4,q1) swap(q1,q5)
+	path from target[2]=[0->2] implying: swap(q0,q2)
+... the minimally extending path with swaps is: cycleExtend=0
+	path from source[3]=[3->6->8] implying: swap(q3,q6) swap(q6,q8)
+	path from target[1]=[5]
+... the minimally extending path with swaps is: cycleExtend=10
+	path from source[1]=[1]
+	path from target[2]=[8->5] implying: swap(q8,q5)
+... the minimally extending path with swaps is: cycleExtend=10
+	path from source[1]=[1]
+	path from target[2]=[8->5] implying: swap(q8,q5)
+... the minimally extending path with swaps is: cycleExtend=10
+	path from source[1]=[1]
+	path from target[2]=[8->5] implying: swap(q8,q5)
+... the minimally extending path with swaps is: cycleExtend=10
+	path from source[1]=[8]
+	path from target[2]=[1->5] implying: swap(q1,q5)
+... the minimally extending path with swaps is: cycleExtend=0
+	path from source[1]=[8]
+	path from target[2]=[2->6] implying: swap(q2,q6)
+... the minimally extending path with swaps is: cycleExtend=8
+	path from source[1]=[8]
+	path from target[3]=[0->2->5] implying: swap(q0,q2) swap(q2,q5)
+... the minimally extending path with swaps is: cycleExtend=4
+	path from source[1]=[8]
+	path from target[2]=[2->6] implying: swap(q2,q6)
+... the minimally extending path with swaps is: cycleExtend=2
+	path from source[2]=[1->5] implying: swap(q1,q5)
+	path from target[1]=[8]
+
+\end{minted}
+
+\end{minipage}
+\end{enumerate}
+
+
+\subsubsection{With initial placement}
+\label{sec:orga42acc5}
+
+\begin{minipage}[t]{.45\textwidth}
+
+\begin{enumerate}
+\item With Resource constraints
+\label{sec:org499b25b}
+
+\begin{minted}[frame=lines,fontsize=\scriptsize,linenos,breaklines,breakanywhere]{shell}
+... Virt2Real(v->r) ... result Virt2Real map of InitialPlace before adding unused virtual qubits and unused locations : (0->10) (1->4) (2->1) (3->5) (4->7) (5->2147483647) (6->2147483647) (7->2147483647) (8->2147483647) (9->2147483647) (10->2147483647) (11->2147483647) (12->2147483647) (13->2147483647) (14->2147483647) (15->2147483647) (16->2147483647)
+... Virt2Real(v->r) ... final result Virt2Real map of InitialPlace: (0->10) (1->4) (2->1) (3->5) (4->7) (5->0) (6->2) (7->3) (8->6) (9->8) (10->9) (11->11) (12->12) (13->13) (14->14) (15->15) (16->16)
+... the minimally extending path with swaps is: cycleExtend=10
+	path from source[1]=[4]
+	path from target[2]=[10->7] implying: swap(q10,q7)
+... the minimally extending path with swaps is: cycleExtend=10
+	path from source[1]=[4]
+	path from target[2]=[10->7] implying: swap(q10,q7)
+... the minimally extending path with swaps is: cycleExtend=10
+	path from source[1]=[4]
+	path from target[2]=[10->7] implying: swap(q10,q7)
+... the minimally extending path with swaps is: cycleExtend=10
+	path from source[1]=[10]
+	path from target[2]=[4->7] implying: swap(q4,q7)
+... the minimally extending path with swaps is: cycleExtend=10
+	path from source[1]=[10]
+	path from target[2]=[5->8] implying: swap(q5,q8)
+... the minimally extending path with swaps is: cycleExtend=10
+	path from source[2]=[10->8] implying: swap(q10,q8)
+	path from target[2]=[1->5] implying: swap(q1,q5)
+... the minimally extending path with swaps is: cycleExtend=10
+	path from source[1]=[8]
+	path from target[2]=[7->5] implying: swap(q7,q5)
+... the minimally extending path with swaps is: cycleExtend=12
+	path from source[2]=[4->1] implying: swap(q4,q1)
+	path from target[2]=[8->5] implying: swap(q8,q5)
+\end{minted}
+
+\end{minipage}
+\hfill %\hspace{1cm}
+\begin{minipage}[t]{.45\textwidth}
+
+\item Without Resource constraints
+\label{sec:orgd6207b1}
+
+\begin{minted}[frame=lines,fontsize=\scriptsize,linenos,breaklines,breakanywhere]{shell}
+... Virt2Real(v->r) ... result Virt2Real map of InitialPlace before adding unused virtual qubits and unused locations : (0->10) (1->4) (2->1) (3->5) (4->7) (5->2147483647) (6->2147483647) (7->2147483647) (8->2147483647) (9->2147483647) (10->2147483647) (11->2147483647) (12->2147483647) (13->2147483647) (14->2147483647) (15->2147483647) (16->2147483647)
+... Virt2Real(v->r) ... final result Virt2Real map of InitialPlace: (0->10) (1->4) (2->1) (3->5) (4->7) (5->0) (6->2) (7->3) (8->6) (9->8) (10->9) (11->11) (12->12) (13->13) (14->14) (15->15) (16->16)
+... the minimally extending path with swaps is: cycleExtend=10
+	path from source[1]=[4]
+	path from target[2]=[10->7] implying: swap(q10,q7)
+... the minimally extending path with swaps is: cycleExtend=10
+	path from source[1]=[4]
+	path from target[2]=[10->7] implying: swap(q10,q7)
+... the minimally extending path with swaps is: cycleExtend=10
+	path from source[1]=[4]
+	path from target[2]=[10->7] implying: swap(q10,q7)
+... the minimally extending path with swaps is: cycleExtend=10
+	path from source[1]=[10]
+	path from target[2]=[4->7] implying: swap(q4,q7)
+... the minimally extending path with swaps is: cycleExtend=0
+	path from source[1]=[10]
+	path from target[2]=[5->8] implying: swap(q5,q8)
+... the minimally extending path with swaps is: cycleExtend=8
+	path from source[1]=[10]
+	path from target[3]=[1->5->7] implying: swap(q1,q5) swap(q5,q7)
+... the minimally extending path with swaps is: cycleExtend=4
+	path from source[1]=[10]
+	path from target[2]=[5->8] implying: swap(q5,q8)
+... the minimally extending path with swaps is: cycleExtend=2
+	path from source[2]=[4->7] implying: swap(q4,q7)
+	path from target[1]=[10]
+\end{minted}
+
+
+\end{minipage}
+\end{enumerate}
+
+\section{1000 iterations}
+\label{sec:org80cc328}
 \section{Simplest benchmarks results}
-\label{sec:orga9ed2ee}
+\label{sec:org6be4e43}
 \end{document}
