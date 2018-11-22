@@ -1,4 +1,4 @@
-% Created 2018-11-22 Thu 14:16
+% Created 2018-11-22 Thu 16:55
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -37,10 +37,10 @@
 
 
 \section{First Step}
-\label{sec:orgf2c1ce9}
+\label{sec:orgf817f9c}
 
 \begin{table}[htbp]
-\caption{\label{tab:org3ca7077}
+\caption{\label{tab:org1a2efd5}
 Benchmark used}
 \centering
 \begin{tabular}{lrrr}
@@ -53,7 +53,7 @@ Benchmark & \# qubits & \# gates & two-qubit gates (\%)\\
 \end{table}
 
 \begin{table}[htbp]
-\caption{\label{tab:org8708ef0}
+\caption{\label{tab:orgac33f23}
 Step 1 results after 100 iterations}
 \centering
 \begin{tabular}{llrrrrrr}
@@ -67,13 +67,13 @@ minextendrc & Yes & 3000 & 3000 & 0.03 & 0.98 & 0.9675513 & 1038\\
 minextend & No & 3000 & 3000 & 0.03 & 0.98 & 0.944128 & 1264\\
 minextend & Yes & 3000 & 3000 & 0.03 & 0.98 & 0.9585909 & 834\\
 base & No & 3000 & 3000 & 0.03 & 0.97 & 0.92331 & 1062\\
-base & Yes & 3000 & 3000 & 0.03 & 0.97 & 0.92331 & 1062\\
+base & Yes & 3000 & 3000 & 0.03 & 0.98 & 0.9568084 & 780\\
 \hline
 \end{tabular}
 \end{table}
 
 \begin{table}[htbp]
-\caption{\label{tab:org76d231c}
+\caption{\label{tab:org18c91db}
 Other mapper statistics}
 \centering
 \begin{tabular}{llrrrr}
@@ -87,6 +87,7 @@ minextendrc & Yes & 6 & 174 & 10 & 2\\
 minextend & No & 8 & 228 & 16 & 1\\
 minextend & Yes & 6 & 165 & 9 & 0\\
 base & No & 6 & 228 & 16 & \\
+base & Yes & 6 & 147 & 7 & \\
 \hline
 \end{tabular}
 \end{table}
@@ -94,10 +95,10 @@ base & No & 6 & 228 & 16 & \\
 
 
 \subsection{Routing comparison}
-\label{sec:org3adba7e}
+\label{sec:orgec578ae}
 
 \subsubsection{No initial placement}
-\label{sec:org9497aa4}
+\label{sec:orge0c8245}
 
 \begin{minipage}[t]{.45\textwidth}
 
@@ -193,7 +194,7 @@ base & No & 6 & 228 & 16 & \\
 
 
 \subsubsection{With initial placement}
-\label{sec:orgeb7a085}
+\label{sec:org4862e86}
 
 \begin{minipage}[t]{.45\textwidth}
 
@@ -269,10 +270,10 @@ base & No & 6 & 228 & 16 & \\
 \end{minipage}
 
 \section{1000 iterations}
-\label{sec:org423f5fb}
+\label{sec:org37abfcd}
 
 \begin{table}[htbp]
-\caption{\label{tab:org1973f39}
+\caption{\label{tab:org12a0174}
 Step 1 results after 1000 iterations}
 \centering
 \begin{tabular}{llrrrrrr}
@@ -280,15 +281,30 @@ Step 1 results after 1000 iterations}
 Mapper & Init. place & \(t_1\) & \(t_2\) & meas. err. & p. success & \(f\) & \(V_Q\)\\
 \hline
 No & No & 3000 & 3000 & 0.03 & 0.96 & 0.97823066 & 390\\
+\hline
 minextendrc & No & 3000 & 3000 & 0.03 & 0.929 & 0.92937318 & 1582\\
 minextendrc & Yes & 3000 & 3000 & 0.03 & 0.939 & 0.94685216 & 1038\\
 minextend & No & 3000 & 3000 & 0.03 & 0.947 & 0.9312172 & 1264\\
 minextend & Yes & 3000 & 3000 & 0.03 & 0.949 & 0.94748374 & 834\\
 base & No & 3000 & 3000 & 0.03 & 0.932 & 0.906571 & 1062\\
+base & Yes & 3000 & 3000 & 0.03 & 0.9509 & 0.9459456 & 780\\
 \hline
 \end{tabular}
 \end{table}
 
+\section{10000 iterations}
+\label{sec:orgca12117}
+
+\begin{table}[htbp]
+\caption{\label{tab:org7b573bc}
+Step 1 results after 10000 iterations}
+\centering
+\begin{tabular}{llllllll}
+\hline
+Mapper & Init. place & \(t_1\) & \(t_2\) & meas. err. & p. success & \(f\) & \(V_Q\)\\
+\hline
+\end{tabular}
+\end{table}
 \section{Simplest benchmarks results}
-\label{sec:orgc77fbd5}
+\label{sec:org3a3bea3}
 \end{document}

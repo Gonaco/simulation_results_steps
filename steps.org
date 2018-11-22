@@ -31,7 +31,7 @@
 | minextend   | No          |  3000 |  3000 |       0.03 |       0.98 |  0.944128 |  1264 |
 | minextend   | Yes         |  3000 |  3000 |       0.03 |       0.98 | 0.9585909 |   834 |
 | base        | No          |  3000 |  3000 |       0.03 |       0.97 |   0.92331 |  1062 |
-| base        | Yes         |  3000 |  3000 |       0.03 |       0.97 |   0.92331 |  1062 |
+| base        | Yes         |  3000 |  3000 |       0.03 |       0.98 | 0.9568084 |   780 |
 |-------------+-------------+-------+-------+------------+------------+-----------+-------|
 
 #+caption: Other mapper statistics
@@ -47,6 +47,7 @@
 | minextend   | No          |                        8 |   228 |      16 |                     1 |
 | minextend   | Yes         |                        6 |   165 |       9 |                     0 |
 | base        | No          |                        6 |   228 |      16 |                       |
+| base        | Yes         |                        6 |   147 |       7 |                       |
 |-------------+-------------+--------------------------+-------+---------+-----------------------|
 
 
@@ -237,20 +238,43 @@ _Without Resource constraints_
 \end{minipage}
 #+END_EXPORT
 
+** Conclusions                                                    :noexport:
+
+Even though it is soon to set general conclusions, we can observe some interesting behaviors in this case
+
+- To meet the qubits in between does not look like a good option
+- 
+
 * 1000 iterations
 
 #+caption: Step 1 results after 1000 iterations
-#+NAME: tab:step1
+#+NAME: tab:step1000
 #+ATTR_LATEX: :booktabs :environment
 |-------------+-------------+-------+-------+------------+------------+------------+-------|
 | Mapper      | Init. place | $t_1$ | $t_2$ | meas. err. | p. success |        $f$ | $V_Q$ |
 |-------------+-------------+-------+-------+------------+------------+------------+-------|
 | No          | No          |  3000 |  3000 |       0.03 |       0.96 | 0.97823066 |   390 |
+|-------------+-------------+-------+-------+------------+------------+------------+-------|
 | minextendrc | No          |  3000 |  3000 |       0.03 |      0.929 | 0.92937318 |  1582 |
 | minextendrc | Yes         |  3000 |  3000 |       0.03 |      0.939 | 0.94685216 |  1038 |
 | minextend   | No          |  3000 |  3000 |       0.03 |      0.947 |  0.9312172 |  1264 |
 | minextend   | Yes         |  3000 |  3000 |       0.03 |      0.949 | 0.94748374 |   834 |
 | base        | No          |  3000 |  3000 |       0.03 |      0.932 |   0.906571 |  1062 |
+| base        | Yes         |  3000 |  3000 |       0.03 |     0.9509 |  0.9459456 |   780 |
 |-------------+-------------+-------+-------+------------+------------+------------+-------|
 
+** Conclusions                                                    :noexport:
+
+- P. success and $f$ is different between 100 and 1000 iterations
+
+* 10000 iterations
+
+#+caption: Step 1 results after 10000 iterations
+#+NAME: tab:step10000
+#+ATTR_LATEX: :booktabs :environment
+|-------------+-------------+-------+-------+------------+------------+------------+-------|
+| Mapper      | Init. place | $t_1$ | $t_2$ | meas. err. | p. success |        $f$ | $V_Q$ |
+|-------------+-------------+-------+-------+------------+------------+------------+-------|
+
+** Conclusions                                                    :noexport:
 * Simplest benchmarks results
