@@ -47,7 +47,6 @@
 | minextend   | No          |                        8 |   228 |      16 |                     1 |
 | minextend   | Yes         |                        6 |   165 |       9 |                     0 |
 | base        | No          |                        6 |   228 |      16 |                       |
-| base        | Yes         |                        6 |   228 |      16 |                       |
 |-------------+-------------+--------------------------+-------+---------+-----------------------|
 
 
@@ -157,6 +156,8 @@ _Without Resource constraints_
 
 *** With initial placement
 
+# In this example one can see that to move a critical qubit (one of the most used) far from the other critical qubits is a causing extra SWAPS
+
 #+BEGIN_EXPORT latex
 \begin{minipage}[t]{.45\textwidth}
 #+END_EXPORT
@@ -237,4 +238,19 @@ _Without Resource constraints_
 #+END_EXPORT
 
 * 1000 iterations
+
+#+caption: Step 1 results after 1000 iterations
+#+NAME: tab:step1
+#+ATTR_LATEX: :booktabs :environment
+|-------------+-------------+-------+-------+------------+------------+------------+-------|
+| Mapper      | Init. place | $t_1$ | $t_2$ | meas. err. | p. success |        $f$ | $V_Q$ |
+|-------------+-------------+-------+-------+------------+------------+------------+-------|
+| No          | No          |  3000 |  3000 |       0.03 |       0.96 | 0.97823066 |   390 |
+| minextendrc | No          |  3000 |  3000 |       0.03 |      0.929 | 0.92937318 |  1582 |
+| minextendrc | Yes         |  3000 |  3000 |       0.03 |      0.939 | 0.94685216 |  1038 |
+| minextend   | No          |  3000 |  3000 |       0.03 |      0.947 |  0.9312172 |  1264 |
+| minextend   | Yes         |  3000 |  3000 |       0.03 |      0.949 | 0.94748374 |   834 |
+| base        | No          |  3000 |  3000 |       0.03 |      0.932 |   0.906571 |  1062 |
+|-------------+-------------+-------+-------+------------+------------+------------+-------|
+
 * Simplest benchmarks results

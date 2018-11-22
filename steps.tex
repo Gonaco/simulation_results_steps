@@ -1,4 +1,4 @@
-% Created 2018-11-21 Wed 17:40
+% Created 2018-11-22 Thu 14:16
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -37,10 +37,10 @@
 
 
 \section{First Step}
-\label{sec:orga5d042f}
+\label{sec:orgf2c1ce9}
 
 \begin{table}[htbp]
-\caption{\label{tab:org3615718}
+\caption{\label{tab:org3ca7077}
 Benchmark used}
 \centering
 \begin{tabular}{lrrr}
@@ -53,7 +53,7 @@ Benchmark & \# qubits & \# gates & two-qubit gates (\%)\\
 \end{table}
 
 \begin{table}[htbp]
-\caption{\label{tab:org6a1608d}
+\caption{\label{tab:org8708ef0}
 Step 1 results after 100 iterations}
 \centering
 \begin{tabular}{llrrrrrr}
@@ -73,7 +73,7 @@ base & Yes & 3000 & 3000 & 0.03 & 0.97 & 0.92331 & 1062\\
 \end{table}
 
 \begin{table}[htbp]
-\caption{\label{tab:org560eb0c}
+\caption{\label{tab:org76d231c}
 Other mapper statistics}
 \centering
 \begin{tabular}{llrrrr}
@@ -87,7 +87,6 @@ minextendrc & Yes & 6 & 174 & 10 & 2\\
 minextend & No & 8 & 228 & 16 & 1\\
 minextend & Yes & 6 & 165 & 9 & 0\\
 base & No & 6 & 228 & 16 & \\
-base & Yes & 6 & 228 & 16 & \\
 \hline
 \end{tabular}
 \end{table}
@@ -95,10 +94,10 @@ base & Yes & 6 & 228 & 16 & \\
 
 
 \subsection{Routing comparison}
-\label{sec:org1889cbd}
+\label{sec:org3adba7e}
 
 \subsubsection{No initial placement}
-\label{sec:org29a9912}
+\label{sec:org9497aa4}
 
 \begin{minipage}[t]{.45\textwidth}
 
@@ -194,7 +193,7 @@ base & Yes & 6 & 228 & 16 & \\
 
 
 \subsubsection{With initial placement}
-\label{sec:org7624cdc}
+\label{sec:orgeb7a085}
 
 \begin{minipage}[t]{.45\textwidth}
 
@@ -270,7 +269,26 @@ base & Yes & 6 & 228 & 16 & \\
 \end{minipage}
 
 \section{1000 iterations}
-\label{sec:orgd10900a}
+\label{sec:org423f5fb}
+
+\begin{table}[htbp]
+\caption{\label{tab:org1973f39}
+Step 1 results after 1000 iterations}
+\centering
+\begin{tabular}{llrrrrrr}
+\hline
+Mapper & Init. place & \(t_1\) & \(t_2\) & meas. err. & p. success & \(f\) & \(V_Q\)\\
+\hline
+No & No & 3000 & 3000 & 0.03 & 0.96 & 0.97823066 & 390\\
+minextendrc & No & 3000 & 3000 & 0.03 & 0.929 & 0.92937318 & 1582\\
+minextendrc & Yes & 3000 & 3000 & 0.03 & 0.939 & 0.94685216 & 1038\\
+minextend & No & 3000 & 3000 & 0.03 & 0.947 & 0.9312172 & 1264\\
+minextend & Yes & 3000 & 3000 & 0.03 & 0.949 & 0.94748374 & 834\\
+base & No & 3000 & 3000 & 0.03 & 0.932 & 0.906571 & 1062\\
+\hline
+\end{tabular}
+\end{table}
+
 \section{Simplest benchmarks results}
-\label{sec:org33a65c5}
+\label{sec:orgc77fbd5}
 \end{document}
