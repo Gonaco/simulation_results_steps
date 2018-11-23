@@ -4,7 +4,7 @@
 #+LATEX_HEADER: \usepackage{geometry}
 #+LATEX_HEADER: \geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
 
-#+OPTIONS: toc:nil tasks:nil
+#+OPTIONS: toc:nil tasks:nil tags:nil
 
 
 * First Step                                                       :noexport:
