@@ -1,4 +1,4 @@
-% Created 2018-11-22 Thu 17:03
+% Created 2018-11-23 Fri 19:05
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -37,10 +37,10 @@
 
 
 \section{First Step}
-\label{sec:org464d4a7}
+\label{sec:orgee3afbe}
 
 \begin{table}[htbp]
-\caption{\label{tab:orgb0e0f27}
+\caption{\label{tab:org399b892}
 Benchmark used}
 \centering
 \begin{tabular}{lrrr}
@@ -53,7 +53,7 @@ Benchmark & \# qubits & \# gates & two-qubit gates (\%)\\
 \end{table}
 
 \begin{table}[htbp]
-\caption{\label{tab:orgbe16ca1}
+\caption{\label{tab:org4071d39}
 Step 1 results after 100 iterations}
 \centering
 \begin{tabular}{llrrrrrr}
@@ -73,21 +73,21 @@ base & Yes & 3000 & 3000 & 0.03 & 0.98 & 0.9568084 & 780\\
 \end{table}
 
 \begin{table}[htbp]
-\caption{\label{tab:orgcec62d2}
+\caption{\label{tab:org16b069a}
 Other mapper statistics}
 \centering
-\begin{tabular}{llrrrr}
+\begin{tabular}{llrrrrr}
 \hline
-Mapper & Init. place & \# qubits (after mapping) & depth & \# SWAPS & \# meetings in between\\
+Mapper & Init. place & \# qubits (after mapping) & depth & \# gates & \# SWAPS & \# meetings in between\\
 \hline
-No & No & 5 & 84 & 0 & 0\\
+No & No & 5 & 78 & 84 & 0 & 0\\
 \hline
-minextendrc & No & 7 & 237 & 17 & 3\\
-minextendrc & Yes & 6 & 174 & 10 & 2\\
-minextend & No & 8 & 228 & 16 & 1\\
-minextend & Yes & 6 & 165 & 9 & 0\\
-base & No & 6 & 228 & 16 & \\
-base & Yes & 6 & 147 & 7 & \\
+minextendrc & No & 7 & 226 & 237 & 17 & 3\\
+minextendrc & Yes & 6 & 173 & 174 & 10 & 2\\
+minextend & No & 8 & 158 & 228 & 16 & 1\\
+minextend & Yes & 6 & 139 & 165 & 9 & 0\\
+base & No & 6 & 177 & 228 & 16 & \\
+base & Yes & 6 & 130 & 147 & 7 & \\
 \hline
 \end{tabular}
 \end{table}
@@ -95,10 +95,10 @@ base & Yes & 6 & 147 & 7 & \\
 
 
 \subsection{Routing comparison}
-\label{sec:orgb0c8cb6}
+\label{sec:orgd9e5987}
 
 \subsubsection{No initial placement}
-\label{sec:orgbfe980f}
+\label{sec:org1aafe70}
 
 \begin{minipage}[t]{.45\textwidth}
 
@@ -194,7 +194,7 @@ base & Yes & 6 & 147 & 7 & \\
 
 
 \subsubsection{With initial placement}
-\label{sec:orgd5b9249}
+\label{sec:org003219c}
 
 \begin{minipage}[t]{.45\textwidth}
 
@@ -270,10 +270,10 @@ base & Yes & 6 & 147 & 7 & \\
 \end{minipage}
 
 \section{1000 iterations}
-\label{sec:orgd809a29}
+\label{sec:orgd09749d}
 
 \begin{table}[htbp]
-\caption{\label{tab:org5a8ac6b}
+\caption{\label{tab:org9793b85}
 Step 1 results after 1000 iterations}
 \centering
 \begin{tabular}{llrrrrrr}
@@ -293,10 +293,10 @@ base & Yes & 3000 & 3000 & 0.03 & 0.9509 & 0.9459456 & 780\\
 \end{table}
 
 \section{10000 iterations}
-\label{sec:org36d6506}
+\label{sec:org2e6829d}
 
 \begin{table}[htbp]
-\caption{\label{tab:org3bfded4}
+\caption{\label{tab:org76bac05}
 Step 1 results after 10000 iterations}
 \centering
 \begin{tabular}{llllllll}
@@ -306,5 +306,5 @@ Mapper & Init. place & \(t_1\) & \(t_2\) & meas. err. & p. success & \(f\) & \(V
 \end{tabular}
 \end{table}
 \section{Simplest benchmarks results}
-\label{sec:org7b9911e}
+\label{sec:org4d67232}
 \end{document}
