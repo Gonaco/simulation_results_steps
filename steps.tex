@@ -1,4 +1,4 @@
-% Created 2018-11-23 Fri 20:02
+% Created 2018-11-26 Mon 17:18
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -37,10 +37,10 @@
 
 
 \section{First Step}
-\label{sec:orgfd99ef1}
+\label{sec:orgcbea846}
 
 \begin{table}[htbp]
-\caption{\label{tab:org688b7c2}
+\caption{\label{tab:org5005d27}
 Benchmark used}
 \centering
 \begin{tabular}{lrrr}
@@ -53,7 +53,7 @@ Benchmark & \# qubits & \# gates & two-qubit gates (\%)\\
 \end{table}
 
 \begin{table}[htbp]
-\caption{\label{tab:org8e5077a}
+\caption{\label{tab:org1c19640}
 Step 1 results after 100 iterations}
 \centering
 \begin{tabular}{llrrrrrr}
@@ -73,7 +73,7 @@ base & Yes & 3000 & 3000 & 0.03 & 0.98 & 0.9568084 & 780\\
 \end{table}
 
 \begin{table}[htbp]
-\caption{\label{tab:org55556ee}
+\caption{\label{tab:org7b2f6b9}
 Other mapper statistics}
 \centering
 \small
@@ -97,10 +97,10 @@ base & Yes & 6 & 130 & 147 & 7 & 0.1156 & \\
 $$\text{Parallelism: }\quad 1 - \frac{depth}{\# gates}$$
 
 \subsection{Routing comparison}
-\label{sec:orgd0af3c9}
+\label{sec:org7467cd2}
 
 \subsubsection{No initial placement}
-\label{sec:org1984f54}
+\label{sec:orga8c19fa}
 
 \begin{minipage}[t]{.45\textwidth}
 
@@ -196,7 +196,7 @@ $$\text{Parallelism: }\quad 1 - \frac{depth}{\# gates}$$
 
 
 \subsubsection{With initial placement}
-\label{sec:org7f669aa}
+\label{sec:org3297280}
 
 \begin{minipage}[t]{.45\textwidth}
 
@@ -272,10 +272,10 @@ $$\text{Parallelism: }\quad 1 - \frac{depth}{\# gates}$$
 \end{minipage}
 
 \section{1000 iterations}
-\label{sec:org239f5d7}
+\label{sec:org571b118}
 
 \begin{table}[htbp]
-\caption{\label{tab:orgaa54aa5}
+\caption{\label{tab:orgf684c95}
 Step 1 results after 1000 iterations}
 \centering
 \begin{tabular}{llrrrrrr}
@@ -295,18 +295,31 @@ base & Yes & 3000 & 3000 & 0.03 & 0.9509 & 0.9459456 & 780\\
 \end{table}
 
 \section{10000 iterations}
-\label{sec:org67d8a55}
+\label{sec:org5a664e7}
 
 \begin{table}[htbp]
-\caption{\label{tab:org00605a9}
+\caption{\label{tab:orgb0e6cfd}
 Step 1 results after 10000 iterations}
 \centering
-\begin{tabular}{llllllll}
+\begin{tabular}{llrrrrrr}
 \hline
 Mapper & Init. place & \(t_1\) & \(t_2\) & meas. err. & p. success & \(f\) & \(V_Q\)\\
 \hline
+No & No & 3000 & 3000 & 0.03 & 0.961 & 0.980342528 & 390\\
+\hline
+minextendrc & No & 3000 & 3000 & 0.03 & 0.9372 & 0.937136544 & 1582\\
+minextendrc & Yes & 3000 & 3000 & 0.03 & 0.9435 & 0.951650597 & 1038\\
+minextend & No & 3000 & 3000 & 0.03 & 0.9519 & 0.93665818 & 1264\\
+minextend & Yes & 3000 & 3000 & 0.03 & 0.9556 & 0.954629151 & 834\\
+\hline
 \end{tabular}
 \end{table}
+
+
+
+
+
+
 \section{Simplest benchmarks results}
-\label{sec:org6e7aa77}
+\label{sec:org9fb7674}
 \end{document}
