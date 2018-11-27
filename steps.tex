@@ -1,4 +1,4 @@
-% Created 2018-11-26 Mon 17:18
+% Created 2018-11-27 Tue 11:49
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -37,10 +37,10 @@
 
 
 \section{First Step}
-\label{sec:orgcbea846}
+\label{sec:org41080f0}
 
 \begin{table}[htbp]
-\caption{\label{tab:org5005d27}
+\caption{\label{tab:org612537d}
 Benchmark used}
 \centering
 \begin{tabular}{lrrr}
@@ -53,7 +53,7 @@ Benchmark & \# qubits & \# gates & two-qubit gates (\%)\\
 \end{table}
 
 \begin{table}[htbp]
-\caption{\label{tab:org1c19640}
+\caption{\label{tab:org074ca68}
 Step 1 results after 100 iterations}
 \centering
 \begin{tabular}{llrrrrrr}
@@ -73,7 +73,7 @@ base & Yes & 3000 & 3000 & 0.03 & 0.98 & 0.9568084 & 780\\
 \end{table}
 
 \begin{table}[htbp]
-\caption{\label{tab:org7b2f6b9}
+\caption{\label{tab:org42f09fc}
 Other mapper statistics}
 \centering
 \small
@@ -97,10 +97,10 @@ base & Yes & 6 & 130 & 147 & 7 & 0.1156 & \\
 $$\text{Parallelism: }\quad 1 - \frac{depth}{\# gates}$$
 
 \subsection{Routing comparison}
-\label{sec:org7467cd2}
+\label{sec:orgb5b8532}
 
 \subsubsection{No initial placement}
-\label{sec:orga8c19fa}
+\label{sec:orgeb59208}
 
 \begin{minipage}[t]{.45\textwidth}
 
@@ -196,7 +196,7 @@ $$\text{Parallelism: }\quad 1 - \frac{depth}{\# gates}$$
 
 
 \subsubsection{With initial placement}
-\label{sec:org3297280}
+\label{sec:org52df117}
 
 \begin{minipage}[t]{.45\textwidth}
 
@@ -272,10 +272,10 @@ $$\text{Parallelism: }\quad 1 - \frac{depth}{\# gates}$$
 \end{minipage}
 
 \section{1000 iterations}
-\label{sec:org571b118}
+\label{sec:org62bb2ea}
 
 \begin{table}[htbp]
-\caption{\label{tab:orgf684c95}
+\caption{\label{tab:org57e17a8}
 Step 1 results after 1000 iterations}
 \centering
 \begin{tabular}{llrrrrrr}
@@ -295,10 +295,10 @@ base & Yes & 3000 & 3000 & 0.03 & 0.9509 & 0.9459456 & 780\\
 \end{table}
 
 \section{10000 iterations}
-\label{sec:org5a664e7}
+\label{sec:org347a74d}
 
 \begin{table}[htbp]
-\caption{\label{tab:orgb0e6cfd}
+\caption{\label{tab:orgc4ac2e8}
 Step 1 results after 10000 iterations}
 \centering
 \begin{tabular}{llrrrrrr}
@@ -311,9 +311,81 @@ minextendrc & No & 3000 & 3000 & 0.03 & 0.9372 & 0.937136544 & 1582\\
 minextendrc & Yes & 3000 & 3000 & 0.03 & 0.9435 & 0.951650597 & 1038\\
 minextend & No & 3000 & 3000 & 0.03 & 0.9519 & 0.93665818 & 1264\\
 minextend & Yes & 3000 & 3000 & 0.03 & 0.9556 & 0.954629151 & 834\\
+base & no & 3000 & 3000 & 0.03 & 0.9417 & 0.9156453 & 1062\\
+base & yes & 3000 & 3000 & 0.03 & 0.953 & 0.95037428 & 780\\
 \hline
 \end{tabular}
 \end{table}
+
+\subsection{Conclusions}
+\label{sec:org2363ddb}
+
+
+\subsubsection{Probability of success}
+\label{sec:org3ccb5e4}
+\begin{center}
+\label{tab:orgb3f8321}
+\begin{tabular}{llrrrrr}
+\hline
+Mapper & Init. place & 100 it. & 1000 it. & 10000 it. & Diff 100-1000 & Diff 1000-10000\\
+\hline
+No & No & 0.99 & 0.96 & 0.961 & -0.0300 & 0.0010\\
+\hline
+minextendrc & No & 0.96 & 0.929 & 0.9372 & -0.0310 & 0.0082\\
+minextendrc & Yes & 0.98 & 0.939 & 0.9435 & -0.0410 & 0.0045\\
+minextend & No & 0.98 & 0.947 & 0.9519 & -0.0330 & 0.0049\\
+minextend & Yes & 0.98 & 0.949 & 0.9556 & -0.0310 & 0.0066\\
+base & No & 0.97 & 0.932 & 0.9417 & -0.0380 & 0.0097\\
+base & Yes & 0.98 & 0.9509 & 0.953 & -0.0291 & 0.0021\\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{rr}
+\hline
+Iterations comparison & Mean diff\\
+\hline
+100-1000 & -0.0333\\
+1000-10000 & 0.0053\\
+\hline
+\end{tabular}
+\end{center}
+
+
+
+
+\subsubsection{Fidelity}
+\label{sec:org65fff6c}
+
+\begin{center}
+\label{tab:org67d7329}
+\begin{tabular}{llrrrrr}
+\hline
+Mapper & Init. place & 100 it. & 1000 it. & 10000 it. & Diff 100-1000 & Diff 1000-10000\\
+\hline
+No & No & 0.98879 & 0.97823066 & 0.980342528 & -0.0106 & 0.0021\\
+\hline
+minextendrc & No & 0.9404637 & 0.92937318 & 0.937136544 & -0.0111 & 0.0078\\
+minextendrc & Yes & 0.9675513 & 0.94685216 & 0.951650597 & -0.0207 & 0.0048\\
+minextend & No & 0.944128 & 0.9312172 & 0.93665818 & -0.0129 & 0.0054\\
+minextend & Yes & 0.9585909 & 0.94748374 & 0.954629151 & -0.0111 & 0.0071\\
+base & No & 0.92331 & 0.906571 & 0.9156453 & -0.0167 & 0.0091\\
+base & Yes & 0.9568084 & 0.9459456 & 0.95037428 & -0.0109 & 0.0044\\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{rr}
+\hline
+Iterations comparison & Mean diff\\
+\hline
+100-1000 & -0.0134\\
+1000-10000 & 0.0058\\
+\hline
+\end{tabular}
+\end{center}
 
 
 
@@ -321,5 +393,5 @@ minextend & Yes & 3000 & 3000 & 0.03 & 0.9556 & 0.954629151 & 834\\
 
 
 \section{Simplest benchmarks results}
-\label{sec:org9fb7674}
+\label{sec:org1303eda}
 \end{document}
