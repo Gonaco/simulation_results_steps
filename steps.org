@@ -291,9 +291,13 @@ Even though it is soon to set general conclusions, we can observe some interesti
 
 
 *** Probability of success
+
+#+caption: Probability of success difference between the number of iterations
+#+NAME: tab:it_diff_ps
+#+ATTR_LATEX: :booktabs :environment 
 #+TBLNAME: ps
 |-------------+-------------+---------+----------+-----------+---------------+-----------------|
-| Mapper      | Init. place | 100 it. | 1000 it. | 10000 it. | Diff 100-1000 | Diff 1000-10000 |
+| Mapper      | Init. place | 100 it. | 1000 it. | 10000 it. | Diff 1000-100 | Diff 10000-1000 |
 |-------------+-------------+---------+----------+-----------+---------------+-----------------|
 | No          | No          |    0.99 |     0.96 |     0.961 |       -0.0300 |          0.0010 |
 |-------------+-------------+---------+----------+-----------+---------------+-----------------|
@@ -307,11 +311,14 @@ Even though it is soon to set general conclusions, we can observe some interesti
 #+TBLFM: $6=$4-$3;%0.4f
 #+TBLFM: $7=$5-$4;%0.4f
 
+#+caption: Mean value of the probability of success difference between number of iterations
+#+NAME: tab:mean_diff_ps
+#+ATTR_LATEX: :booktabs :environment 
 |-----------------------+-----------|
 | Iterations comparison | Mean diff |
 |-----------------------+-----------|
-|              100-1000 |   -0.0333 |
-|            1000-10000 |    0.0053 |
+|              1000-100 |   -0.0333 |
+|            10000-1000 |    0.0053 |
 |-----------------------+-----------|
 #+TBLFM: @2$2=vmean(remote(ps,@2$6..@8$6));%0.4f
 #+TBLFM: @3$2=vmean(remote(ps,@2$7..@8$7));%0.4f
@@ -321,9 +328,12 @@ Even though it is soon to set general conclusions, we can observe some interesti
 
 *** Fidelity
 
+#+caption: Fidelity difference between the number of iterations
+#+NAME: tab:it_diff_ps
+#+ATTR_LATEX: :booktabs :environment 
 #+TBLNAME: f
 |-------------+-------------+-----------+------------+-------------+---------------+-----------------|
-| Mapper      | Init. place |   100 it. |   1000 it. |   10000 it. | Diff 100-1000 | Diff 1000-10000 |
+| Mapper      | Init. place |   100 it. |   1000 it. |   10000 it. | Diff 1000-100  | Diff 10000-1000  |
 |-------------+-------------+-----------+------------+-------------+---------------+-----------------|
 | No          | No          |   0.98879 | 0.97823066 | 0.980342528 |       -0.0106 |          0.0021 |
 |-------------+-------------+-----------+------------+-------------+---------------+-----------------|
@@ -337,11 +347,14 @@ Even though it is soon to set general conclusions, we can observe some interesti
 #+TBLFM: $6=$4-$3;%0.4f      
 #+TBLFM: $7=$5-$4;%0.4f      
 
+#+caption: Mean value of the fidelity difference between number of iterations
+#+NAME: tab:mean_diff_ps
+#+ATTR_LATEX: :booktabs :environment 
 |-----------------------+-----------|
 | Iterations comparison | Mean diff |
 |-----------------------+-----------|
-|              100-1000 |   -0.0134 |
-|            1000-10000 |    0.0058 |
+|              1000-100 |   -0.0134 |
+|            10000-1000 |    0.0058 |
 |-----------------------+-----------|
 #+TBLFM: @2$2=vmean(remote(f,@2$6..@8$6));%0.4f
 #+TBLFM: @3$2=vmean(remote(f,@2$7..@8$7));%0.4f

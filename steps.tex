@@ -1,4 +1,4 @@
-% Created 2018-11-27 Tue 12:46
+% Created 2018-11-27 Tue 13:31
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -37,10 +37,10 @@
 
 
 \section{First Step}
-\label{sec:org3329b1f}
+\label{sec:org327dee3}
 
 \begin{table}[htbp]
-\caption{\label{tab:orge36774e}
+\caption{\label{tab:orgb211fd1}
 Benchmark used}
 \centering
 \begin{tabular}{lrrr}
@@ -53,7 +53,7 @@ Benchmark & \# qubits & \# gates & two-qubit gates (\%)\\
 \end{table}
 
 \begin{table}[htbp]
-\caption{\label{tab:org0832cb3}
+\caption{\label{tab:orgfe9064e}
 Step 1 results after 100 iterations}
 \centering
 \begin{tabular}{llrrrrrr}
@@ -73,7 +73,7 @@ base & Yes & 3000 & 3000 & 0.03 & 0.98 & 0.9568084 & 780\\
 \end{table}
 
 \begin{table}[htbp]
-\caption{\label{tab:org81438f3}
+\caption{\label{tab:orgcef4d35}
 Other mapper statistics}
 \centering
 \small
@@ -97,10 +97,10 @@ base & Yes & 6 & 130 & 147 & 7 & 0.1156 & \\
 $$\text{Parallelism: }\quad 1 - \frac{depth}{\# gates}$$
 
 \subsection{Routing comparison}
-\label{sec:orgfe6f680}
+\label{sec:org9870ac0}
 
 \subsubsection{No initial placement}
-\label{sec:orga21698b}
+\label{sec:org7f1a62a}
 
 \begin{minipage}[t]{.45\textwidth}
 
@@ -196,7 +196,7 @@ $$\text{Parallelism: }\quad 1 - \frac{depth}{\# gates}$$
 
 
 \subsubsection{With initial placement}
-\label{sec:orga5c5700}
+\label{sec:orge519170}
 
 \begin{minipage}[t]{.45\textwidth}
 
@@ -272,10 +272,10 @@ $$\text{Parallelism: }\quad 1 - \frac{depth}{\# gates}$$
 \end{minipage}
 
 \section{1000 iterations}
-\label{sec:org0e5fe29}
+\label{sec:orgf2ed333}
 
 \begin{table}[htbp]
-\caption{\label{tab:org78b5db3}
+\caption{\label{tab:orga207da9}
 Step 1 results after 1000 iterations}
 \centering
 \begin{tabular}{llrrrrrr}
@@ -295,10 +295,10 @@ base & Yes & 3000 & 3000 & 0.03 & 0.9509 & 0.9459456 & 780\\
 \end{table}
 
 \section{10000 iterations}
-\label{sec:orgf0ba29c}
+\label{sec:org4a91d46}
 
 \begin{table}[htbp]
-\caption{\label{tab:orga17cadd}
+\caption{\label{tab:orgd1a6eb8}
 Step 1 results after 10000 iterations}
 \centering
 \begin{tabular}{llrrrrrr}
@@ -318,16 +318,19 @@ base & yes & 3000 & 3000 & 0.03 & 0.953 & 0.95037428 & 780\\
 \end{table}
 
 \subsection{Conclusions}
-\label{sec:org114b953}
+\label{sec:org5be5f34}
 
 
 \subsubsection{Probability of success}
-\label{sec:org719c604}
-\begin{center}
-\label{tab:org9ab08c8}
+\label{sec:org93f01e6}
+
+\begin{table}[htbp]
+\caption{\label{tab:org5bf8859}
+Probability of success difference between the number of iterations}
+\centering
 \begin{tabular}{llrrrrr}
 \hline
-Mapper & Init. place & 100 it. & 1000 it. & 10000 it. & Diff 100-1000 & Diff 1000-10000\\
+Mapper & Init. place & 100 it. & 1000 it. & 10000 it. & Diff 1000-100 & Diff 10000-1000\\
 \hline
 No & No & 0.99 & 0.96 & 0.961 & -0.0300 & 0.0010\\
 \hline
@@ -339,30 +342,35 @@ base & No & 0.97 & 0.932 & 0.9417 & -0.0380 & 0.0097\\
 base & Yes & 0.98 & 0.9509 & 0.953 & -0.0291 & 0.0021\\
 \hline
 \end{tabular}
-\end{center}
+\end{table}
 
-\begin{center}
+\begin{table}[htbp]
+\caption{\label{tab:org5ab829c}
+Mean value of the probability of success difference between number of iterations}
+\centering
 \begin{tabular}{rr}
 \hline
 Iterations comparison & Mean diff\\
 \hline
-100-1000 & -0.0333\\
-1000-10000 & 0.0053\\
+1000-100 & -0.0333\\
+10000-1000 & 0.0053\\
 \hline
 \end{tabular}
-\end{center}
+\end{table}
 
 
 
 
 \subsubsection{Fidelity}
-\label{sec:org6aa0b9b}
+\label{sec:org20af865}
 
-\begin{center}
-\label{tab:org67bf0b2}
+\begin{table}[htbp]
+\caption{\label{tab:org41e025f}
+Fidelity difference between the number of iterations}
+\centering
 \begin{tabular}{llrrrrr}
 \hline
-Mapper & Init. place & 100 it. & 1000 it. & 10000 it. & Diff 100-1000 & Diff 1000-10000\\
+Mapper & Init. place & 100 it. & 1000 it. & 10000 it. & Diff 1000-100 & Diff 10000-1000\\
 \hline
 No & No & 0.98879 & 0.97823066 & 0.980342528 & -0.0106 & 0.0021\\
 \hline
@@ -374,18 +382,21 @@ base & No & 0.92331 & 0.906571 & 0.9156453 & -0.0167 & 0.0091\\
 base & Yes & 0.9568084 & 0.9459456 & 0.95037428 & -0.0109 & 0.0044\\
 \hline
 \end{tabular}
-\end{center}
+\end{table}
 
-\begin{center}
+\begin{table}[htbp]
+\caption{\label{tab:orgde69669}
+Mean value of the fidelity difference between number of iterations}
+\centering
 \begin{tabular}{rr}
 \hline
 Iterations comparison & Mean diff\\
 \hline
-100-1000 & -0.0134\\
-1000-10000 & 0.0058\\
+1000-100 & -0.0134\\
+10000-1000 & 0.0058\\
 \hline
 \end{tabular}
-\end{center}
+\end{table}
 
 
 
@@ -393,29 +404,29 @@ Iterations comparison & Mean diff\\
 
 
 \section{Simplest benchmarks results}
-\label{sec:org02cc075}
+\label{sec:orgfc80f87}
 
 \subsection{4gt11\(_{\text{82}}\)}
-\label{sec:org271d107}
+\label{sec:org2102fc5}
 
 \subsection{4gt12-v1\(_{\text{89}}\)}
-\label{sec:org76b843a}
+\label{sec:org4b9e2ee}
 
 \subsection{4gt4-v0\(_{\text{72}}\)}
-\label{sec:org763100d}
+\label{sec:org2e754e1}
 
 \subsection{4mod5-bdd\(_{\text{287}}\)}
-\label{sec:org3bd433f}
+\label{sec:org8a2f23a}
 
 \subsection{4mod5-v0\(_{\text{20}}\)}
-\label{sec:org32301dd}
+\label{sec:org8706549}
 
 \subsection{sqrt8\(_{\text{260}}\)}
-\label{sec:org0a244aa}
+\label{sec:orgfcc052d}
 
 \subsection{grover\(_{\text{orcl}}\)\(_{\text{toff}}\)}
-\label{sec:orgdc66c73}
+\label{sec:orgbed49c0}
 
 \subsection{shor\(_{\text{15}}\)}
-\label{sec:org15de05c}
+\label{sec:org3ccde47}
 \end{document}
