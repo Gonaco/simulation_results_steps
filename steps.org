@@ -352,3 +352,19 @@ Even though it is soon to set general conclusions, we can observe some interesti
 
 
 * Simplest benchmarks results
+
+** 4gt11_82
+
+** 4gt12-v1_89
+
+** 4gt4-v0_72
+
+** 4mod5-bdd_287
+
+** 4mod5-v0_20
+
+** sqrt8_260
+
+** grover_orcl_toff
+
+** shor_15
