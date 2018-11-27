@@ -11,7 +11,7 @@
 
 #+caption: Benchmark used
 #+NAME: tab:bench1
-#+ATTR_LATEX: :booktabs :environment
+#+ATTR_LATEX: :booktabs :environment :placement [!htpb]
 |-----------+----------+---------+---------------------|
 | Benchmark | # qubits | # gates | two-qubit gates (%) |
 |-----------+----------+---------+---------------------|
@@ -20,7 +20,7 @@
 
 #+caption: Step 1 results after 100 iterations
 #+NAME: tab:step1
-#+ATTR_LATEX: :booktabs :environment
+#+ATTR_LATEX: :booktabs :environment :placement [!htpb]
 |-------------+-------------+-------+-------+------------+------------+-----------+-------|
 | Mapper      | Init. place | $t_1$ | $t_2$ | meas. err. | p. success |       $f$ | $V_Q$ |
 |-------------+-------------+-------+-------+------------+------------+-----------+-------|
@@ -36,7 +36,7 @@
 
 #+caption: Other mapper statistics
 #+NAME: tab:step1_other
-#+ATTR_LATEX: :booktabs :environment :font \small
+#+ATTR_LATEX: :booktabs :environment :placement [!htpb] :font \small
 |-------------+-------------+----------+-------+---------+---------+-------------+--------------------|
 | Mapper      | Init. place | # qubits | depth | # gates | # SWAPS | Parallelism | # meet. in between |
 |-------------+-------------+----------+-------+---------+---------+-------------+--------------------|
@@ -251,7 +251,7 @@ Even though it is soon to set general conclusions, we can observe some interesti
 
 #+caption: Step 1 results after 1000 iterations
 #+NAME: tab:step1000
-#+ATTR_LATEX: :booktabs :environment
+#+ATTR_LATEX: :booktabs :environment :placement [H]
 |-------------+-------------+-------+-------+------------+------------+------------+-------|
 | Mapper      | Init. place | $t_1$ | $t_2$ | meas. err. | p. success |        $f$ | $V_Q$ |
 |-------------+-------------+-------+-------+------------+------------+------------+-------|
@@ -273,7 +273,7 @@ Even though it is soon to set general conclusions, we can observe some interesti
 
 #+caption: Step 1 results after 10000 iterations
 #+NAME: tab:step10000
-#+ATTR_LATEX: :booktabs :environment
+#+ATTR_LATEX: :booktabs :environment :placement [H]
 |-------------+-------------+-------+-------+------------+------------+-------------+-------|
 | Mapper      | Init. place | $t_1$ | $t_2$ | meas. err. | p. success |         $f$ | $V_Q$ |
 |-------------+-------------+-------+-------+------------+------------+-------------+-------|
@@ -294,7 +294,7 @@ Even though it is soon to set general conclusions, we can observe some interesti
 
 #+caption: Probability of success difference between the number of iterations
 #+NAME: tab:it_diff_ps
-#+ATTR_LATEX: :booktabs :environment 
+#+ATTR_LATEX: :booktabs :environment :placement [H]
 #+TBLNAME: ps
 |-------------+-------------+---------+----------+-----------+---------------+-----------------|
 | Mapper      | Init. place | 100 it. | 1000 it. | 10000 it. | Diff 1000-100 | Diff 10000-1000 |
@@ -313,7 +313,7 @@ Even though it is soon to set general conclusions, we can observe some interesti
 
 #+caption: Mean value of the probability of success difference between number of iterations
 #+NAME: tab:mean_diff_ps
-#+ATTR_LATEX: :booktabs :environment 
+#+ATTR_LATEX: :booktabs :environment :placement [!htpb]
 |-----------------------+-----------|
 | Iterations comparison | Mean diff |
 |-----------------------+-----------|
@@ -329,8 +329,8 @@ Even though it is soon to set general conclusions, we can observe some interesti
 *** Fidelity
 
 #+caption: Fidelity difference between the number of iterations
-#+NAME: tab:it_diff_ps
-#+ATTR_LATEX: :booktabs :environment 
+#+NAME: tab:it_diff_f
+#+ATTR_LATEX: :booktabs :environment :placement [!htpb]
 #+TBLNAME: f
 |-------------+-------------+-----------+------------+-------------+---------------+-----------------|
 | Mapper      | Init. place |   100 it. |   1000 it. |   10000 it. | Diff 1000-100  | Diff 10000-1000  |
@@ -348,8 +348,8 @@ Even though it is soon to set general conclusions, we can observe some interesti
 #+TBLFM: $7=$5-$4;%0.4f      
 
 #+caption: Mean value of the fidelity difference between number of iterations
-#+NAME: tab:mean_diff_ps
-#+ATTR_LATEX: :booktabs :environment 
+#+NAME: tab:mean_diff_f
+#+ATTR_LATEX: :booktabs :environment :placement [!htpb]
 |-----------------------+-----------|
 | Iterations comparison | Mean diff |
 |-----------------------+-----------|

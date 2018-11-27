@@ -1,4 +1,4 @@
-% Created 2018-11-27 Tue 13:31
+% Created 2018-11-27 Tue 13:39
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -37,10 +37,10 @@
 
 
 \section{First Step}
-\label{sec:org327dee3}
+\label{sec:org1e7d236}
 
-\begin{table}[htbp]
-\caption{\label{tab:orgb211fd1}
+\begin{table}[!htpb]
+\caption{\label{tab:org57f534c}
 Benchmark used}
 \centering
 \begin{tabular}{lrrr}
@@ -52,8 +52,8 @@ Benchmark & \# qubits & \# gates & two-qubit gates (\%)\\
 \end{tabular}
 \end{table}
 
-\begin{table}[htbp]
-\caption{\label{tab:orgfe9064e}
+\begin{table}[!htpb]
+\caption{\label{tab:orgce398f0}
 Step 1 results after 100 iterations}
 \centering
 \begin{tabular}{llrrrrrr}
@@ -72,8 +72,8 @@ base & Yes & 3000 & 3000 & 0.03 & 0.98 & 0.9568084 & 780\\
 \end{tabular}
 \end{table}
 
-\begin{table}[htbp]
-\caption{\label{tab:orgcef4d35}
+\begin{table}[!htpb]
+\caption{\label{tab:org83ebc54}
 Other mapper statistics}
 \centering
 \small
@@ -97,10 +97,10 @@ base & Yes & 6 & 130 & 147 & 7 & 0.1156 & \\
 $$\text{Parallelism: }\quad 1 - \frac{depth}{\# gates}$$
 
 \subsection{Routing comparison}
-\label{sec:org9870ac0}
+\label{sec:orgf89afed}
 
 \subsubsection{No initial placement}
-\label{sec:org7f1a62a}
+\label{sec:orgcbf208e}
 
 \begin{minipage}[t]{.45\textwidth}
 
@@ -196,7 +196,7 @@ $$\text{Parallelism: }\quad 1 - \frac{depth}{\# gates}$$
 
 
 \subsubsection{With initial placement}
-\label{sec:orge519170}
+\label{sec:orga55d5ac}
 
 \begin{minipage}[t]{.45\textwidth}
 
@@ -272,10 +272,10 @@ $$\text{Parallelism: }\quad 1 - \frac{depth}{\# gates}$$
 \end{minipage}
 
 \section{1000 iterations}
-\label{sec:orgf2ed333}
+\label{sec:org3246d5e}
 
-\begin{table}[htbp]
-\caption{\label{tab:orga207da9}
+\begin{table}[H]
+\caption{\label{tab:orgd523ae9}
 Step 1 results after 1000 iterations}
 \centering
 \begin{tabular}{llrrrrrr}
@@ -295,10 +295,10 @@ base & Yes & 3000 & 3000 & 0.03 & 0.9509 & 0.9459456 & 780\\
 \end{table}
 
 \section{10000 iterations}
-\label{sec:org4a91d46}
+\label{sec:org55036c0}
 
-\begin{table}[htbp]
-\caption{\label{tab:orgd1a6eb8}
+\begin{table}[H]
+\caption{\label{tab:orgd006d11}
 Step 1 results after 10000 iterations}
 \centering
 \begin{tabular}{llrrrrrr}
@@ -318,14 +318,14 @@ base & yes & 3000 & 3000 & 0.03 & 0.953 & 0.95037428 & 780\\
 \end{table}
 
 \subsection{Conclusions}
-\label{sec:org5be5f34}
+\label{sec:orgbe8e087}
 
 
 \subsubsection{Probability of success}
-\label{sec:org93f01e6}
+\label{sec:orgdd0a648}
 
-\begin{table}[htbp]
-\caption{\label{tab:org5bf8859}
+\begin{table}[H]
+\caption{\label{tab:org7860c95}
 Probability of success difference between the number of iterations}
 \centering
 \begin{tabular}{llrrrrr}
@@ -344,8 +344,8 @@ base & Yes & 0.98 & 0.9509 & 0.953 & -0.0291 & 0.0021\\
 \end{tabular}
 \end{table}
 
-\begin{table}[htbp]
-\caption{\label{tab:org5ab829c}
+\begin{table}[!htpb]
+\caption{\label{tab:org8018564}
 Mean value of the probability of success difference between number of iterations}
 \centering
 \begin{tabular}{rr}
@@ -362,10 +362,10 @@ Iterations comparison & Mean diff\\
 
 
 \subsubsection{Fidelity}
-\label{sec:org20af865}
+\label{sec:org8466184}
 
-\begin{table}[htbp]
-\caption{\label{tab:org41e025f}
+\begin{table}[!htpb]
+\caption{\label{tab:org72083c8}
 Fidelity difference between the number of iterations}
 \centering
 \begin{tabular}{llrrrrr}
@@ -384,8 +384,8 @@ base & Yes & 0.9568084 & 0.9459456 & 0.95037428 & -0.0109 & 0.0044\\
 \end{tabular}
 \end{table}
 
-\begin{table}[htbp]
-\caption{\label{tab:orgde69669}
+\begin{table}[!htpb]
+\caption{\label{tab:org57297e4}
 Mean value of the fidelity difference between number of iterations}
 \centering
 \begin{tabular}{rr}
@@ -404,29 +404,29 @@ Iterations comparison & Mean diff\\
 
 
 \section{Simplest benchmarks results}
-\label{sec:orgfc80f87}
+\label{sec:orgb2757a6}
 
 \subsection{4gt11\(_{\text{82}}\)}
-\label{sec:org2102fc5}
+\label{sec:org0335f0b}
 
 \subsection{4gt12-v1\(_{\text{89}}\)}
-\label{sec:org4b9e2ee}
+\label{sec:org4289702}
 
 \subsection{4gt4-v0\(_{\text{72}}\)}
-\label{sec:org2e754e1}
+\label{sec:org1451c28}
 
 \subsection{4mod5-bdd\(_{\text{287}}\)}
-\label{sec:org8a2f23a}
+\label{sec:orgc6072e7}
 
 \subsection{4mod5-v0\(_{\text{20}}\)}
-\label{sec:org8706549}
+\label{sec:orge260654}
 
 \subsection{sqrt8\(_{\text{260}}\)}
-\label{sec:orgfcc052d}
+\label{sec:orgf461109}
 
 \subsection{grover\(_{\text{orcl}}\)\(_{\text{toff}}\)}
-\label{sec:orgbed49c0}
+\label{sec:orgabecdca}
 
 \subsection{shor\(_{\text{15}}\)}
-\label{sec:org3ccde47}
+\label{sec:org3ba8c5a}
 \end{document}
