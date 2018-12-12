@@ -4,7 +4,7 @@
 #+LATEX_HEADER: \usepackage{geometry}
 #+LATEX_HEADER: \geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
 
-#+OPTIONS: toc:nil
+#+OPTIONS: toc:nil tasks:nil
 
 
 * First Step
@@ -327,7 +327,7 @@ Even though it is soon to set general conclusions, we can observe some interesti
 
 #+caption: Fidelity difference between the number of iterations
 #+NAME: tab:it_diff_f
-#+ATTR_LATEX: :booktabs :environment :placement [!htpb]
+#+ATTR_LATEX: :booktabs :environment :placement [H]
 #+TBLNAME: f
 |-------------+-------------+-----------+------------+-------------+---------------+-----------------|
 | Mapper      | Init. place |   100 it. |   1000 it. |   10000 it. | Diff 1000-100  | Diff 10000-1000  |
@@ -386,8 +386,8 @@ Even though it is soon to set general conclusions, we can observe some interesti
 |-------------+-------------+-------+-------+------------+------------+------------+-------|
 | no          | no          |  3000 |  3000 |      0.005 |      0.768 | 0.66623522 |  2496 |
 |-------------+-------------+-------+-------+------------+------------+------------+-------|
-| minextendrc | no          |  3000 |  3000 |      0.005 |      0.562 | 0.44841106 | 10548 |
-| minextend   | no          |  3000 |  3000 |      0.005 |      0.601 | 0.40972458 |  9072 |
+| minextendrc | no          |  3000 |  3000 |      0.005 |      0.562 | *0.44841106* | 10548 |
+| minextend   | no          |  3000 |  3000 |      0.005 |      *0.601* | 0.40972458 |  9072 |
 | base        | no          |  3000 |  3000 |      0.005 |      0.517 |  0.3581228 |  6414 |
 |-------------+-------------+-------+-------+------------+------------+------------+-------|
 
@@ -399,8 +399,8 @@ Even though it is soon to set general conclusions, we can observe some interesti
 |-------------+-------------+----------+-------+---------+---------|
 | no          | no          |        6 |   416 |     658 |       0 |
 |-------------+-------------+----------+-------+---------+---------|
-| minextendrc | no          |        9 |  1172 |    1360 |      78 |
-| minextend   | no          |        9 |  1008 |    1549 |      99 |
+| minextendrc | no          |        9 |  1172 |    *1360* |      *78* |
+| minextend   | no          |        9 |  *1008* |    1549 |      99 |
 | base        | no          |        6 |  1069 |    1423 |      85 |
 |-------------+-------------+----------+-------+---------+---------|
 
@@ -414,9 +414,9 @@ Even though it is soon to set general conclusions, we can observe some interesti
 |-------------+-------------+-------+-------+------------+------------+------------+-------|
 | no          | no          |  3000 |  3000 |      0.005 |      0.786 | 0.68007548 |  2652 |
 |-------------+-------------+-------+-------+------------+------------+------------+-------|
-| minextendrc | no          |  3000 |  3000 |      0.005 |      0.452 | 0.37749204 | 12168 |
+| minextendrc | no          |  3000 |  3000 |      0.005 |      0.452 | *0.37749204* | 12168 |
 | minextend   | no          |  3000 |  3000 |      0.005 |      0.498 | 0.34067243 |  7704 |
-| base        | no          |  3000 |  3000 |      0.005 |      0.532 | 0.35703954 |  6336 |
+| base        | no          |  3000 |  3000 |      0.005 |      *0.532* | 0.35703954 |  6336 |
 |-------------+-------------+-------+-------+------------+------------+------------+-------|
 
 #+caption: Other mapper statistics
@@ -428,8 +428,8 @@ Even though it is soon to set general conclusions, we can observe some interesti
 | no          | no          |        6 |   442 |     746 |       0 |
 |-------------+-------------+----------+-------+---------+---------|
 | minextendrc | no          |        9 |  1352 |    1592 |      94 |
-| minextend   | no          |        8 |   963 |    1736 |     110 |
-| base        | no          |        6 |  1056 |    1547 |      89 |
+| minextend   | no          |        8 |   *963* |    1736 |     110 |
+| base        | no          |        6 |  1056 |    *1547* |      *89* |
 |-------------+-------------+----------+-------+---------+---------|
 
 ** 4mod5-bdd_287
@@ -442,7 +442,7 @@ Even though it is soon to set general conclusions, we can observe some interesti
 | no          | no          |  3000 |  3000 |      0.005 |      0.916 | 0.87474237 |  1029 |
 |-------------+-------------+-------+-------+------------+------------+------------+-------|
 | minextendrc | no          |  3000 |  3000 |      0.005 |      0.753 | 0.65935538 |  3924 |
-| minextend   | no          |  3000 |  3000 |      0.005 |      0.798 | 0.69281491 |  2988 |
+| minextend   | no          |  3000 |  3000 |      0.005 |      *0.798* | *0.69281491* |  2988 |
 | base        | no          |  3000 |  3000 |      0.005 |      0.776 | 0.67942877 |  2338 |
 |-------------+-------------+-------+-------+------------+------------+------------+-------|
 
@@ -456,8 +456,8 @@ Even though it is soon to set general conclusions, we can observe some interesti
 | no          | no          |        7 |   147 |     203 |       0 |
 |-------------+-------------+----------+-------+---------+---------|
 | minextendrc | no          |        9 |   436 |     500 |      33 |
-| minextend   | no          |        9 |   332 |     500 |      33 |
-| base        | no          |        7 |   334 |     419 |      24 |
+| minextend   | no          |        9 |   *332* |     500 |      33 |
+| base        | no          |        7 |   334 |     *419* |      *24* |
 |-------------+-------------+----------+-------+---------+---------|
 
 ** 4mod5-v0_20
@@ -469,7 +469,7 @@ Even though it is soon to set general conclusions, we can observe some interesti
 |-------------+-------------+-------+-------+------------+------------+------------+-------|
 | no          | no          |  3000 |  3000 |      0.005 |      0.985 | 0.97145968 |   265 |
 |-------------+-------------+-------+-------+------------+------------+------------+-------|
-| minextendrc | no          |  3000 |  3000 |      0.005 |      0.944 |  0.9092329 |  1251 |
+| minextendrc | no          |  3000 |  3000 |      0.005 |      *0.944* |  *0.9092329* |  1251 |
 | minextend   | no          |  3000 |  3000 |      0.005 |      0.938 | 0.88981602 |  1024 |
 |-------------+-------------+-------+-------+------------+------------+------------+-------|
 
@@ -481,10 +481,12 @@ Even though it is soon to set general conclusions, we can observe some interesti
 |-------------+-------------+----------+-------+---------+---------|
 | no          | no          |        5 |    53 |      61 |       0 |
 |-------------+-------------+----------+-------+---------+---------|
-| minextendrc | no          |        9 |   139 |     142 |       9 |
-| minextend   | no          |        8 |   128 |     160 |      11 |
+| minextendrc | no          |        9 |   139 |     *142* |       *9* |
+| minextend   | no          |        8 |   *128* |     160 |      11 |
 |-------------+-------------+----------+-------+---------+---------|
-** sqrt8_260
+** WAIT sqrt8_260
+- State "WAIT"       from "TODO"       [2018-12-12 Wed 13:03] \\
+  Waiting for the simulations to end
 #+caption: Results after 1000 iterations
 #+NAME: tab:sqrt8_260
 #+ATTR_LATEX: :booktabs :environment :placement [!htpb]
@@ -498,7 +500,9 @@ Even though it is soon to set general conclusions, we can observe some interesti
 |-------------+-------------+----------+-------+---------+---------+-------------+--------------------|
 | Mapper      | Init. place | # qubits | depth | # gates | # SWAPS | Parallelism | # meet. in between |
 |-------------+-------------+----------+-------+---------+---------+-------------+--------------------|
-** grover_orcl_toff
+** WAIT grover_orcl_toff
+- State "WAIT"       from              [2018-12-12 Wed 13:03] \\
+  Waiting for simulation to end
 #+caption: Results after 1000 iterations
 #+NAME: tab:grover_orcl_toff
 #+ATTR_LATEX: :booktabs :environment :placement [!htpb]
@@ -508,11 +512,13 @@ Even though it is soon to set general conclusions, we can observe some interesti
 
 #+caption: Other mapper statistics
 #+NAME: tab:grover_orcl_toff_other
-#ATTR_LATEX: :booktabs :environment :placement [!htpb] :font \small
+#+ATTR_LATEX: :booktabs :environment :placement [!htpb] :font \small
 |-------------+-------------+----------+-------+---------+---------+-------------+--------------------|
 | Mapper      | Init. place | # qubits | depth | # gates | # SWAPS | Parallelism | # meet. in between |
 |-------------+-------------+----------+-------+---------+---------+-------------+--------------------|
-** shor_15
+** WAIT shor_15
+- State "WAIT"       from              [2018-12-12 Wed 13:03] \\
+  Waiting for simulation to end
 #+caption: Results after 1000 iterations
 #+NAME: tab:shor_15
 #+ATTR_LATEX: :booktabs :environment :placement [!htpb]
@@ -522,7 +528,7 @@ Even though it is soon to set general conclusions, we can observe some interesti
 
 #+caption: Other mapper statistics
 #+NAME: tab:shor_15_other
-#ATTR_LATEX: :booktabs :environment :placement [!htpb] :font \small
+#+ATTR_LATEX: :booktabs :environment :placement [!htpb] :font \small
 |-------------+-------------+----------+-------+---------+---------+-------------+--------------------|
 | Mapper      | Init. place | # qubits | depth | # gates | # SWAPS | Parallelism | # meet. in between |
 |-------------+-------------+----------+-------+---------+---------+-------------+--------------------|
