@@ -248,7 +248,7 @@ Even though it is soon to set general conclusions, we can observe some interesti
 
 #+caption: Step 1 results after 1000 iterations
 #+NAME: tab:step1000
-#+ATTR_LATEX: :booktabs :environment :placement [H]
+#+ATTR_LATEX: :booktabs :environment :placement [H] 
 |-------------+-------------+-------+-------+------------+------------+------------+-------|
 | Mapper      | Init. place | $t_1$ | $t_2$ | meas. err. | p. success |        $f$ | $V_Q$ |
 |-------------+-------------+-------+-------+------------+------------+------------+-------|
@@ -394,7 +394,7 @@ Even though it is soon to set general conclusions, we can observe some interesti
 
 #+caption: Step 1 results after 1000 iterations
 #+NAME: tab:step1000
-#+ATTR_LATEX: :booktabs :environment :placement [H]
+#+ATTR_LATEX: :booktabs :environment :placement [H] :font \small
 |-------------+----------+-------+---------+---------+-------+-------+------------+------------+------------+-------|
 | Mapper      | # qubits | depth | # gates | # SWAPS | $t_1$ | $t_2$ | meas. err. | p. success |        $f$ | $V_Q$ |
 |-------------+----------+-------+---------+---------+-------+-------+------------+------------+------------+-------|
@@ -412,7 +412,7 @@ Even though it is soon to set general conclusions, we can observe some interesti
 
 #+caption: Results after 1000 iterations
 #+NAME: tab:4gt12-v1_89
-#+ATTR_LATEX: :booktabs :environment :placement [!htpb]
+#+ATTR_LATEX: :booktabs :environment :placement [H] :font \small
 |-------------+----------+-------+---------+---------+-------+-------+------------+------------+------------+-------|
 | Mapper      | # qubits | depth | # gates | # SWAPS | $t_1$ | $t_2$ | meas. err. | p. success |        $f$ | $V_Q$ |
 |-------------+----------+-------+---------+---------+-------+-------+------------+------------+------------+-------|
@@ -428,7 +428,7 @@ Even though it is soon to set general conclusions, we can observe some interesti
 
 #+caption: Results after 1000 iterations
 #+NAME: tab:4gt4-v0_72
-#+ATTR_LATEX: :booktabs :environment :placement [!htpb]
+#+ATTR_LATEX: :booktabs :environment :placement [H] :font \small
 |-------------+----------+-------+---------+---------+-------+-------+------------+------------+------------+-------|
 | Mapper      | # qubits | depth | # gates | # SWAPS | $t_1$ | $t_2$ | meas. err. | p. success |        $f$ | $V_Q$ |
 |-------------+----------+-------+---------+---------+-------+-------+------------+------------+------------+-------|
@@ -442,7 +442,7 @@ Even though it is soon to set general conclusions, we can observe some interesti
 ** 4mod5-bdd_287
 #+caption: Results after 1000 iterations
 #+NAME: tab:4mod5-bdd_287
-#+ATTR_LATEX: :booktabs :environment :placement [!htpb]
+#+ATTR_LATEX: :booktabs :environment :placement [H] :font \small
 |-------------+----------+-------+---------+---------+-------+-------+------------+------------+------------+-------|
 | Mapper      | # qubits | depth | # gates | # SWAPS | $t_1$ | $t_2$ | meas. err. | p. success |        $f$ | $V_Q$ |
 |-------------+----------+-------+---------+---------+-------+-------+------------+------------+------------+-------|
@@ -457,7 +457,7 @@ Even though it is soon to set general conclusions, we can observe some interesti
 ** 4mod5-v0_20
 #+caption: Results after 1000 iterations
 #+NAME: tab:4mod5-v0_20
-#+ATTR_LATEX: :booktabs :environment :placement [!htpb]
+#+ATTR_LATEX: :booktabs :environment :placement [H] :font \small
 |-------------+----------+-------+---------+---------+-------+-------+------------+------------+------------+-------|
 | Mapper      | # qubits | depth | # gates | # SWAPS | $t_1$ | $t_2$ | meas. err. | p. success |        $f$ | $V_Q$ |
 |-------------+----------+-------+---------+---------+-------+-------+------------+------------+------------+-------|
@@ -520,7 +520,7 @@ Even though it is soon to set general conclusions, we can observe some interesti
 
 #+caption: Results after 1000 iterations
 #+NAME: tab:alu_bdd_288
-#+ATTR_LATEX: :booktabs :environment :placement [!htpb]
+#+ATTR_LATEX: :booktabs :environment :placement [H] :font \small
 |-------------+----------+---------+---------+-------+-------+-------+------------+------------+------------+-------|
 | Mapper      | # qubits | # gates | # SWAPS | depth | $t_1$ | $t_2$ | meas. err. | p. success |        $f$ | $V_Q$ |
 |-------------+----------+---------+---------+-------+-------+-------+------------+------------+------------+-------|
@@ -534,7 +534,7 @@ Even though it is soon to set general conclusions, we can observe some interesti
 ** alu_v0_27           
 #+caption: Results after 1000 iterations
 #+NAME: tab:alu_v0_27           
-#+ATTR_LATEX: :booktabs :environment :placement [!htpb]
+#+ATTR_LATEX: :booktabs :environment :placement [H] :font \small
 |-------------+----------+---------+---------+-------+-------+-------+------------+------------+------------+-------|
 | Mapper      | # qubits | # gates | # SWAPS | depth | $t_1$ | $t_2$ | meas. err. | p. success |        $f$ | $V_Q$ |
 |-------------+----------+---------+---------+-------+-------+-------+------------+------------+------------+-------|
@@ -547,7 +547,7 @@ Even though it is soon to set general conclusions, we can observe some interesti
 ** decod24_bdd_294     
 #+caption: Results after 1000 iterations
 #+NAME: tab:decod24_bdd_294     
-#+ATTR_LATEX: :booktabs :environment :placement [!htpb]
+#+ATTR_LATEX: :booktabs :environment :placement [H] :font \small
 |-------------+----------+---------+---------+-------+-------+-------+------------+------------+------------+-------|
 | Mapper      | # qubits | # gates | # SWAPS | depth | $t_1$ | $t_2$ | meas. err. | p. success |        $f$ | $V_Q$ |
 |-------------+----------+---------+---------+-------+-------+-------+------------+------------+------------+-------|
@@ -560,7 +560,7 @@ Even though it is soon to set general conclusions, we can observe some interesti
 ** mod10_176           
 #+caption: Results after 1000 iterations
 #+NAME: tab:mod10_174
-#+ATTR_LATEX: :booktabs :environment :placement [!htpb]
+#+ATTR_LATEX: :booktabs :environment :placement [H] :font \small
 |-------------+----------+---------+---------+-------+-------+-------+------------+------------+------------+-------|
 | Mapper      | # qubits | # gates | # SWAPS | depth | $t_1$ | $t_2$ | meas. err. | p. success |        $f$ | $V_Q$ |
 |-------------+----------+---------+---------+-------+-------+-------+------------+------------+------------+-------|
@@ -573,7 +573,7 @@ Even though it is soon to set general conclusions, we can observe some interesti
 ** mod5adder_127
 #+caption: Results after 1000 iterations
 #+NAME: tab:mod5adder_127
-#+ATTR_LATEX: :booktabs :environment :placement [!htpb]
+#+ATTR_LATEX: :booktabs :environment :placement [H] :font \small
 |-------------+----------+---------+---------+-------+-------+-------+------------+------------+------------+-------|
 | Mapper      | # qubits | # gates | # SWAPS | depth | $t_1$ | $t_2$ | meas. err. | p. success |        $f$ | $V_Q$ |
 |-------------+----------+---------+---------+-------+-------+-------+------------+------------+------------+-------|
@@ -586,7 +586,7 @@ Even though it is soon to set general conclusions, we can observe some interesti
 ** mod5d1_63
 #+caption: Results after 1000 iterations
 #+NAME: tab:mod5d1_63
-#+ATTR_LATEX: :booktabs :environment :placement [!htpb]
+#+ATTR_LATEX: :booktabs :environment :placement [H] :font \small
 |-------------+----------+---------+---------+-------+-------+-------+------------+------------+------------+-------|
 | Mapper      | # qubits | # gates | # SWAPS | depth | $t_1$ | $t_2$ | meas. err. | p. success |        $f$ | $V_Q$ |
 |-------------+----------+---------+---------+-------+-------+-------+------------+------------+------------+-------|
@@ -599,7 +599,7 @@ Even though it is soon to set general conclusions, we can observe some interesti
 ** mod8_10_177
 #+caption: Results after 1000 iterations
 #+NAME: tab:mod8_10_177
-#+ATTR_LATEX: :booktabs :environment :placement [!htpb]
+#+ATTR_LATEX: :booktabs :environment :placement [H] :font \small
 |-------------+----------+---------+---------+-------+-------+-------+------------+------------+------------+-------|
 | Mapper      | # qubits | # gates | # SWAPS | depth | $t_1$ | $t_2$ | meas. err. | p. success |        $f$ | $V_Q$ |
 |-------------+----------+---------+---------+-------+-------+-------+------------+------------+------------+-------|
@@ -612,7 +612,7 @@ Even though it is soon to set general conclusions, we can observe some interesti
 ** one_two_three_v1_99
 #+caption: Results after 1000 iterations
 #+NAME: tab:one_two_three_v
-#+ATTR_LATEX: :booktabs :environment :placement [!htpb]
+#+ATTR_LATEX: :booktabs :environment :placement [H] :font \small
 |-------------+----------+---------+---------+-------+-------+-------+------------+------------+------------+-------|
 | Mapper      | # qubits | # gates | # SWAPS | depth | $t_1$ | $t_2$ | meas. err. | p. success |        $f$ | $V_Q$ |
 |-------------+----------+---------+---------+-------+-------+-------+------------+------------+------------+-------|
@@ -625,7 +625,7 @@ Even though it is soon to set general conclusions, we can observe some interesti
 ** one_two_three_v3_101
 #+caption: Results after 1000 iterations
 #+NAME: tab:one_two_three_v
-#+ATTR_LATEX: :booktabs :environment :placement [!htpb]
+#+ATTR_LATEX: :booktabs :environment :placement [H] :font \small
 |-------------+----------+---------+---------+-------+-------+-------+------------+------------+------------+-------|
 | Mapper      | # qubits | # gates | # SWAPS | depth | $t_1$ | $t_2$ | meas. err. | p. success |        $f$ | $V_Q$ |
 |-------------+----------+---------+---------+-------+-------+-------+------------+------------+------------+-------|
@@ -638,7 +638,7 @@ Even though it is soon to set general conclusions, we can observe some interesti
 ** rd32_v0_66
 #+caption: Results after 1000 iterations
 #+NAME: tab:rd32_v0_66
-#+ATTR_LATEX: :booktabs :environment :placement [!htpb]
+#+ATTR_LATEX: :booktabs :environment :placement [H] :font \small
 |-------------+----------+---------+---------+-------+-------+-------+------------+------------+------------+-------|
 | Mapper      | # qubits | # gates | # SWAPS | depth | $t_1$ | $t_2$ | meas. err. | p. success |        $f$ | $V_Q$ |
 |-------------+----------+---------+---------+-------+-------+-------+------------+------------+------------+-------|
@@ -651,7 +651,7 @@ Even though it is soon to set general conclusions, we can observe some interesti
 ** sf_274
 #+caption: Results after 1000 iterations
 #+NAME: tab:sf_274
-#+ATTR_LATEX: :booktabs :environment :placement [!htpb]
+#+ATTR_LATEX: :booktabs :environment :placement [H] :font \small
 |-------------+----------+---------+---------+-------+-------+-------+------------+------------+------------+-------|
 | Mapper      | # qubits | # gates | # SWAPS | depth | $t_1$ | $t_2$ | meas. err. | p. success |        $f$ | $V_Q$ |
 |-------------+----------+---------+---------+-------+-------+-------+------------+------------+------------+-------|
@@ -664,7 +664,7 @@ Even though it is soon to set general conclusions, we can observe some interesti
 ** sf_276
 #+caption: Results after 1000 iterations
 #+NAME: tab:sf_276
-#+ATTR_LATEX: :booktabs :environment :placement [!htpb]
+#+ATTR_LATEX: :booktabs :environment :placement [H] :font \small
 |-------------+----------+---------+---------+-------+-------+-------+------------+------------+------------+-------|
 | Mapper      | # qubits | # gates | # SWAPS | depth | $t_1$ | $t_2$ | meas. err. | p. success |        $f$ | $V_Q$ |
 |-------------+----------+---------+---------+-------+-------+-------+------------+------------+------------+-------|
@@ -677,7 +677,7 @@ Even though it is soon to set general conclusions, we can observe some interesti
 ** sym6_145
 #+caption: Results after 1000 iterations
 #+NAME: tab:sym6_145
-#+ATTR_LATEX: :booktabs :environment :placement [!htpb]
+#+ATTR_LATEX: :booktabs :environment :placement [H] :font \small
 |--------+----------+---------+---------+-------+-------+-------+------------+------------+------------+-------|
 | Mapper | # qubits | # gates | # SWAPS | depth | $t_1$ | $t_2$ | meas. err. | p. success |        $f$ | $V_Q$ |
 |--------+----------+---------+---------+-------+-------+-------+------------+------------+------------+-------|
