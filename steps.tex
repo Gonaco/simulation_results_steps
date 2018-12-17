@@ -1,4 +1,4 @@
-% Created 2018-12-12 Wed 13:29
+% Created 2018-12-17 Mon 12:34
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -36,396 +36,68 @@
 \maketitle
 
 
-\section{First Step}
-\label{sec:org554f0ff}
-
-\begin{table}[!htpb]
-\caption{\label{tab:orgeb4b20a}
-Benchmark used}
-\centering
-\begin{tabular}{lrrr}
-\hline
-Benchmark & \# qubits & \# gates & two-qubit gates (\%)\\
-\hline
-4gt11\(_{\text{82}}\) & 5 & 27 & 67\\
-\hline
-\end{tabular}
-\end{table}
-
-\begin{table}[!htpb]
-\caption{\label{tab:org3ef9da6}
-Step 1 results after 100 iterations}
-\centering
-\begin{tabular}{llrrrrrr}
-\hline
-Mapper & Init. place & \(t_1\) & \(t_2\) & meas. err. & p. success & \(f\) & \(V_Q\)\\
-\hline
-No & No & 3000 & 3000 & 0.03 & 0.99 & 0.98879 & 390\\
-\hline
-minextendrc & No & 3000 & 3000 & 0.03 & 0.96 & 0.9404637 & 1582\\
-minextendrc & Yes & 3000 & 3000 & 0.03 & 0.98 & 0.9675513 & 1038\\
-minextend & No & 3000 & 3000 & 0.03 & 0.98 & 0.944128 & 1264\\
-minextend & Yes & 3000 & 3000 & 0.03 & 0.98 & 0.9585909 & 834\\
-base & No & 3000 & 3000 & 0.03 & 0.97 & 0.92331 & 1062\\
-base & Yes & 3000 & 3000 & 0.03 & 0.98 & 0.9568084 & 780\\
-\hline
-\end{tabular}
-\end{table}
-
-\begin{table}[!htpb]
-\caption{\label{tab:org9582490}
-Other mapper statistics}
-\centering
-\small
-\begin{tabular}{llrrrrr}
-\hline
-Mapper & Init. place & \# qubits & depth & \# gates & \# SWAPS & \# meet. in between\\
-\hline
-No & No & 5 & 78 & 84 & 0 & 0\\
-\hline
-minextendrc & No & 7 & 226 & 237 & 17 & 3\\
-minextendrc & Yes & 6 & 173 & 174 & 10 & 2\\
-minextend & No & 8 & 158 & 228 & 16 & 1\\
-minextend & Yes & 6 & 139 & 165 & 9 & 0\\
-base & No & 6 & 177 & 228 & 16 & \\
-base & Yes & 6 & 130 & 147 & 7 & \\
-\hline
-\end{tabular}
-\end{table}
-
-
-\subsection{Routing comparison}
-\label{sec:org3dc5288}
-
-\subsubsection{No initial placement}
-\label{sec:org4954ec1}
-
-\begin{minipage}[t]{.45\textwidth}
-
-\uline{With Resource constraints}
-
-\begin{minted}[frame=lines,fontsize=\scriptsize,linenos,breaklines,breakanywhere]{shell}
-... the minimally extending path with swaps is: cycleExtend=10
-	path from source[1]=[2]
-	path from target[2]=[1->5] implying: swap(q1,q5)
-... the minimally extending path with swaps is: cycleExtend=9
-	path from source[1]=[3]
-	path from target[2]=[2->0] implying: swap(q2,q0)
-... the minimally extending path with swaps is: cycleExtend=20
-	path from source[3]=[4->7->5] implying: swap(q4,q7) swap(q7,q5)
-	path from target[3]=[3->0->2] implying: swap(q3,q0) swap(q0,q2)
-... the minimally extending path with swaps is: cycleExtend=9
-	path from source[1]=[0]
-	path from target[2]=[5->2] implying: swap(q5,q2)
-... the minimally extending path with swaps is: cycleExtend=12
-	path from source[2]=[7->5] implying: swap(q7,q5)
-	path from target[2]=[0->2] implying: swap(q0,q2)
-... the minimally extending path with swaps is: cycleExtend=9
-	path from source[1]=[5]
-	path from target[2]=[0->2] implying: swap(q0,q2)
-... the minimally extending path with swaps is: cycleExtend=9
-	path from source[1]=[5]
-	path from target[2]=[0->2] implying: swap(q0,q2)
-... the minimally extending path with swaps is: cycleExtend=10
-	path from source[1]=[0]
-	path from target[2]=[5->2] implying: swap(q5,q2)
-... the minimally extending path with swaps is: cycleExtend=13
-	path from source[2]=[0->2] implying: swap(q0,q2)
-	path from target[2]=[7->5] implying: swap(q7,q5)
-... the minimally extending path with swaps is: cycleExtend=10
-	path from source[1]=[2]
-	path from target[2]=[3->0] implying: swap(q3,q0)
-... the minimally extending path with swaps is: cycleExtend=10
-	path from source[1]=[2]
-	path from target[2]=[3->0] implying: swap(q3,q0)
-... the minimally extending path with swaps is: cycleExtend=10
-	path from source[1]=[7]
-	path from target[2]=[2->5] implying: swap(q2,q5)
-\end{minted}
-
-\end{minipage}
-\hfill %\hspace{1cm}
-\begin{minipage}[t]{.45\textwidth}
-
-\uline{Without Resource constraints}
-
-\begin{minted}[frame=lines,fontsize=\scriptsize,linenos,breaklines,breakanywhere]{shell}
-
-... the minimally extending path with swaps is: cycleExtend=10
-	path from source[1]=[2]
-	path from target[2]=[1->5] implying: swap(q1,q5)
-... the minimally extending path with swaps is: cycleExtend=0
-	path from source[2]=[3->0] implying: swap(q3,q0)
-	path from target[1]=[2]
-... the minimally extending path with swaps is: cycleExtend=9
-	path from source[3]=[4->1->5] implying: swap(q4,q1) swap(q1,q5)
-	path from target[2]=[0->2] implying: swap(q0,q2)
-... the minimally extending path with swaps is: cycleExtend=0
-	path from source[3]=[3->6->8] implying: swap(q3,q6) swap(q6,q8)
-	path from target[1]=[5]
-... the minimally extending path with swaps is: cycleExtend=10
-	path from source[1]=[1]
-	path from target[2]=[8->5] implying: swap(q8,q5)
-... the minimally extending path with swaps is: cycleExtend=10
-	path from source[1]=[1]
-	path from target[2]=[8->5] implying: swap(q8,q5)
-... the minimally extending path with swaps is: cycleExtend=10
-	path from source[1]=[1]
-	path from target[2]=[8->5] implying: swap(q8,q5)
-... the minimally extending path with swaps is: cycleExtend=10
-	path from source[1]=[8]
-	path from target[2]=[1->5] implying: swap(q1,q5)
-... the minimally extending path with swaps is: cycleExtend=0
-	path from source[1]=[8]
-	path from target[2]=[2->6] implying: swap(q2,q6)
-... the minimally extending path with swaps is: cycleExtend=8
-	path from source[1]=[8]
-	path from target[3]=[0->2->5] implying: swap(q0,q2) swap(q2,q5)
-... the minimally extending path with swaps is: cycleExtend=4
-	path from source[1]=[8]
-	path from target[2]=[2->6] implying: swap(q2,q6)
-... the minimally extending path with swaps is: cycleExtend=2
-	path from source[2]=[1->5] implying: swap(q1,q5)
-	path from target[1]=[8]
-
-\end{minted}
-
-\end{minipage}
-
-
-\subsubsection{With initial placement}
-\label{sec:org362b80c}
-
-\begin{minipage}[t]{.45\textwidth}
-
-\uline{With Resource constraints}
-
-\begin{minted}[frame=lines,fontsize=\scriptsize,linenos,breaklines,breakanywhere]{shell}
-
-... Virt2Real(v->r) ... result Virt2Real map of InitialPlace before adding unused virtual qubits and unused locations : (0->10) (1->4) (2->1) (3->5) (4->7) (5->2147483647) (6->2147483647) (7->2147483647) (8->2147483647) (9->2147483647) (10->2147483647) (11->2147483647) (12->2147483647) (13->2147483647) (14->2147483647) (15->2147483647) (16->2147483647)
-... Virt2Real(v->r) ... final result Virt2Real map of InitialPlace: (0->10) (1->4) (2->1) (3->5) (4->7) (5->0) (6->2) (7->3) (8->6) (9->8) (10->9) (11->11) (12->12) (13->13) (14->14) (15->15) (16->16)
-... the minimally extending path with swaps is: cycleExtend=10
-	path from source[1]=[4]
-	path from target[2]=[10->7] implying: swap(q10,q7)
-... the minimally extending path with swaps is: cycleExtend=10
-	path from source[1]=[4]
-	path from target[2]=[10->7] implying: swap(q10,q7)
-... the minimally extending path with swaps is: cycleExtend=10
-	path from source[1]=[4]
-	path from target[2]=[10->7] implying: swap(q10,q7)
-... the minimally extending path with swaps is: cycleExtend=10
-	path from source[1]=[10]
-	path from target[2]=[4->7] implying: swap(q4,q7)
-... the minimally extending path with swaps is: cycleExtend=10
-	path from source[1]=[10]
-	path from target[2]=[5->8] implying: swap(q5,q8)
-... the minimally extending path with swaps is: cycleExtend=10
-	path from source[2]=[10->8] implying: swap(q10,q8)
-	path from target[2]=[1->5] implying: swap(q1,q5)
-... the minimally extending path with swaps is: cycleExtend=10
-	path from source[1]=[8]
-	path from target[2]=[7->5] implying: swap(q7,q5)
-... the minimally extending path with swaps is: cycleExtend=12
-	path from source[2]=[4->1] implying: swap(q4,q1)
-	path from target[2]=[8->5] implying: swap(q8,q5)
-\end{minted}
-
-\end{minipage}
-\hfill %\hspace{1cm}
-\begin{minipage}[t]{.45\textwidth}
-
-\uline{Without Resource constraints}
-
-\begin{minted}[frame=lines,fontsize=\scriptsize,linenos,breaklines,breakanywhere]{shell}
-
-... Virt2Real(v->r) ... result Virt2Real map of InitialPlace before adding unused virtual qubits and unused locations : (0->10) (1->4) (2->1) (3->5) (4->7) (5->2147483647) (6->2147483647) (7->2147483647) (8->2147483647) (9->2147483647) (10->2147483647) (11->2147483647) (12->2147483647) (13->2147483647) (14->2147483647) (15->2147483647) (16->2147483647)
-... Virt2Real(v->r) ... final result Virt2Real map of InitialPlace: (0->10) (1->4) (2->1) (3->5) (4->7) (5->0) (6->2) (7->3) (8->6) (9->8) (10->9) (11->11) (12->12) (13->13) (14->14) (15->15) (16->16)
-... the minimally extending path with swaps is: cycleExtend=10
-	path from source[1]=[4]
-	path from target[2]=[10->7] implying: swap(q10,q7)
-... the minimally extending path with swaps is: cycleExtend=10
-	path from source[1]=[4]
-	path from target[2]=[10->7] implying: swap(q10,q7)
-... the minimally extending path with swaps is: cycleExtend=10
-	path from source[1]=[4]
-	path from target[2]=[10->7] implying: swap(q10,q7)
-... the minimally extending path with swaps is: cycleExtend=10
-	path from source[1]=[10]
-	path from target[2]=[4->7] implying: swap(q4,q7)
-... the minimally extending path with swaps is: cycleExtend=0
-	path from source[1]=[10]
-	path from target[2]=[5->8] implying: swap(q5,q8)
-... the minimally extending path with swaps is: cycleExtend=8
-	path from source[1]=[10]
-	path from target[3]=[1->5->7] implying: swap(q1,q5) swap(q5,q7)
-... the minimally extending path with swaps is: cycleExtend=4
-	path from source[1]=[10]
-	path from target[2]=[5->8] implying: swap(q5,q8)
-... the minimally extending path with swaps is: cycleExtend=2
-	path from source[2]=[4->7] implying: swap(q4,q7)
-	path from target[1]=[10]
-\end{minted}
-
-
-\end{minipage}
-
-\section{1000 iterations}
-\label{sec:org1efe04d}
-
-\begin{table}[H]
-\caption{\label{tab:org2937097}
-Step 1 results after 1000 iterations}
-\centering
-\begin{tabular}{llrrrrrr}
-\hline
-Mapper & Init. place & \(t_1\) & \(t_2\) & meas. err. & p. success & \(f\) & \(V_Q\)\\
-\hline
-No & No & 3000 & 3000 & 0.03 & 0.96 & 0.97823066 & 390\\
-\hline
-minextendrc & No & 3000 & 3000 & 0.03 & 0.929 & 0.92937318 & 1582\\
-minextendrc & Yes & 3000 & 3000 & 0.03 & 0.939 & 0.94685216 & 1038\\
-minextend & No & 3000 & 3000 & 0.03 & 0.947 & 0.9312172 & 1264\\
-minextend & Yes & 3000 & 3000 & 0.03 & 0.949 & 0.94748374 & 834\\
-base & No & 3000 & 3000 & 0.03 & 0.932 & 0.906571 & 1062\\
-base & Yes & 3000 & 3000 & 0.03 & 0.9509 & 0.9459456 & 780\\
-\hline
-\end{tabular}
-\end{table}
-
-\section{10000 iterations}
-\label{sec:orgd44aa9c}
-
-\begin{table}[H]
-\caption{\label{tab:orgc50cb75}
-Step 1 results after 10000 iterations}
-\centering
-\begin{tabular}{llrrrrrr}
-\hline
-Mapper & Init. place & \(t_1\) & \(t_2\) & meas. err. & p. success & \(f\) & \(V_Q\)\\
-\hline
-No & No & 3000 & 3000 & 0.03 & 0.961 & 0.980342528 & 390\\
-\hline
-minextendrc & No & 3000 & 3000 & 0.03 & 0.9372 & 0.937136544 & 1582\\
-minextendrc & Yes & 3000 & 3000 & 0.03 & 0.9435 & 0.951650597 & 1038\\
-minextend & No & 3000 & 3000 & 0.03 & 0.9519 & 0.93665818 & 1264\\
-minextend & Yes & 3000 & 3000 & 0.03 & 0.9556 & 0.954629151 & 834\\
-base & no & 3000 & 3000 & 0.03 & 0.9417 & 0.9156453 & 1062\\
-base & yes & 3000 & 3000 & 0.03 & 0.953 & 0.95037428 & 780\\
-\hline
-\end{tabular}
-\end{table}
-
-\subsection{Conclusions}
-\label{sec:org09886ca}
-
-
-\subsubsection{Probability of success}
-\label{sec:orge5db045}
-
-\begin{table}[H]
-\caption{\label{tab:orgae9eb57}
-Probability of success difference between the number of iterations}
-\centering
-\begin{tabular}{llrrrrr}
-\hline
-Mapper & Init. place & 100 it. & 1000 it. & 10000 it. & Diff 1000-100 & Diff 10000-1000\\
-\hline
-No & No & 0.99 & 0.96 & 0.961 & -0.0300 & 0.0010\\
-\hline
-minextendrc & No & 0.96 & 0.929 & 0.9372 & -0.0310 & 0.0082\\
-minextendrc & Yes & 0.98 & 0.939 & 0.9435 & -0.0410 & 0.0045\\
-minextend & No & 0.98 & 0.947 & 0.9519 & -0.0330 & 0.0049\\
-minextend & Yes & 0.98 & 0.949 & 0.9556 & -0.0310 & 0.0066\\
-base & No & 0.97 & 0.932 & 0.9417 & -0.0380 & 0.0097\\
-base & Yes & 0.98 & 0.9509 & 0.953 & -0.0291 & 0.0021\\
-\hline
-\end{tabular}
-\end{table}
-
-\begin{table}[!htpb]
-\caption{\label{tab:orgbeaca47}
-Mean value of the probability of success difference between number of iterations}
-\centering
-\begin{tabular}{rr}
-\hline
-Iterations comparison & Mean diff\\
-\hline
-1000-100 & -0.0333\\
-10000-1000 & 0.0053\\
-\hline
-\end{tabular}
-\end{table}
-
-
-
-
-\subsubsection{Fidelity}
-\label{sec:org2c08341}
-
-\begin{table}[H]
-\caption{\label{tab:org7a3913b}
-Fidelity difference between the number of iterations}
-\centering
-\begin{tabular}{llrrrrr}
-\hline
-Mapper & Init. place & 100 it. & 1000 it. & 10000 it. & Diff 1000-100 & Diff 10000-1000\\
-\hline
-No & No & 0.98879 & 0.97823066 & 0.980342528 & -0.0106 & 0.0021\\
-\hline
-minextendrc & No & 0.9404637 & 0.92937318 & 0.937136544 & -0.0111 & 0.0078\\
-minextendrc & Yes & 0.9675513 & 0.94685216 & 0.951650597 & -0.0207 & 0.0048\\
-minextend & No & 0.944128 & 0.9312172 & 0.93665818 & -0.0129 & 0.0054\\
-minextend & Yes & 0.9585909 & 0.94748374 & 0.954629151 & -0.0111 & 0.0071\\
-base & No & 0.92331 & 0.906571 & 0.9156453 & -0.0167 & 0.0091\\
-base & Yes & 0.9568084 & 0.9459456 & 0.95037428 & -0.0109 & 0.0044\\
-\hline
-\end{tabular}
-\end{table}
-
-\begin{table}[!htpb]
-\caption{\label{tab:orgff2b91c}
-Mean value of the fidelity difference between number of iterations}
-\centering
-\begin{tabular}{rr}
-\hline
-Iterations comparison & Mean diff\\
-\hline
-1000-100 & -0.0134\\
-10000-1000 & 0.0058\\
-\hline
-\end{tabular}
-\end{table}
-
-
-
-
-
-
 \section{Simplest benchmarks results}
-\label{sec:orgd669f49}
+\label{sec:org98c1475}
 
 \begin{table}[!htpb]
-\caption{\label{tab:org596f166}
+\caption{\label{tab:orgda72444}
 Benchmarks used}
 \centering
 \begin{tabular}{lrr}
 \hline
 Benchmark & \# qubits & \# gates\\
 \hline
+4gt11\(_{\text{82}}\) & 5 & 27\\
 4gt12\(_{\text{v1}}\)\(_{\text{89}}\) & 6 & 228\\
 4gt4\(_{\text{v0}}\)\(_{\text{72}}\) & 6 & 258\\
 4mod5\(_{\text{bdd}}\)\(_{\text{287}}\) & 7 & 70\\
 4mod5\(_{\text{v0}}\)\(_{\text{20}}\) & 5 & 20\\
+alu\(_{\text{bdd}}\)\(_{\text{288}}\) & 7 & 84\\
+alu\(_{\text{v0}}\)\(_{\text{27}}\) & 5 & 36\\
+decod24\(_{\text{bdd}}\)\(_{\text{294}}\) & 6 & 73\\
+mod10\(_{\text{176}}\) & 5 & 178\\
+mod5adder\(_{\text{127}}\) & 6 & 555\\
+mod5d1\(_{\text{63}}\) & 5 & 22\\
+mod8\(_{\text{10}}\)\(_{\text{177}}\) & 6 & 440\\
+one\(_{\text{two}}\)\(_{\text{three}}\)\(_{\text{v1}}\)\(_{\text{99}}\) & 5 & 132\\
+one\(_{\text{two}}\)\(_{\text{three}}\)\(_{\text{v3}}\)\(_{\text{101}}\) & 5 & 70\\
+rd32\(_{\text{v0}}\)\(_{\text{66}}\) & 4 & 34\\
+sf\(_{\text{274}}\) & 6 & 781\\
+sf\(_{\text{276}}\) & 6 & 778\\
+sym6\(_{\text{145}}\) & 7 & 3888\\
 \hline
 \end{tabular}
 \end{table}
 
 
+\subsection{4gt11\(_{\text{82}}\)}
+\label{sec:orgae4cf9d}
+
+\begin{table}[H]
+\caption{\label{tab:org44dd8ee}
+Step 1 results after 1000 iterations}
+\centering
+\begin{tabular}{lrrrrrrrrrr}
+\hline
+Mapper & \# qubits & depth & \# gates & \# SWAPS & \(t_1\) & \(t_2\) & meas. err. & p. success & \(f\) & \(V_Q\)\\
+\hline
+No & 5 & 78 & 84 & 0 & 3000 & 3000 & 0.03 & 0.96 & 0.97823066 & 390\\
+\hline
+minextendrc & 7 & 226 & 237 & 17 & 3000 & 3000 & 0.03 & 0.929 & 0.92937318 & 1582\\
+minextendrc & 6 & 173 & 174 & 10 & 3000 & 3000 & 0.03 & 0.939 & 0.94685216 & 1038\\
+minextend & 8 & 158 & 228 & 16 & 3000 & 3000 & 0.03 & 0.947 & 0.9312172 & 1264\\
+minextend & 6 & 139 & 165 & 9 & 3000 & 3000 & 0.03 & 0.949 & 0.94748374 & 834\\
+base & 6 & 177 & 228 & 16 & 3000 & 3000 & 0.03 & 0.932 & 0.906571 & 1062\\
+base & 6 & 130 & 147 & 7 & 3000 & 3000 & 0.03 & 0.9509 & 0.9459456 & 780\\
+\hline
+\end{tabular}
+\end{table}
+
 \subsection{4gt12-v1\(_{\text{89}}\)}
-\label{sec:org02b70c4}
+\label{sec:org08040e6}
 
 \begin{table}[!htpb]
-\caption{\label{tab:org742dea4}
+\caption{\label{tab:org2a2d59f}
 Results after 1000 iterations}
 \centering
 \begin{tabular}{llrrrrrr}
@@ -442,7 +114,7 @@ base & no & 3000 & 3000 & 0.005 & 0.517 & 0.3581228 & 6414\\
 \end{table}
 
 \begin{table}[!htpb]
-\caption{\label{tab:org4e768db}
+\caption{\label{tab:orga8010ac}
 Other mapper statistics}
 \centering
 \small
@@ -458,12 +130,11 @@ base & no & 6 & 1069 & 1423 & 85\\
 \hline
 \end{tabular}
 \end{table}
-
 \subsection{4gt4-v0\(_{\text{72}}\)}
-\label{sec:org5279ffb}
+\label{sec:org2bc56c1}
 
 \begin{table}[!htpb]
-\caption{\label{tab:orgf32b263}
+\caption{\label{tab:org025ebbe}
 Results after 1000 iterations}
 \centering
 \begin{tabular}{llrrrrrr}
@@ -480,7 +151,7 @@ base & no & 3000 & 3000 & 0.005 & \textbf{0.532} & 0.35703954 & 6336\\
 \end{table}
 
 \begin{table}[!htpb]
-\caption{\label{tab:org3534fb5}
+\caption{\label{tab:org7e23aaa}
 Other mapper statistics}
 \centering
 \small
@@ -498,9 +169,9 @@ base & no & 6 & 1056 & \textbf{1547} & \textbf{89}\\
 \end{table}
 
 \subsection{4mod5-bdd\(_{\text{287}}\)}
-\label{sec:orge160baf}
+\label{sec:org43b01e5}
 \begin{table}[!htpb]
-\caption{\label{tab:org7e496d8}
+\caption{\label{tab:org49ea372}
 Results after 1000 iterations}
 \centering
 \begin{tabular}{llrrrrrr}
@@ -518,7 +189,7 @@ base & no & 3000 & 3000 & 0.005 & 0.776 & 0.67942877 & 2338\\
 
 
 \begin{table}[!htpb]
-\caption{\label{tab:orga8efcfb}
+\caption{\label{tab:org9e68a81}
 Other mapper statistics}
 \centering
 \small
@@ -536,9 +207,9 @@ base & no & 7 & 334 & \textbf{419} & \textbf{24}\\
 \end{table}
 
 \subsection{4mod5-v0\(_{\text{20}}\)}
-\label{sec:org4d10d6d}
+\label{sec:org7e4e40c}
 \begin{table}[!htpb]
-\caption{\label{tab:orgefb5fa8}
+\caption{\label{tab:orge73af54}
 Results after 1000 iterations}
 \centering
 \begin{tabular}{llrrrrrr}
@@ -554,7 +225,7 @@ minextend & no & 3000 & 3000 & 0.005 & 0.938 & 0.88981602 & 1024\\
 \end{table}
 
 \begin{table}[!htpb]
-\caption{\label{tab:orgfc567ba}
+\caption{\label{tab:org0824637}
 Other mapper statistics}
 \centering
 \small
@@ -566,6 +237,238 @@ no & no & 5 & 53 & 61 & 0\\
 \hline
 minextendrc & no & 9 & 139 & \textbf{142} & \textbf{9}\\
 minextend & no & 8 & \textbf{128} & 160 & 11\\
+\hline
+\end{tabular}
+\end{table}
+\subsection{alu\(_{\text{bdd}}\)\(_{\text{288}}\)}
+\label{sec:orgf55e6d4}
+
+\begin{table}[!htpb]
+\caption{\label{tab:orgc1b1f29}
+Results after 1000 iterations}
+\centering
+\begin{tabular}{lrrrrrrrrrr}
+\hline
+Mapper & \# qubits & \# gates & \# SWAPS & depth & \(t_1\) & \(t_2\) & meas. err. & p. success & \(f\) & \(V_Q\)\\
+\hline
+no & 7 & 247 & 0 & 165 & 3000 & 3000 & 0.005 & 0.94 & 0.89851036 & 1155\\
+\hline
+minextendrc & 8 & 571 & 36 & 495 & 3000 & 3000 & 0.005 & 0.847 & 0.78096707 & 3960\\
+minextend & 8 & 616 & 41 & 383 & 3000 & 3000 & 0.005 & 0.846 & 0.73109047 & 3064\\
+base & 7 & 472 & 25 & 360 & 3000 & 3000 & 0.005 & 0.841 & 0.71637503 & 2520\\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{alu\(_{\text{v0}}\)\(_{\text{27}}\)}
+\label{sec:org894e89e}
+\begin{table}[!htpb]
+\caption{\label{tab:org106d352}
+Results after 1000 iterations}
+\centering
+\begin{tabular}{lrrrrrrrrrr}
+\hline
+Mapper & \# qubits & \# gates & \# SWAPS & depth & \(t_1\) & \(t_2\) & meas. err. & p. success & \(f\) & \(V_Q\)\\
+\hline
+no & 5 & 107 & 0 & 80 & 3000 & 3000 & 0.005 & 0.98 & 0.96369032 & 400\\
+\hline
+minextendrc & 9 & 278 & 19 & 248 & 3000 & 3000 & 0.005 & 0.959 & 0.92602273 & 2232\\
+minextend & 10 & 296 & 21 & 156 & 3000 & 3000 & 0.005 & 0.944 & 0.89032214 & 1560\\
+base & 6 & 278 & 19 & 214 & 3000 & 3000 & 0.005 & 0.915 & 0.84492332 & 1284\\
+\hline
+\end{tabular}
+\end{table}
+\subsection{decod24\(_{\text{bdd}}\)\(_{\text{294}}\)}
+\label{sec:orgda110be}
+\begin{table}[!htpb]
+\caption{\label{tab:orgf99faa7}
+Results after 1000 iterations}
+\centering
+\begin{tabular}{lrrrrrrrrrr}
+\hline
+Mapper & \# qubits & \# gates & \# SWAPS & depth & \(t_1\) & \(t_2\) & meas. err. & p. success & \(f\) & \(V_Q\)\\
+\hline
+no & 6 & 207 & 0 & 144 & 3000 & 3000 & 0.005 & 0.938 & 0.91098461 & 864\\
+\hline
+minextendrc & 9 & 441 & 26 & 407 & 3000 & 3000 & 0.005 & 0.888 & 0.7749599 & 3663\\
+minextend & 7 & 468 & 29 & 328 & 3000 & 3000 & 0.005 & 0.816 & 0.73708015 & 2296\\
+base & 6 & 405 & 22 & 300 & 3000 & 3000 & 0.005 & 0.781 & 0.71803687 & 1800\\
+\hline
+\end{tabular}
+\end{table}
+\subsection{mod10\(_{\text{176}}\)}
+\label{sec:orgaf27b24}
+\begin{table}[!htpb]
+\caption{\label{tab:org4877b78}
+Results after 1000 iterations}
+\centering
+\begin{tabular}{lrrrrrrrrrr}
+\hline
+Mapper & \# qubits & \# gates & \# SWAPS & depth & \(t_1\) & \(t_2\) & meas. err. & p. success & \(f\) & \(V_Q\)\\
+\hline
+no & 5 & 515 & 0 & 327 & 3000 & 3000 & 0.005 & 0.9 & 0.82976826 & 1635\\
+\hline
+minextendrc & 7 & 1199 & 76 & 1090 & 3000 & 3000 & 0.005 & 0.758 & 0.62105388 & 7630\\
+minextend & 10 & 1127 & 68 & 687 & 3000 & 3000 & 0.005 & 0.733 & 0.60641905 & 6870\\
+base & 6 & 983 & 52 & 734 & 3000 & 3000 & 0.005 & 0.697 & 0.56115058 & 4404\\
+\hline
+\end{tabular}
+\end{table}
+\subsection{mod5adder\(_{\text{127}}\)}
+\label{sec:org0ccf1f7}
+\begin{table}[!htpb]
+\caption{\label{tab:orgac325e3}
+Results after 1000 iterations}
+\centering
+\begin{tabular}{lrrrrrrrrrr}
+\hline
+Mapper & \# qubits & \# gates & \# SWAPS & depth & \(t_1\) & \(t_2\) & meas. err. & p. success & \(f\) & \(V_Q\)\\
+\hline
+no & 6 & 1583 & 0 & 944 & 3000 & 3000 & 0.005 & 0.71 & 0.45135226 & 5664\\
+\hline
+minextendrc & 9 & 3320 & 193 & 2878 & 3000 & 3000 & 0.005 & 0.491 & 0.1922222 & 25902\\
+minextend & 10 & 3779 & 244 & 2667 & 3000 & 3000 & 0.005 & 0.548 & 0.18165444 & 26670\\
+base & 6 & 3248 & 185 & 2378 & 3000 & 3000 & 0.005 & 0.591 & 0.18911191 & 14268\\
+\hline
+\end{tabular}
+\end{table}
+\subsection{mod5d1\(_{\text{63}}\)}
+\label{sec:orgbd123d2}
+\begin{table}[!htpb]
+\caption{\label{tab:orgdebe707}
+Results after 1000 iterations}
+\centering
+\begin{tabular}{lrrrrrrrrrr}
+\hline
+Mapper & \# qubits & \# gates & \# SWAPS & depth & \(t_1\) & \(t_2\) & meas. err. & p. success & \(f\) & \(V_Q\)\\
+\hline
+no & 5 & 69 & 0 & 59 & 3000 & 3000 & 0.005 & 0.989 & 0.98368741 & 295\\
+\hline
+minextendrc & 8 & 195 & 14 & 209 & 3000 & 3000 & 0.005 & 0.958 & 0.93474128 & 1672\\
+minextend & 8 & 195 & 14 & 136 & 3000 & 3000 & 0.005 & 0.969 & 0.93997349 & 1088\\
+base & 6 & 195 & 14 & 146 & 3000 & 3000 & 0.005 & 0.95 & 0.91002595 & 876\\
+\hline
+\end{tabular}
+\end{table}
+\subsection{mod8\(_{\text{10}}\)\(_{\text{177}}\)}
+\label{sec:orgae6dd7a}
+\begin{table}[!htpb]
+\caption{\label{tab:org5121f40}
+Results after 1000 iterations}
+\centering
+\begin{tabular}{lrrrrrrrrrr}
+\hline
+Mapper & \# qubits & \# gates & \# SWAPS & depth & \(t_1\) & \(t_2\) & meas. err. & p. success & \(f\) & \(V_Q\)\\
+\hline
+no & 6 & 1270 & 0 & 794 & 3000 & 3000 & 0.005 & 0.858 & 0.70131629 & 4764\\
+\hline
+minextendrc & 10 & 2674 & 156 & 2275 & 3000 & 3000 & 0.005 & 0.52 & 0.39211003 & 22750\\
+minextend & 10 & 2827 & 173 & 1761 & 3000 & 3000 & 0.005 & 0.411 & 0.29686116 & 17610\\
+base & 6 & 2773 & 167 & 2006 & 3000 & 3000 & 0.005 & 0.335 & 0.26106507 & 12036\\
+\hline
+\end{tabular}
+\end{table}
+\subsection{one\(_{\text{two}}\)\(_{\text{three}}\)\(_{\text{v1}}\)\(_{\text{99}}\)}
+\label{sec:org69e22dc}
+\begin{table}[!htpb]
+\caption{\label{tab:orgc67e89a}
+Results after 1000 iterations}
+\centering
+\begin{tabular}{lrrrrrrrrrr}
+\hline
+Mapper & \# qubits & \# gates & \# SWAPS & depth & \(t_1\) & \(t_2\) & meas. err. & p. success & \(f\) & \(V_Q\)\\
+\hline
+no & 5 & 383 & 0 & 256 & 3000 & 3000 & 0.005 & 0.832 & 0.78653106 & 1280\\
+\hline
+minextendrc & 7 & 887 & 56 & 839 & 3000 & 3000 & 0.005 & 0.633 & 0.59855522 & 5873\\
+minextend & 10 & 869 & 54 & 530 & 3000 & 3000 & 0.005 & 0.729 & 0.62135956 & 5300\\
+base & 6 & 833 & 50 & 609 & 3000 & 3000 & 0.005 & 0.662 & 0.57083541 & 3654\\
+\hline
+\end{tabular}
+\end{table}
+\subsection{one\(_{\text{two}}\)\(_{\text{three}}\)\(_{\text{v3}}\)\(_{\text{101}}\)}
+\label{sec:org01c331f}
+\begin{table}[!htpb]
+\caption{\label{tab:org15650f7}
+Results after 1000 iterations}
+\centering
+\begin{tabular}{lrrrrrrrrrr}
+\hline
+Mapper & \# qubits & \# gates & \# SWAPS & depth & \(t_1\) & \(t_2\) & meas. err. & p. success & \(f\) & \(V_Q\)\\
+\hline
+no & 5 & 203 & 0 & 143 & 3000 & 3000 & 0.005 & 0.937 & 0.88807716 & 715\\
+\hline
+minextendrc & 8 & 464 & 29 & 440 & 3000 & 3000 & 0.005 & 0.746 & 0.620299 & 3520\\
+minextend & 8 & 509 & 34 & 302 & 3000 & 3000 & 0.005 & 0.732 & 0.63161506 & 2416\\
+base & 6 & 428 & 25 & 323 & 3000 & 3000 & 0.005 & 0.742 & 0.62081173 & 1938\\
+\hline
+\end{tabular}
+\end{table}
+\subsection{rd32\(_{\text{v0}}\)\(_{\text{66}}\)}
+\label{sec:org195239b}
+\begin{table}[!htpb]
+\caption{\label{tab:orgb0ae9b0}
+Results after 1000 iterations}
+\centering
+\begin{tabular}{lrrrrrrrrrr}
+\hline
+Mapper & \# qubits & \# gates & \# SWAPS & depth & \(t_1\) & \(t_2\) & meas. err. & p. success & \(f\) & \(V_Q\)\\
+\hline
+no & 4 & 102 & 0 & 83 & 3000 & 3000 & 0.005 & 0.983 & 0.97241164 & 332\\
+\hline
+minextendrc & 7 & 219 & 13 & 195 & 3000 & 3000 & 0.005 & 0.947 & 0.91458844 & 1365\\
+minextend & 7 & 228 & 14 & 142 & 3000 & 3000 & 0.005 & 0.958 & 0.91079208 & 994\\
+base & 5 & 219 & 13 & 169 & 3000 & 3000 & 0.005 & 0.955 & 0.90759692 & 845\\
+\hline
+\end{tabular}
+\end{table}
+\subsection{sf\(_{\text{274}}\)}
+\label{sec:org6d48619}
+\begin{table}[!htpb]
+\caption{\label{tab:orgb9d9e82}
+Results after 1000 iterations}
+\centering
+\begin{tabular}{lrrrrrrrrrr}
+\hline
+Mapper & \# qubits & \# gates & \# SWAPS & depth & \(t_1\) & \(t_2\) & meas. err. & p. success & \(f\) & \(V_Q\)\\
+\hline
+no & 6 & 2227 & 0 & 1359 & 3000 & 3000 & 0.005 & 0.484 & 0.34974095 & 8154\\
+\hline
+minextendrc & 7 & 5116 & 321 & 4515 & 3000 & 3000 & 0.005 & 0.0 & 0.16778098 & 31605\\
+minextend & 10 & 5071 & 316 & 3007 & 3000 & 3000 & 0.005 & 0.097 & 0.14752778 & 30070\\
+base & 6 & 4450 & 247 & 3289 & 3000 & 3000 & 0.005 & 0.088 & 0.15461728 & 19734\\
+\hline
+\end{tabular}
+\end{table}
+\subsection{sf\(_{\text{276}}\)}
+\label{sec:org05aead9}
+\begin{table}[!htpb]
+\caption{\label{tab:org91e39da}
+Results after 1000 iterations}
+\centering
+\begin{tabular}{lrrrrrrrrrr}
+\hline
+Mapper & \# qubits & \# gates & \# SWAPS & depth & \(t_1\) & \(t_2\) & meas. err. & p. success & \(f\) & \(V_Q\)\\
+\hline
+no & 6 & 2224 & 0 & 1360 & 3000 & 3000 & 0.005 & 0.472 & 0.30846996 & 8160\\
+\hline
+minextendrc & 9 & 4852 & 292 & 4103 & 3000 & 3000 & 0.005 & 0.0 & 0.16746873 & 36927\\
+minextend & 10 & 4807 & 287 & 2747 & 3000 & 3000 & 0.005 & 0.092 & 0.14342305 & 27470\\
+base & 6 & 4447 & 247 & 3280 & 3000 & 3000 & 0.005 & 0.089 & 0.13928494 & 19680\\
+\hline
+\end{tabular}
+\end{table}
+\subsection{sym6\(_{\text{145}}\)}
+\label{sec:org217d004}
+\begin{table}[!htpb]
+\caption{\label{tab:org1dfe691}
+Results after 1000 iterations}
+\centering
+\begin{tabular}{lrrrrrrrrrr}
+\hline
+Mapper & \# qubits & \# gates & \# SWAPS & depth & \(t_1\) & \(t_2\) & meas. err. & p. success & \(f\) & \(V_Q\)\\
+\hline
+no & 7 & 11185 & 0 & 6759 & 3000 & 3000 & 0.005 & 0.506 & 0.15429107 & 47313\\
 \hline
 \end{tabular}
 \end{table}
