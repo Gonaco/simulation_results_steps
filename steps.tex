@@ -1,4 +1,4 @@
-% Created 2018-12-17 Mon 12:34
+% Created 2018-12-17 Mon 13:06
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -37,10 +37,10 @@
 
 
 \section{Simplest benchmarks results}
-\label{sec:org98c1475}
+\label{sec:org3a7bc67}
 
 \begin{table}[!htpb]
-\caption{\label{tab:orgda72444}
+\caption{\label{tab:org1273d6f}
 Benchmarks used}
 \centering
 \begin{tabular}{lrr}
@@ -71,10 +71,10 @@ sym6\(_{\text{145}}\) & 7 & 3888\\
 
 
 \subsection{4gt11\(_{\text{82}}\)}
-\label{sec:orgae4cf9d}
+\label{sec:orgc704fdd}
 
 \begin{table}[H]
-\caption{\label{tab:org44dd8ee}
+\caption{\label{tab:org3aad440}
 Step 1 results after 1000 iterations}
 \centering
 \begin{tabular}{lrrrrrrrrrr}
@@ -94,157 +94,90 @@ base & 6 & 130 & 147 & 7 & 3000 & 3000 & 0.03 & 0.9509 & 0.9459456 & 780\\
 \end{table}
 
 \subsection{4gt12-v1\(_{\text{89}}\)}
-\label{sec:org08040e6}
+\label{sec:org1269bd7}
 
 \begin{table}[!htpb]
-\caption{\label{tab:org2a2d59f}
+\caption{\label{tab:orgbbfb0ea}
 Results after 1000 iterations}
 \centering
-\begin{tabular}{llrrrrrr}
+\begin{tabular}{lrrrrrrrrrr}
 \hline
-Mapper & Init. place & \(t_1\) & \(t_2\) & meas. err. & p. success & \(f\) & \(V_Q\)\\
+Mapper & \# qubits & depth & \# gates & \# SWAPS & \(t_1\) & \(t_2\) & meas. err. & p. success & \(f\) & \(V_Q\)\\
 \hline
-no & no & 3000 & 3000 & 0.005 & 0.768 & 0.66623522 & 2496\\
+no & 6 & 416 & 658 & 0 & 3000 & 3000 & 0.005 & 0.768 & 0.66623522 & 2496\\
 \hline
-minextendrc & no & 3000 & 3000 & 0.005 & 0.562 & \textbf{0.44841106} & 10548\\
-minextend & no & 3000 & 3000 & 0.005 & \textbf{0.601} & 0.40972458 & 9072\\
-base & no & 3000 & 3000 & 0.005 & 0.517 & 0.3581228 & 6414\\
+minextendrc & 9 & 1172 & \textbf{1360} & \textbf{78} & 3000 & 3000 & 0.005 & 0.562 & \textbf{0.44841106} & 10548\\
+minextend & 9 & \textbf{1008} & 1549 & 99 & 3000 & 3000 & 0.005 & \textbf{0.601} & 0.40972458 & 9072\\
+base & 6 & 1069 & 1423 & 85 & 3000 & 3000 & 0.005 & 0.517 & 0.3581228 & 6414\\
 \hline
 \end{tabular}
 \end{table}
 
-\begin{table}[!htpb]
-\caption{\label{tab:orga8010ac}
-Other mapper statistics}
-\centering
-\small
-\begin{tabular}{llrrrr}
-\hline
-Mapper & Init. place & \# qubits & depth & \# gates & \# SWAPS\\
-\hline
-no & no & 6 & 416 & 658 & 0\\
-\hline
-minextendrc & no & 9 & 1172 & \textbf{1360} & \textbf{78}\\
-minextend & no & 9 & \textbf{1008} & 1549 & 99\\
-base & no & 6 & 1069 & 1423 & 85\\
-\hline
-\end{tabular}
-\end{table}
+
 \subsection{4gt4-v0\(_{\text{72}}\)}
-\label{sec:org2bc56c1}
+\label{sec:org1dfc6ab}
 
 \begin{table}[!htpb]
-\caption{\label{tab:org025ebbe}
+\caption{\label{tab:org0260211}
 Results after 1000 iterations}
 \centering
-\begin{tabular}{llrrrrrr}
+\begin{tabular}{lrrrrrrrrrr}
 \hline
-Mapper & Init. place & \(t_1\) & \(t_2\) & meas. err. & p. success & \(f\) & \(V_Q\)\\
+Mapper & \# qubits & depth & \# gates & \# SWAPS & \(t_1\) & \(t_2\) & meas. err. & p. success & \(f\) & \(V_Q\)\\
 \hline
-no & no & 3000 & 3000 & 0.005 & 0.786 & 0.68007548 & 2652\\
+no & 6 & 442 & 746 & 0 & 3000 & 3000 & 0.005 & 0.786 & 0.68007548 & 2652\\
 \hline
-minextendrc & no & 3000 & 3000 & 0.005 & 0.452 & \textbf{0.37749204} & 12168\\
-minextend & no & 3000 & 3000 & 0.005 & 0.498 & 0.34067243 & 7704\\
-base & no & 3000 & 3000 & 0.005 & \textbf{0.532} & 0.35703954 & 6336\\
-\hline
-\end{tabular}
-\end{table}
-
-\begin{table}[!htpb]
-\caption{\label{tab:org7e23aaa}
-Other mapper statistics}
-\centering
-\small
-\begin{tabular}{llrrrr}
-\hline
-Mapper & Init. place & \# qubits & depth & \# gates & \# SWAPS\\
-\hline
-no & no & 6 & 442 & 746 & 0\\
-\hline
-minextendrc & no & 9 & 1352 & 1592 & 94\\
-minextend & no & 8 & \textbf{963} & 1736 & 110\\
-base & no & 6 & 1056 & \textbf{1547} & \textbf{89}\\
+minextendrc & 9 & 1352 & 1592 & 94 & 3000 & 3000 & 0.005 & 0.452 & \textbf{0.37749204} & 12168\\
+minextend & 8 & \textbf{963} & 1736 & 110 & 3000 & 3000 & 0.005 & 0.498 & 0.34067243 & 7704\\
+base & 6 & 1056 & \textbf{1547} & \textbf{89} & 3000 & 3000 & 0.005 & \textbf{0.532} & 0.35703954 & 6336\\
 \hline
 \end{tabular}
 \end{table}
 
 \subsection{4mod5-bdd\(_{\text{287}}\)}
-\label{sec:org43b01e5}
+\label{sec:orgba66a1d}
 \begin{table}[!htpb]
-\caption{\label{tab:org49ea372}
+\caption{\label{tab:org2bc7f4a}
 Results after 1000 iterations}
 \centering
-\begin{tabular}{llrrrrrr}
+\begin{tabular}{lrrrrrrrrrr}
 \hline
-Mapper & Init. place & \(t_1\) & \(t_2\) & meas. err. & p. success & \(f\) & \(V_Q\)\\
+Mapper & \# qubits & depth & \# gates & \# SWAPS & \(t_1\) & \(t_2\) & meas. err. & p. success & \(f\) & \(V_Q\)\\
 \hline
-no & no & 3000 & 3000 & 0.005 & 0.916 & 0.87474237 & 1029\\
+no & 7 & 147 & 203 & 0 & 3000 & 3000 & 0.005 & 0.916 & 0.87474237 & 1029\\
 \hline
-minextendrc & no & 3000 & 3000 & 0.005 & 0.753 & 0.65935538 & 3924\\
-minextend & no & 3000 & 3000 & 0.005 & \textbf{0.798} & \textbf{0.69281491} & 2988\\
-base & no & 3000 & 3000 & 0.005 & 0.776 & 0.67942877 & 2338\\
+minextendrc & 9 & 436 & 500 & 33 & 3000 & 3000 & 0.005 & 0.753 & 0.65935538 & 3924\\
+minextend & 9 & \textbf{332} & 500 & 33 & 3000 & 3000 & 0.005 & \textbf{0.798} & \textbf{0.69281491} & 2988\\
+base & 7 & 334 & \textbf{419} & \textbf{24} & 3000 & 3000 & 0.005 & 0.776 & 0.67942877 & 2338\\
 \hline
 \end{tabular}
 \end{table}
 
-
-\begin{table}[!htpb]
-\caption{\label{tab:org9e68a81}
-Other mapper statistics}
-\centering
-\small
-\begin{tabular}{llrrrr}
-\hline
-Mapper & Init. place & \# qubits & depth & \# gates & \# SWAPS\\
-\hline
-no & no & 7 & 147 & 203 & 0\\
-\hline
-minextendrc & no & 9 & 436 & 500 & 33\\
-minextend & no & 9 & \textbf{332} & 500 & 33\\
-base & no & 7 & 334 & \textbf{419} & \textbf{24}\\
-\hline
-\end{tabular}
-\end{table}
 
 \subsection{4mod5-v0\(_{\text{20}}\)}
-\label{sec:org7e4e40c}
+\label{sec:orgb448534}
 \begin{table}[!htpb]
-\caption{\label{tab:orge73af54}
+\caption{\label{tab:org7410de5}
 Results after 1000 iterations}
 \centering
-\begin{tabular}{llrrrrrr}
+\begin{tabular}{lrrrrrrrrrr}
 \hline
-Mapper & Init. place & \(t_1\) & \(t_2\) & meas. err. & p. success & \(f\) & \(V_Q\)\\
+Mapper & \# qubits & depth & \# gates & \# SWAPS & \(t_1\) & \(t_2\) & meas. err. & p. success & \(f\) & \(V_Q\)\\
 \hline
-no & no & 3000 & 3000 & 0.005 & 0.985 & 0.97145968 & 265\\
+no & 5 & 53 & 61 & 0 & 3000 & 3000 & 0.005 & 0.985 & 0.97145968 & 265\\
 \hline
-minextendrc & no & 3000 & 3000 & 0.005 & \textbf{0.944} & \textbf{0.9092329} & 1251\\
-minextend & no & 3000 & 3000 & 0.005 & 0.938 & 0.88981602 & 1024\\
+minextendrc & 9 & 139 & 142 & 9 & 3000 & 3000 & 0.005 & 0.944 & \textbf{0.9092329} & 1251\\
+minextend & 8 & \textbf{128} & 160 & 11 & 3000 & 3000 & 0.005 & 0.938 & 0.88981602 & 1024\\
+base & 6 & 133 & \textbf{119} & \textbf{8} & 3000 & 3000 & 0.005 & \textbf{0.947} & 0.89871898 & 714\\
 \hline
 \end{tabular}
 \end{table}
 
-\begin{table}[!htpb]
-\caption{\label{tab:org0824637}
-Other mapper statistics}
-\centering
-\small
-\begin{tabular}{llrrrr}
-\hline
-Mapper & Init. place & \# qubits & depth & \# gates & \# SWAPS\\
-\hline
-no & no & 5 & 53 & 61 & 0\\
-\hline
-minextendrc & no & 9 & 139 & \textbf{142} & \textbf{9}\\
-minextend & no & 8 & \textbf{128} & 160 & 11\\
-\hline
-\end{tabular}
-\end{table}
 \subsection{alu\(_{\text{bdd}}\)\(_{\text{288}}\)}
-\label{sec:orgf55e6d4}
+\label{sec:orgc39cfb3}
 
 \begin{table}[!htpb]
-\caption{\label{tab:orgc1b1f29}
+\caption{\label{tab:org1c6a3fb}
 Results after 1000 iterations}
 \centering
 \begin{tabular}{lrrrrrrrrrr}
@@ -261,9 +194,9 @@ base & 7 & 472 & 25 & 360 & 3000 & 3000 & 0.005 & 0.841 & 0.71637503 & 2520\\
 \end{table}
 
 \subsection{alu\(_{\text{v0}}\)\(_{\text{27}}\)}
-\label{sec:org894e89e}
+\label{sec:org3629c42}
 \begin{table}[!htpb]
-\caption{\label{tab:org106d352}
+\caption{\label{tab:orga557d0a}
 Results after 1000 iterations}
 \centering
 \begin{tabular}{lrrrrrrrrrr}
@@ -279,9 +212,9 @@ base & 6 & 278 & 19 & 214 & 3000 & 3000 & 0.005 & 0.915 & 0.84492332 & 1284\\
 \end{tabular}
 \end{table}
 \subsection{decod24\(_{\text{bdd}}\)\(_{\text{294}}\)}
-\label{sec:orgda110be}
+\label{sec:orgf057ba1}
 \begin{table}[!htpb]
-\caption{\label{tab:orgf99faa7}
+\caption{\label{tab:org0c921f5}
 Results after 1000 iterations}
 \centering
 \begin{tabular}{lrrrrrrrrrr}
@@ -297,9 +230,9 @@ base & 6 & 405 & 22 & 300 & 3000 & 3000 & 0.005 & 0.781 & 0.71803687 & 1800\\
 \end{tabular}
 \end{table}
 \subsection{mod10\(_{\text{176}}\)}
-\label{sec:orgaf27b24}
+\label{sec:org7716277}
 \begin{table}[!htpb]
-\caption{\label{tab:org4877b78}
+\caption{\label{tab:org6cc03d5}
 Results after 1000 iterations}
 \centering
 \begin{tabular}{lrrrrrrrrrr}
@@ -315,9 +248,9 @@ base & 6 & 983 & 52 & 734 & 3000 & 3000 & 0.005 & 0.697 & 0.56115058 & 4404\\
 \end{tabular}
 \end{table}
 \subsection{mod5adder\(_{\text{127}}\)}
-\label{sec:org0ccf1f7}
+\label{sec:org3344e6a}
 \begin{table}[!htpb]
-\caption{\label{tab:orgac325e3}
+\caption{\label{tab:orgcd8faca}
 Results after 1000 iterations}
 \centering
 \begin{tabular}{lrrrrrrrrrr}
@@ -333,9 +266,9 @@ base & 6 & 3248 & 185 & 2378 & 3000 & 3000 & 0.005 & 0.591 & 0.18911191 & 14268\
 \end{tabular}
 \end{table}
 \subsection{mod5d1\(_{\text{63}}\)}
-\label{sec:orgbd123d2}
+\label{sec:org65dfff8}
 \begin{table}[!htpb]
-\caption{\label{tab:orgdebe707}
+\caption{\label{tab:orgd94b06a}
 Results after 1000 iterations}
 \centering
 \begin{tabular}{lrrrrrrrrrr}
@@ -351,9 +284,9 @@ base & 6 & 195 & 14 & 146 & 3000 & 3000 & 0.005 & 0.95 & 0.91002595 & 876\\
 \end{tabular}
 \end{table}
 \subsection{mod8\(_{\text{10}}\)\(_{\text{177}}\)}
-\label{sec:orgae6dd7a}
+\label{sec:org722d67b}
 \begin{table}[!htpb]
-\caption{\label{tab:org5121f40}
+\caption{\label{tab:org66aec26}
 Results after 1000 iterations}
 \centering
 \begin{tabular}{lrrrrrrrrrr}
@@ -369,9 +302,9 @@ base & 6 & 2773 & 167 & 2006 & 3000 & 3000 & 0.005 & 0.335 & 0.26106507 & 12036\
 \end{tabular}
 \end{table}
 \subsection{one\(_{\text{two}}\)\(_{\text{three}}\)\(_{\text{v1}}\)\(_{\text{99}}\)}
-\label{sec:org69e22dc}
+\label{sec:orga4abd3a}
 \begin{table}[!htpb]
-\caption{\label{tab:orgc67e89a}
+\caption{\label{tab:org3e0df40}
 Results after 1000 iterations}
 \centering
 \begin{tabular}{lrrrrrrrrrr}
@@ -387,9 +320,9 @@ base & 6 & 833 & 50 & 609 & 3000 & 3000 & 0.005 & 0.662 & 0.57083541 & 3654\\
 \end{tabular}
 \end{table}
 \subsection{one\(_{\text{two}}\)\(_{\text{three}}\)\(_{\text{v3}}\)\(_{\text{101}}\)}
-\label{sec:org01c331f}
+\label{sec:org49c50e2}
 \begin{table}[!htpb]
-\caption{\label{tab:org15650f7}
+\caption{\label{tab:org4a4dd81}
 Results after 1000 iterations}
 \centering
 \begin{tabular}{lrrrrrrrrrr}
@@ -405,9 +338,9 @@ base & 6 & 428 & 25 & 323 & 3000 & 3000 & 0.005 & 0.742 & 0.62081173 & 1938\\
 \end{tabular}
 \end{table}
 \subsection{rd32\(_{\text{v0}}\)\(_{\text{66}}\)}
-\label{sec:org195239b}
+\label{sec:orgf527a59}
 \begin{table}[!htpb]
-\caption{\label{tab:orgb0ae9b0}
+\caption{\label{tab:org5f87d92}
 Results after 1000 iterations}
 \centering
 \begin{tabular}{lrrrrrrrrrr}
@@ -423,9 +356,9 @@ base & 5 & 219 & 13 & 169 & 3000 & 3000 & 0.005 & 0.955 & 0.90759692 & 845\\
 \end{tabular}
 \end{table}
 \subsection{sf\(_{\text{274}}\)}
-\label{sec:org6d48619}
+\label{sec:org414d93c}
 \begin{table}[!htpb]
-\caption{\label{tab:orgb9d9e82}
+\caption{\label{tab:org31255d3}
 Results after 1000 iterations}
 \centering
 \begin{tabular}{lrrrrrrrrrr}
@@ -441,9 +374,9 @@ base & 6 & 4450 & 247 & 3289 & 3000 & 3000 & 0.005 & 0.088 & 0.15461728 & 19734\
 \end{tabular}
 \end{table}
 \subsection{sf\(_{\text{276}}\)}
-\label{sec:org05aead9}
+\label{sec:orge0f2f8c}
 \begin{table}[!htpb]
-\caption{\label{tab:org91e39da}
+\caption{\label{tab:org37832ee}
 Results after 1000 iterations}
 \centering
 \begin{tabular}{lrrrrrrrrrr}
@@ -459,9 +392,9 @@ base & 6 & 4447 & 247 & 3280 & 3000 & 3000 & 0.005 & 0.089 & 0.13928494 & 19680\
 \end{tabular}
 \end{table}
 \subsection{sym6\(_{\text{145}}\)}
-\label{sec:org217d004}
+\label{sec:orgf92bc44}
 \begin{table}[!htpb]
-\caption{\label{tab:org1dfe691}
+\caption{\label{tab:org69e36a8}
 Results after 1000 iterations}
 \centering
 \begin{tabular}{lrrrrrrrrrr}
