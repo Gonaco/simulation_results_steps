@@ -377,6 +377,8 @@ Even though it is soon to set general conclusions, we can observe some interesti
 | alu_bdd_288          |        7 |      84 |
 | alu_v0_27            |        5 |      36 |
 | decod24_bdd_294      |        6 |      73 |
+| decod24_enable_126   |        6 |     338 |
+| graycode6_47         |        6 |       5 |
 | mod10_176            |        5 |     178 |
 | mod5adder_127        |        6 |     555 |
 | mod5d1_63            |        5 |      22 |
@@ -553,6 +555,24 @@ Even though it is soon to set general conclusions, we can observe some interesti
 | minextend   |        7 |     468 |      29 |   328 |      0.816 | 0.73708015 |  2296 |
 | base        |        6 |     *405* |      *22* |   *300* |      0.781 | 0.71803687 |  1800 |
 |-------------+----------+---------+---------+-------+------------+------------+-------|
+** decod24_enable_126
+#+caption: Results after 1000 iterations
+#+NAME: tab:decod24_enable_126
+#+ATTR_LATEX: :booktabs :environment :placement [H] :font \small
+|-------------+----------+---------+---------+-------+------------+------------+-------|
+| Mapper      | # qubits | # gates | # SWAPS | depth | p. success |        $f$ | $V_Q$ |
+|-------------+----------+---------+---------+-------+------------+------------+-------|
+| no          |        6 |     978 |       0 |   612 |      0.894 | 0.74038417 |  3672 |
+|-------------+----------+---------+---------+-------+------------+------------+-------|
+| minextendrc |        9 |    2049 |     119 |  1788 |      0.831 | 0.57285276 | 16092 |
+| minextend   |       10 |    2184 |     134 |  1440 |      0.805 | 0.50947313 | 14400 |
+| base        |        6 |    1959 |     109 |  1446 |       0.74 | 0.42630108 |  8676 |
+|-------------+----------+---------+---------+-------+------------+------------+-------|
+
+** WAIT graycode6_47
+
+- State "WAIT"       from              [2018-12-17 Mon 21:04] \\
+  To finish all the simulations
 ** mod10_176                                         :mapper_not_important:
 #+caption: Results after 1000 iterations
 #+NAME: tab:mod10_174
