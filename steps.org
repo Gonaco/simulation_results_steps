@@ -3,6 +3,8 @@
 
 #+LATEX_HEADER: \usepackage{geometry}
 #+LATEX_HEADER: \geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+#+LATEX_HEADER: \usepackage{graphicx}
+#+LATEX_HEADER: \usepackage{subcaption}
 
 #+OPTIONS: toc:nil tasks:nil tags:nil
 
@@ -912,45 +914,76 @@ Even though it is soon to set general conclusions, we can observe some interesti
 |-----------------+------------+------------+---------+---------|
 #+TBLFM: 
 
+#+BEGIN_EXPORT latex
+\begin{figure}[ht] 
+  \begin{subfigure}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[width=0.75\linewidth]{f_g_3000} 
+    \caption{Number of gates} 
+    \label{fig:f_g_3000} 
+    \vspace{4ex}
+  \end{subfigure}%% 
+  \begin{subfigure}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[width=0.75\linewidth]{f_s_3000} 
+    \caption{Number of SWAPs} 
+    \label{fig:f_s_3000} 
+    \vspace{4ex}
+  \end{subfigure} 
+  \begin{subfigure}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[width=0.75\linewidth]{f_d_3000} 
+    \caption{Depth} 
+    \label{fig:f_d_3000} 
+  \end{subfigure}%%
+  \begin{subfigure}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[width=0.75\linewidth]{f_q_3000} 
+    \caption{Quantum Volume} 
+    \label{fig:f_q_3000} 
+  \end{subfigure} 
+  \caption{Plotting fidelity against number of gates, swaps, depth and Quantum Volume}
+  \label{fig:f_3000} 
+\end{figure}
 
-
-
-*** Probability of Success
-
-**** # of Gates
-
-#+caption: 
-#+NAME: fig:ps-g
-#+ATTR_LATEX: :width \textwidth
-[[file:ps_g.png]]
-
-**** # of SWAPS
-
-#+caption: 
-#+NAME: fig:ps-s
-#+ATTR_LATEX: :width \textwidth
-[[file:ps_s.png]]
-
-**** Depth
-
-#+caption: 
-#+NAME: fig:ps-d
-#+ATTR_LATEX: :width \textwidth
-[[file:ps_d.png]]
-
-**** Quantum Volume
-
-#+caption: 
-#+NAME: fig:ps-q
-#+ATTR_LATEX: :width \textwidth
-[[file:ps_q.png]]
+\begin{figure}[ht] 
+  \begin{subfigure}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[width=0.75\linewidth]{ps_g_3000} 
+    \caption{Number of gates} 
+    \label{fig:ps_g_3000} 
+    \vspace{4ex}
+  \end{subfigure}%% 
+  \begin{subfigure}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[width=0.75\linewidth]{ps_s_3000} 
+    \caption{Number of SWAPs} 
+    \label{fig:ps_s_3000} 
+    \vspace{4ex}
+  \end{subfigure} 
+  \begin{subfigure}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[width=0.75\linewidth]{ps_d_3000} 
+    \caption{Depth} 
+    \label{fig:ps_d_3000} 
+  \end{subfigure}%%
+  \begin{subfigure}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[width=0.75\linewidth]{ps_q_3000} 
+    \caption{Quantum Volume} 
+    \label{fig:ps_q_3000} 
+  \end{subfigure} 
+  \caption{Plotting probability of success against number of gates, swaps, depth and Quantum Volume}
+  \label{fig:ps_3000} 
+\end{figure}
+#+END_EXPORT
 
 
 
 
 ** $t_1=1000$
 
-#+caption: Peason correlation coefficient for decoherence time of $t_1 = 1000$
+#+caption: Pearson correlation coefficient for decoherence time of $t_1 = 1000$
 #+NAME: tab:pearson_corr_3000
 #+ATTR_LATEX: :booktabs :environment :font \tiny :width \textwidth :float t
 #+TBLNAME: 
@@ -960,3 +993,67 @@ Even though it is soon to set general conclusions, we can observe some interesti
 | $\rho _{p_s,Y}$ |    -0.1874 |    -0.1757 | -0.1923 | -0.1874 |
 |-----------------+------------+------------+---------+---------|
 #+TBLFM: 
+
+#+BEGIN_EXPORT latex
+\begin{figure}[ht] 
+  \begin{subfigure}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[width=0.75\linewidth]{f_g_1000} 
+    \caption{Number of gates} 
+    \label{fig:f_g_1000} 
+    \vspace{4ex}
+  \end{subfigure}%% 
+  \begin{subfigure}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[width=0.75\linewidth]{f_s_1000} 
+    \caption{Number of SWAPs} 
+    \label{fig:f_s_1000} 
+    \vspace{4ex}
+  \end{subfigure} 
+  \begin{subfigure}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[width=0.75\linewidth]{f_d_1000} 
+    \caption{Depth} 
+    \label{fig:f_d_1000} 
+  \end{subfigure}%%
+  \begin{subfigure}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[width=0.75\linewidth]{f_q_1000} 
+    \caption{Quantum Volume} 
+    \label{fig:f_q_1000} 
+  \end{subfigure} 
+  \caption{Plotting fidelity against number of gates, swaps, depth and Quantum Volume}
+  \label{fig:f_1000} 
+\end{figure}
+
+\begin{figure}[ht] 
+  \begin{subfigure}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[width=0.75\linewidth]{ps_g_1000} 
+    \caption{Number of gates} 
+    \label{fig:ps_g_1000} 
+    \vspace{4ex}
+  \end{subfigure}%% 
+  \begin{subfigure}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[width=0.75\linewidth]{ps_s_1000} 
+    \caption{Number of SWAPs} 
+    \label{fig:ps_s_1000} 
+    \vspace{4ex}
+  \end{subfigure} 
+  \begin{subfigure}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[width=0.75\linewidth]{ps_d_1000} 
+    \caption{Depth} 
+    \label{fig:ps_d_1000} 
+  \end{subfigure}%%
+  \begin{subfigure}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[width=0.75\linewidth]{ps_q_1000} 
+    \caption{Quantum Volume} 
+    \label{fig:ps_q_1000} 
+  \end{subfigure} 
+  \caption{Plotting probability of success against number of gates, swaps, depth and Quantum Volume}
+  \label{fig:ps_1000} 
+\end{figure}
+#+END_EXPORT
