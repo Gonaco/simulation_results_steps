@@ -914,6 +914,7 @@ Even though it is soon to set general conclusions, we can observe some interesti
 
 
 
+
 *** Probability of Success
 
 **** # of Gates
@@ -953,9 +954,9 @@ Even though it is soon to set general conclusions, we can observe some interesti
 #+NAME: tab:pearson_corr_3000
 #+ATTR_LATEX: :booktabs :environment :font \tiny :width \textwidth :float t
 #+TBLNAME: 
-|                 | # of Gates | # of SWAPs | Depth | $V_Q$ |
-|-----------------+------------+------------+-------+-------|
-| $\rho _{f,Y}$   |            |            |       |       |
-| $\rho _{p_s,Y}$ |            |            |       |       |
-|-----------------+------------+------------+-------+-------|
+|                 | # of Gates | # of SWAPs |   Depth |   $V_Q$ |
+|-----------------+------------+------------+---------+---------|
+| $\rho _{f,Y}$   |    -0.4389 |    -0.3803 | -0.4256 | -0.4389 |
+| $\rho _{p_s,Y}$ |    -0.1874 |    -0.1757 | -0.1923 | -0.1874 |
+|-----------------+------------+------------+---------+---------|
 #+TBLFM: 
