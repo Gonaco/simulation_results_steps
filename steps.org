@@ -903,9 +903,9 @@ Even though it is soon to set general conclusions, we can observe some interesti
 
 ** $t_1=3000$
 
-#+caption: Peason correlation coefficient for decoherence time of $t_1 = 3000$
+#+caption: Pearson correlation coefficient for decoherence time of $t_1 = 3000$
 #+NAME: tab:pearson_corr_3000
-#+ATTR_LATEX: :booktabs :environment :font \tiny :width \textwidth :float t
+#+ATTR_LATEX: :booktabs :environment :font :width \textwidth :float 
 #+TBLNAME: 
 |                 | # of Gates | # of SWAPs |   Depth |   $V_Q$ |
 |-----------------+------------+------------+---------+---------|
@@ -915,7 +915,7 @@ Even though it is soon to set general conclusions, we can observe some interesti
 #+TBLFM: 
 
 #+BEGIN_EXPORT latex
-\begin{figure}[ht] 
+\begin{figure}[H] 
   \begin{subfigure}[b]{0.5\linewidth}
     \centering
     \includegraphics[width=0.75\linewidth]{f_g_3000} 
@@ -946,7 +946,7 @@ Even though it is soon to set general conclusions, we can observe some interesti
   \label{fig:f_3000} 
 \end{figure}
 
-\begin{figure}[ht] 
+\begin{figure}[H] 
   \begin{subfigure}[b]{0.5\linewidth}
     \centering
     \includegraphics[width=0.75\linewidth]{ps_g_3000} 
@@ -981,11 +981,20 @@ Even though it is soon to set general conclusions, we can observe some interesti
 
 
 
+*** Two-qubit gates
+
+$$\rho _{f',Y} = -0.1158$$
+
+#+caption: Number of swaps and fidelity difference relationship's
+#+NAME: fig:f_s_2qg_3000
+#+ATTR_LATEX: :width 0.7\textwidth
+[[file:f_s_2qg_3000.png]]
+
 ** $t_1=1000$
 
 #+caption: Pearson correlation coefficient for decoherence time of $t_1 = 1000$
 #+NAME: tab:pearson_corr_3000
-#+ATTR_LATEX: :booktabs :environment :font \tiny :width \textwidth :float t
+#+ATTR_LATEX: :booktabs :environment :font :width \textwidth :float
 #+TBLNAME: 
 |                 | # of Gates | # of SWAPs |   Depth |   $V_Q$ |
 |-----------------+------------+------------+---------+---------|
@@ -995,7 +1004,7 @@ Even though it is soon to set general conclusions, we can observe some interesti
 #+TBLFM: 
 
 #+BEGIN_EXPORT latex
-\begin{figure}[ht] 
+\begin{figure}[H] 
   \begin{subfigure}[b]{0.5\linewidth}
     \centering
     \includegraphics[width=0.75\linewidth]{f_g_1000} 
@@ -1026,7 +1035,7 @@ Even though it is soon to set general conclusions, we can observe some interesti
   \label{fig:f_1000} 
 \end{figure}
 
-\begin{figure}[ht] 
+\begin{figure}[H] 
   \begin{subfigure}[b]{0.5\linewidth}
     \centering
     \includegraphics[width=0.75\linewidth]{ps_g_1000} 
@@ -1057,3 +1066,12 @@ Even though it is soon to set general conclusions, we can observe some interesti
   \label{fig:ps_1000} 
 \end{figure}
 #+END_EXPORT
+
+*** Two-qubit gates
+
+$$\rho _{f',Y} = -0.5525$$
+
+#+caption: Number of swaps and fidelity difference relationship's
+#+NAME: fig:f_s_2qg_1000
+#+ATTR_LATEX: :width 0.7\textwidth
+[[file:f_s_2qg_1000.png]]
