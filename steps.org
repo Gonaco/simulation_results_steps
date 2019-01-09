@@ -901,6 +901,10 @@ Even though it is soon to set general conclusions, we can observe some interesti
 
 * Correlation and Plots
 
+Pearson correlation formula:
+
+$${\displaystyle \rho _{X,Y}={\frac {\operatorname {cov} (X,Y)}{\sigma _{X}\sigma _{Y}}}}$$
+
 ** $t_1=3000$
 
 #+caption: Pearson correlation coefficient for decoherence time of $t_1 = 3000$
