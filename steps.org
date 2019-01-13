@@ -918,31 +918,42 @@ $${\displaystyle \rho _{X,Y}={\frac {\operatorname {cov} (X,Y)}{\sigma _{X}\sigm
 # |-----------------+------------+------------+---------+---------|
 # #+TBLFM: 
 
+#+caption: Pearson correlation coefficient for decoherence time of $t_1 = 3000$ and measurement error 0f 0.005
+#+NAME: tab:pearson_corr_3000
+#+ATTR_LATEX: :booktabs :environment :font :width \textwidth :float 
+#+TBLNAME: 
+|                 | # of Gates | # of SWAPs |   Depth |   $V_Q$ |
+|-----------------+------------+------------+---------+---------|
+| $\rho _{f,Y}$   |    -0.9360 |    -0.8614 | -0.9091 | -0.9360 |
+| $\rho _{p_s,Y}$ |    -0.9257 |    -0.8700 | -0.9060 | -0.9257 |
+|-----------------+------------+------------+---------+---------|
+#+TBLFM: 
+
 #+BEGIN_EXPORT latex
 \begin{figure}[H] 
   \begin{subfigure}[b]{0.5\linewidth}
     \centering
-    \includegraphics[width=0.75\linewidth]{f_g_3000} 
+    \includegraphics[width=0.75\linewidth]{f_g_3000_0_005} 
     \caption{Number of gates} 
     \label{fig:f_g_3000} 
     \vspace{4ex}
   \end{subfigure}%% 
   \begin{subfigure}[b]{0.5\linewidth}
     \centering
-    \includegraphics[width=0.75\linewidth]{f_s_3000} 
+    \includegraphics[width=0.75\linewidth]{f_s_3000_0_005} 
     \caption{Number of SWAPs} 
     \label{fig:f_s_3000} 
     \vspace{4ex}
   \end{subfigure} 
   \begin{subfigure}[b]{0.5\linewidth}
     \centering
-    \includegraphics[width=0.75\linewidth]{f_d_3000} 
+    \includegraphics[width=0.75\linewidth]{f_d_3000_0_005} 
     \caption{Depth} 
     \label{fig:f_d_3000} 
   \end{subfigure}%%
   \begin{subfigure}[b]{0.5\linewidth}
     \centering
-    \includegraphics[width=0.75\linewidth]{f_q_3000} 
+    \includegraphics[width=0.75\linewidth]{f_q_3000_0_005} 
     \caption{Quantum Volume} 
     \label{fig:f_q_3000} 
   \end{subfigure} 
@@ -953,27 +964,27 @@ $${\displaystyle \rho _{X,Y}={\frac {\operatorname {cov} (X,Y)}{\sigma _{X}\sigm
 \begin{figure}[H] 
   \begin{subfigure}[b]{0.5\linewidth}
     \centering
-    \includegraphics[width=0.75\linewidth]{ps_g_3000} 
+    \includegraphics[width=0.75\linewidth]{ps_g_3000_0_005} 
     \caption{Number of gates} 
     \label{fig:ps_g_3000} 
     \vspace{4ex}
   \end{subfigure}%% 
   \begin{subfigure}[b]{0.5\linewidth}
     \centering
-    \includegraphics[width=0.75\linewidth]{ps_s_3000} 
+    \includegraphics[width=0.75\linewidth]{ps_s_3000_0_005} 
     \caption{Number of SWAPs} 
     \label{fig:ps_s_3000} 
     \vspace{4ex}
   \end{subfigure} 
   \begin{subfigure}[b]{0.5\linewidth}
     \centering
-    \includegraphics[width=0.75\linewidth]{ps_d_3000} 
+    \includegraphics[width=0.75\linewidth]{ps_d_3000_0_005} 
     \caption{Depth} 
     \label{fig:ps_d_3000} 
   \end{subfigure}%%
   \begin{subfigure}[b]{0.5\linewidth}
     \centering
-    \includegraphics[width=0.75\linewidth]{ps_q_3000} 
+    \includegraphics[width=0.75\linewidth]{ps_q_3000_0_005} 
     \caption{Quantum Volume} 
     \label{fig:ps_q_3000} 
   \end{subfigure} 
@@ -987,7 +998,7 @@ $${\displaystyle \rho _{X,Y}={\frac {\operatorname {cov} (X,Y)}{\sigma _{X}\sigm
 
 *** Two-qubit gates
 
-$$\rho _{f',Y} = -0.1158$$
+$$\rho _{f',Y} = 0.5784$$
 
 #+caption: Number of swaps and fidelity difference relationship's
 #+NAME: fig:f_s_2qg_3000
@@ -1007,31 +1018,43 @@ $$\rho _{f',Y} = -0.1158$$
 # |-----------------+------------+------------+---------+---------|
 # #+TBLFM: 
 
+#+caption: Pearson correlation coefficient for decoherence time of $t_1 = 1000$ and measurement error 0f 0.005
+#+NAME: tab:pearson_corr_3000
+#+ATTR_LATEX: :booktabs :environment :font :width \textwidth :float
+#+TBLNAME: 
+|                 | # of Gates | # of SWAPs |   Depth |   $V_Q$ |
+|-----------------+------------+------------+---------+---------|
+| $\rho _{f,Y}$   |    -0.7637 |    -0.6658 | -0.7354 | -0.7637 |
+| $\rho _{p_s,Y}$ |    -0.8341 |    -0.7484 | -0.8076 | -0.8341 |
+|-----------------+------------+------------+---------+---------|
+#+TBLFM: 
+
+
 #+BEGIN_EXPORT latex
 \begin{figure}[H] 
   \begin{subfigure}[b]{0.5\linewidth}
     \centering
-    \includegraphics[width=0.75\linewidth]{f_g_1000} 
+    \includegraphics[width=0.75\linewidth]{f_g_1000_0_005} 
     \caption{Number of gates} 
     \label{fig:f_g_1000} 
     \vspace{4ex}
   \end{subfigure}%% 
   \begin{subfigure}[b]{0.5\linewidth}
     \centering
-    \includegraphics[width=0.75\linewidth]{f_s_1000} 
+    \includegraphics[width=0.75\linewidth]{f_s_1000_0_005} 
     \caption{Number of SWAPs} 
     \label{fig:f_s_1000} 
     \vspace{4ex}
   \end{subfigure} 
   \begin{subfigure}[b]{0.5\linewidth}
     \centering
-    \includegraphics[width=0.75\linewidth]{f_d_1000} 
+    \includegraphics[width=0.75\linewidth]{f_d_1000_0_005} 
     \caption{Depth} 
     \label{fig:f_d_1000} 
   \end{subfigure}%%
   \begin{subfigure}[b]{0.5\linewidth}
     \centering
-    \includegraphics[width=0.75\linewidth]{f_q_1000} 
+    \includegraphics[width=0.75\linewidth]{f_q_1000_0_005} 
     \caption{Quantum Volume} 
     \label{fig:f_q_1000} 
   \end{subfigure} 
@@ -1042,27 +1065,27 @@ $$\rho _{f',Y} = -0.1158$$
 \begin{figure}[H] 
   \begin{subfigure}[b]{0.5\linewidth}
     \centering
-    \includegraphics[width=0.75\linewidth]{ps_g_1000} 
+    \includegraphics[width=0.75\linewidth]{ps_g_1000_0_005} 
     \caption{Number of gates} 
     \label{fig:ps_g_1000} 
     \vspace{4ex}
   \end{subfigure}%% 
   \begin{subfigure}[b]{0.5\linewidth}
     \centering
-    \includegraphics[width=0.75\linewidth]{ps_s_1000} 
+    \includegraphics[width=0.75\linewidth]{ps_s_1000_0_005} 
     \caption{Number of SWAPs} 
     \label{fig:ps_s_1000} 
     \vspace{4ex}
   \end{subfigure} 
   \begin{subfigure}[b]{0.5\linewidth}
     \centering
-    \includegraphics[width=0.75\linewidth]{ps_d_1000} 
+    \includegraphics[width=0.75\linewidth]{ps_d_1000_0_005} 
     \caption{Depth} 
     \label{fig:ps_d_1000} 
   \end{subfigure}%%
   \begin{subfigure}[b]{0.5\linewidth}
     \centering
-    \includegraphics[width=0.75\linewidth]{ps_q_1000} 
+    \includegraphics[width=0.75\linewidth]{ps_q_1000_0_005} 
     \caption{Quantum Volume} 
     \label{fig:ps_q_1000} 
   \end{subfigure} 
@@ -1073,7 +1096,7 @@ $$\rho _{f',Y} = -0.1158$$
 
 *** Two-qubit gates
 
-$$\rho _{f',Y} = -0.5525$$
+$$\rho _{f',Y} = -0.639791579133524$$
 
 #+caption: Number of swaps and fidelity difference relationship's
 #+NAME: fig:f_s_2qg_1000
@@ -1088,8 +1111,8 @@ $$\rho _{f',Y} = -0.5525$$
 #+TBLNAME: 
 |                 | # of Gates | # of SWAPs |   Depth |   $V_Q$ |
 |-----------------+------------+------------+---------+---------|
-| $\rho _{f,Y}$   |    -0.6172 |    -0.5566 | -0.6058 | -0.6172 |
-| $\rho _{p_s,Y}$ |     -0.449 |    -0.4176 | -0.4522 | -0.449  |
+| $\rho _{f,Y}$   |    -0.9246 |    -0.8482 | -0.9012 | -0.9246 |
+| $\rho _{p_s,Y}$ |    -0.9495 |    -0.8972 | -0.9334 | -0.9495 |
 |-----------------+------------+------------+---------+---------|
 #+TBLFM: 
 
@@ -1160,7 +1183,7 @@ $$\rho _{f',Y} = -0.5525$$
 
 *** Two-qubit gates
 
-$$\rho _{f',Y} = -0.2197$$
+$$\rho _{f',Y} = 0.4445$$
 
 #+caption: Number of swaps and fidelity difference relationship's
 #+NAME: fig:f_s_2qg_3000
