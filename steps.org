@@ -907,16 +907,16 @@ $${\displaystyle \rho _{X,Y}={\frac {\operatorname {cov} (X,Y)}{\sigma _{X}\sigm
 
 ** $t_1=3000$
 
-#+caption: Pearson correlation coefficient for decoherence time of $t_1 = 3000$
-#+NAME: tab:pearson_corr_3000
-#+ATTR_LATEX: :booktabs :environment :font :width \textwidth :float 
-#+TBLNAME: 
-|                 | # of Gates | # of SWAPs |   Depth |   $V_Q$ |
-|-----------------+------------+------------+---------+---------|
-| $\rho _{f,Y}$   |    -0.6196 |    -0.5598 | -0.6093 | -0.6196 |
-| $\rho _{p_s,Y}$ |    -0.4684 |    -0.4346 | -0.4710 | -0.4684 |
-|-----------------+------------+------------+---------+---------|
-#+TBLFM: 
+# #+caption: Pearson correlation coefficient for decoherence time of $t_1 = 3000$
+# #+NAME: tab:pearson_corr_3000
+# #+ATTR_LATEX: :booktabs :environment :font :width \textwidth :float 
+# #+TBLNAME: 
+# |                 | # of Gates | # of SWAPs |   Depth |   $V_Q$ |
+# |-----------------+------------+------------+---------+---------|
+# | $\rho _{f,Y}$   |    -0.6196 |    -0.5598 | -0.6093 | -0.6196 |
+# | $\rho _{p_s,Y}$ |    -0.4684 |    -0.4346 | -0.4710 | -0.4684 |
+# |-----------------+------------+------------+---------+---------|
+# #+TBLFM: 
 
 #+BEGIN_EXPORT latex
 \begin{figure}[H] 
@@ -996,16 +996,16 @@ $$\rho _{f',Y} = -0.1158$$
 
 ** $t_1=1000$
 
-#+caption: Pearson correlation coefficient for decoherence time of $t_1 = 1000$
-#+NAME: tab:pearson_corr_3000
-#+ATTR_LATEX: :booktabs :environment :font :width \textwidth :float
-#+TBLNAME: 
-|                 | # of Gates | # of SWAPs |   Depth |   $V_Q$ |
-|-----------------+------------+------------+---------+---------|
-| $\rho _{f,Y}$   |    -0.4389 |    -0.3803 | -0.4256 | -0.4389 |
-| $\rho _{p_s,Y}$ |    -0.1874 |    -0.1757 | -0.1923 | -0.1874 |
-|-----------------+------------+------------+---------+---------|
-#+TBLFM: 
+# #+caption: Pearson correlation coefficient for decoherence time of $t_1 = 1000$
+# #+NAME: tab:pearson_corr_3000
+# #+ATTR_LATEX: :booktabs :environment :font :width \textwidth :float
+# #+TBLNAME: 
+# |                 | # of Gates | # of SWAPs |   Depth |   $V_Q$ |
+# |-----------------+------------+------------+---------+---------|
+# | $\rho _{f,Y}$   |    -0.4389 |    -0.3803 | -0.4256 | -0.4389 |
+# | $\rho _{p_s,Y}$ |    -0.1874 |    -0.1757 | -0.1923 | -0.1874 |
+# |-----------------+------------+------------+---------+---------|
+# #+TBLFM: 
 
 #+BEGIN_EXPORT latex
 \begin{figure}[H] 
@@ -1079,3 +1079,90 @@ $$\rho _{f',Y} = -0.5525$$
 #+NAME: fig:f_s_2qg_1000
 #+ATTR_LATEX: :width 0.7\textwidth
 [[file:f_s_2qg_1000.png]]
+
+** No measurement error and $t_1=3000$
+
+#+caption: Pearson correlation coefficient for decoherence time of $t_1 = 3000$ and probability 0 for the measurement
+#+NAME: tab:pearson_corr_3000_0
+#+ATTR_LATEX: :booktabs :environment :font :width \textwidth :float 
+#+TBLNAME: 
+|                 | # of Gates | # of SWAPs |   Depth |   $V_Q$ |
+|-----------------+------------+------------+---------+---------|
+| $\rho _{f,Y}$   |    -0.6172 |    -0.5566 | -0.6058 | -0.6172 |
+| $\rho _{p_s,Y}$ |     -0.449 |    -0.4176 | -0.4522 | -0.449  |
+|-----------------+------------+------------+---------+---------|
+#+TBLFM: 
+
+
+#+BEGIN_EXPORT latex
+\begin{figure}[H] 
+  \begin{subfigure}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[width=0.75\linewidth]{f_g_3000_0} 
+    \caption{Number of gates} 
+    \label{fig:f_g_3000_0} 
+    \vspace{4ex}
+  \end{subfigure}%% 
+  \begin{subfigure}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[width=0.75\linewidth]{f_s_3000_0} 
+    \caption{Number of SWAPs} 
+    \label{fig:f_s_3000_0} 
+    \vspace{4ex}
+  \end{subfigure} 
+  \begin{subfigure}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[width=0.75\linewidth]{f_d_3000_0} 
+    \caption{Depth} 
+    \label{fig:f_d_3000_0} 
+  \end{subfigure}%%
+  \begin{subfigure}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[width=0.75\linewidth]{f_q_3000_0} 
+    \caption{Quantum Volume} 
+    \label{fig:f_q_3000_0} 
+  \end{subfigure} 
+  \caption{Plotting fidelity against number of gates, swaps, depth and Quantum Volume}
+  \label{fig:f_3000_0} 
+\end{figure}
+
+\begin{figure}[H] 
+  \begin{subfigure}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[width=0.75\linewidth]{ps_g_3000_0} 
+    \caption{Number of gates} 
+    \label{fig:ps_g_3000_0} 
+    \vspace{4ex}
+  \end{subfigure}%% 
+  \begin{subfigure}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[width=0.75\linewidth]{ps_s_3000_0} 
+    \caption{Number of SWAPs} 
+    \label{fig:ps_s_3000_0} 
+    \vspace{4ex}
+  \end{subfigure} 
+  \begin{subfigure}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[width=0.75\linewidth]{ps_d_3000_0} 
+    \caption{Depth} 
+    \label{fig:ps_d_3000_0} 
+  \end{subfigure}%%
+  \begin{subfigure}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[width=0.75\linewidth]{ps_q_3000_0} 
+    \caption{Quantum Volume} 
+    \label{fig:ps_q_3000_0} 
+  \end{subfigure} 
+  \caption{Plotting probability of success against number of gates, swaps, depth and Quantum Volume}
+  \label{fig:ps_3000_0} 
+\end{figure}
+#+END_EXPORT
+
+*** Two-qubit gates
+
+$$\rho _{f',Y} = -0.2197$$
+
+#+caption: Number of swaps and fidelity difference relationship's
+#+NAME: fig:f_s_2qg_3000
+#+ATTR_LATEX: :width 0.7\textwidth
+[[file:f_s_2qg_3000.png]]
