@@ -1001,9 +1001,9 @@ $${\displaystyle \rho _{X,Y}={\frac {\operatorname {cov} (X,Y)}{\sigma _{X}\sigm
 $$\rho _{f',Y} = 0.5784$$
 
 #+caption: Number of swaps and fidelity difference relationship's
-#+NAME: fig:f_s_2qg_3000
+#+NAME: fig:f_s_2qg_3000_0_005
 #+ATTR_LATEX: :width 0.7\textwidth
-[[file:f_s_2qg_3000.png]]
+[[file:f_s_2qg_3000_0_005.png]]
 
 ** $t_1=1000$
 
@@ -1099,9 +1099,9 @@ $$\rho _{f',Y} = 0.5784$$
 $$\rho _{f',Y} = -0.639791579133524$$
 
 #+caption: Number of swaps and fidelity difference relationship's
-#+NAME: fig:f_s_2qg_1000
+#+NAME: fig:f_s_2qg_1000_0_005
 #+ATTR_LATEX: :width 0.7\textwidth
-[[file:f_s_2qg_1000.png]]
+[[file:f_s_2qg_1000_0_005.png]]
 
 ** No measurement error and $t_1=3000$
 
@@ -1186,6 +1186,6 @@ $$\rho _{f',Y} = -0.639791579133524$$
 $$\rho _{f',Y} = 0.4445$$
 
 #+caption: Number of swaps and fidelity difference relationship's
-#+NAME: fig:f_s_2qg_3000
+#+NAME: fig:f_s_2qg_3000_0
 #+ATTR_LATEX: :width 0.7\textwidth
-[[file:f_s_2qg_3000.png]]
+[[file:f_s_2qg_3000_0.png]]
