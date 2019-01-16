@@ -998,12 +998,18 @@ $${\displaystyle \rho _{X,Y}={\frac {\operatorname {cov} (X,Y)}{\sigma _{X}\sigm
 
 *** Two-qubit gates
 
-$$\rho _{f',Y} = 0.5784$$
+# $$\rho _{f',Y} = 0.5784$$
 
-#+caption: Number of swaps and fidelity difference relationship's
-#+NAME: fig:f_s_2qg_3000_0_005
+# #+caption: Number of swaps and fidelity difference relationship's
+# #+NAME: fig:f_s_2qg_3000_0_005
+# #+ATTR_LATEX: :width 0.7\textwidth
+# [[file:f_s_2qg_3000_0_005.png]]
+
+#+caption: Number of two-qubit gates against fidelity
+#+NAME: fig:f_2qg_3000_0_005
 #+ATTR_LATEX: :width 0.7\textwidth
-[[file:f_s_2qg_3000_0_005.png]]
+[[file:f_2qg_3000_0_005.png]]
+
 
 ** $t_1=1000$
 
@@ -1096,12 +1102,17 @@ $$\rho _{f',Y} = 0.5784$$
 
 *** Two-qubit gates
 
-$$\rho _{f',Y} = -0.639791579133524$$
+# $$\rho _{f',Y} = -0.639791579133524$$
 
-#+caption: Number of swaps and fidelity difference relationship's
-#+NAME: fig:f_s_2qg_1000_0_005
+# #+caption: Number of swaps and fidelity difference relationship's
+# #+NAME: fig:f_s_2qg_1000_0_005
+# #+ATTR_LATEX: :width 0.7\textwidth
+# [[file:f_s_2qg_1000_0_005.png]]
+
+#+caption: Number of two-qubit gates against fidelity
+#+NAME: fig:f_2qg_1000_0_005
 #+ATTR_LATEX: :width 0.7\textwidth
-[[file:f_s_2qg_1000_0_005.png]]
+[[file:f_2qg_1000_0_005.png]]
 
 ** No measurement error and $t_1=3000$
 
@@ -1181,11 +1192,17 @@ $$\rho _{f',Y} = -0.639791579133524$$
 \end{figure}
 #+END_EXPORT
 
-*** Two-qubit gates
+*** Two-qubit gates analysis
 
-$$\rho _{f',Y} = 0.4445$$
+# $$\rho _{f',Y} = 0.4445$$
 
-#+caption: Number of swaps and fidelity difference relationship's
-#+NAME: fig:f_s_2qg_3000_0
+# #+caption: Number of swaps and fidelity difference relationship's
+# #+NAME: fig:f_s_2qg_3000_0
+# #+ATTR_LATEX: :width 0.7\textwidth
+# [[file:f_s_2qg_3000_0.png]]
+
+#+caption: Number of two qubit gates against fidelity
+#+NAME: fig:f_2qg_3000_0
 #+ATTR_LATEX: :width 0.7\textwidth
-[[file:f_s_2qg_3000_0.png]]
+[[file:f_2qg_3000_0.png]]
+
