@@ -1011,6 +1011,7 @@ $${\displaystyle \rho _{X,Y}={\frac {\operatorname {cov} (X,Y)}{\sigma _{X}\sigm
 #+BEGIN_EXPORT latex
 
 \begin{figure}[H]
+\centering
 \begin{subfigure}[b]{0.5\linewidth}
 \centering
 \includegraphics[width=0.75\linewidth]{f_2qg_3000_0_005}
@@ -1135,7 +1136,7 @@ $${\displaystyle \rho _{X,Y}={\frac {\operatorname {cov} (X,Y)}{\sigma _{X}\sigm
 #+BEGIN_EXPORT latex
 
 \begin{figure}[H]
-
+\centering
 \begin{subfigure}[b]{0.5\linewidth}
 \centering
 \includegraphics[width=0.75\linewidth]{f_2qg_1000_0_005}
@@ -1249,6 +1250,7 @@ n    \centering
 #+BEGIN_EXPORT latex
 
 \begin{figure}[H]
+\centering
   \begin{subfigure}[b]{0.5\linewidth}
     \centering
     \includegraphics[width=0.75\linewidth]{f_2qg_3000_0}
