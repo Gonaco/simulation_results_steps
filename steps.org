@@ -1009,10 +1009,9 @@ $${\displaystyle \rho _{X,Y}={\frac {\operatorname {cov} (X,Y)}{\sigma _{X}\sigm
 #+BEGIN_EXPORT latex
 
 \begin{figure}
-\centering
 \begin{subfigure}[b]{0.5\linewigth}
 \centering
-\includegraphics[width=0.75\linewidth]{f_2qg_3000_0_005.png}
+\includegraphics[width=0.75\linewidth]{f_2qg_3000_0_005}
 \caption{Number of two-qubit gates against fidelity}
 \label{fig:f_2qg_3000_0_005}
 \vspace{4ex}
@@ -1020,10 +1019,9 @@ $${\displaystyle \rho _{X,Y}={\frac {\operatorname {cov} (X,Y)}{\sigma _{X}\sigm
 
 \begin{subfigure}[b]{0.5\linewigth}
 \centering
-\includegraphics[width=0.75\linewidth]{ps_2qg_3000_0_005.png}
+\includegraphics[width=0.75\linewidth]{ps_2qg_3000_0_005}
 \caption{Number of two-qubit gates against fidelity}
 \label{fig:ps_2qg_3000_0_005}
-\vspace{4ex}
 \end{subfigure}
 
 \label{fig:2qg_3000_0_005}
@@ -1133,10 +1131,10 @@ $${\displaystyle \rho _{X,Y}={\frac {\operatorname {cov} (X,Y)}{\sigma _{X}\sigm
 #+BEGIN_EXPORT latex
 
 \begin{figure}
-\centering
+
 \begin{subfigure}[b]{0.5\linewigth}
 \centering
-\includegraphics[width=0.75\linewidth]{f_2qg_1000_0_005.png}
+\includegraphics[width=0.75\linewidth]{f_2qg_1000_0_005}
 \caption{Number of two-qubit gates against fidelity}
 \label{fig:f_2qg_3000_0_005}
     \vspace{4ex}
@@ -1144,7 +1142,7 @@ $${\displaystyle \rho _{X,Y}={\frac {\operatorname {cov} (X,Y)}{\sigma _{X}\sigm
 
 \begin{subfigure}[b]{0.5\linewigth}
 \centering
-\includegraphics[width=0.75\linewidth]{ps_2qg_1000_0_005.png}
+\includegraphics[width=0.75\linewidth]{ps_2qg_1000_0_005}
 \caption{Number of two-qubit gates against fidelity}
 \label{fig:ps_2qg_3000_0_005}
 \end{subfigure}
@@ -1248,7 +1246,7 @@ n    \centering
 \begin{figure}
   \begin{subfigure}[b]{0.5\linewidth}
     \centering
-    \includegraphics[width=0.75\linewidth]{f_2qg_3000_0.png}
+    \includegraphics[width=0.75\linewidth]{f_2qg_3000_0}
     \caption{Number of two-qubit gates against fidelity} 
     \label{fig:f_2qg_3000_0}
     \vspace{4ex}
@@ -1256,10 +1254,9 @@ n    \centering
 
 \begin{subfigure}[b]{0.5\linewigth}
 \centering
-\includegraphics[width=0.75\linewidth]{ps_2qg_3000_0.png}
+\includegraphics[width=0.75\linewidth]{ps_2qg_3000_0}
 \caption{Number of two-qubit gates against fidelity}
 \label{fig:ps_2qg_3000_0}
-\vspace{4ex}
 \end{subfigure}
 
 \label{fig:2qg_3000_0}
