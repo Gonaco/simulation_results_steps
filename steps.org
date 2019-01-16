@@ -998,12 +998,8 @@ $${\displaystyle \rho _{X,Y}={\frac {\operatorname {cov} (X,Y)}{\sigma _{X}\sigm
 
 *** Two-qubit gates
 
-# $$\rho _{f',Y} = 0.5784$$
+**** Number of two qubit gates
 
-# #+caption: Number of swaps and fidelity difference relationship's
-# #+NAME: fig:f_s_2qg_3000_0_005
-# #+ATTR_LATEX: :width 0.7\textwidth
-# [[file:f_s_2qg_3000_0_005.png]]
 | $\rho _{f,\text{# 2qg}} = -0.9393$ | $\rho _{ps,\text{# 2qg}} = -0.9254$ |
 
 
@@ -1029,6 +1025,43 @@ $${\displaystyle \rho _{X,Y}={\frac {\operatorname {cov} (X,Y)}{\sigma _{X}\sigm
 
 \label{fig:2qg_3000_0_005}
 \caption{Two-qubit gates analysis }
+\end{figure}
+
+#+END_EXPORT
+
+**** Difference and number of SWAPs
+
+$$\rho _{f',\text{# 2qg}} = 0.5784$$
+
+#+caption: Number of swaps and fidelity difference relationship's
+#+NAME: fig:f_s_2qg_3000_0_005
+#+ATTR_LATEX: :width 0.7\textwidth
+[[file:f_s_2qg_3000_0_005.png]]
+
+**** Proportion of SWAPs
+
+
+#+BEGIN_EXPORT latex
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[b]{0.5\linewidth}
+\centering
+\includegraphics[width=0.75\linewidth]{f_sprop_3000_0_005}
+\caption{Number of two-qubit gates against fidelity}
+\label{fig:f_2qg_3000_0_005}
+\vspace{4ex}
+\end{subfigure}
+
+\begin{subfigure}[b]{0.5\linewidth}
+\centering
+\includegraphics[width=0.75\linewidth]{ps_sprop_3000_0_005}
+\caption{Number of two-qubit gates against fidelity}
+\label{fig:ps_2qg_3000_0_005}
+\end{subfigure}
+
+\label{fig:2qg_3000_0_005}
+\caption{Proportion of SWAPs analysis}
 \end{figure}
 
 #+END_EXPORT
@@ -1124,12 +1157,7 @@ $${\displaystyle \rho _{X,Y}={\frac {\operatorname {cov} (X,Y)}{\sigma _{X}\sigm
 
 *** Two-qubit gates
 
-# $$\rho _{f',Y} = -0.639791579133524$$
-
-# #+caption: Number of swaps and fidelity difference relationship's
-# #+NAME: fig:f_s_2qg_1000_0_005
-# #+ATTR_LATEX: :width 0.7\textwidth
-# [[file:f_s_2qg_1000_0_005.png]]
+**** Number of two qubit gates
 
 | $\rho _{f,\text{# 2qg}} = -0.7725$ | $\rho _{ps,\text{# 2qg}} = -0.8404$ |
 
@@ -1154,6 +1182,44 @@ $${\displaystyle \rho _{X,Y}={\frac {\operatorname {cov} (X,Y)}{\sigma _{X}\sigm
 
 \label{fig:2qg_3000_0_005}
 \caption{Two-qubit gates analysis}
+\end{figure}
+
+#+END_EXPORT
+
+**** Difference and number of SWAPs
+
+$$\rho _{f',Y} = -0.639791579133524$$
+
+#+caption: Number of swaps and fidelity difference relationship's
+#+NAME: fig:f_s_2qg_1000_0_005
+#+ATTR_LATEX: :width 0.7\textwidth
+[[file:f_s_2qg_1000_0_005.png]]
+
+
+**** Proportion of SWAPs
+
+
+#+BEGIN_EXPORT latex
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[b]{0.5\linewidth}
+\centering
+\includegraphics[width=0.75\linewidth]{f_sprop_1000_0_005}
+\caption{Number of two-qubit gates against fidelity}
+\label{fig:f_sprop_1000_0_005}
+\vspace{4ex}
+\end{subfigure}
+
+\begin{subfigure}[b]{0.5\linewidth}
+\centering
+\includegraphics[width=0.75\linewidth]{ps_sprop_1000_0_005}
+\caption{Number of two-qubit gates against fidelity}
+\label{fig:ps_sprop_1000_0_005}
+\end{subfigure}
+
+\label{fig:sprop_1000_0_005}
+\caption{Proportion of SWAPs analysis}
 \end{figure}
 
 #+END_EXPORT
@@ -1239,12 +1305,8 @@ n    \centering
 
 *** Two-qubit gates analysis
 
-# $$\rho _{f',Y} = 0.4445$$
+**** Number of two qubit gates
 
-# #+caption: Number of swaps and fidelity difference relationship's
-# #+NAME: fig:f_s_2qg_3000_0
-# #+ATTR_LATEX: :width 0.7\textwidth
-# [[file:f_s_2qg_3000_0.png]]
 | $\rho _{f,\text{# 2qg}} = -0.9287$ | $\rho _{ps,\text{# 2qg}} = -0.9492$ |
 
 #+BEGIN_EXPORT latex
@@ -1268,6 +1330,43 @@ n    \centering
 
 \label{fig:2qg_3000_0}
 \caption{Two-qubit gates analysis }
+\end{figure}
+
+#+END_EXPORT
+
+**** Difference and number of SWAPs
+
+$$\rho _{f',Y} = 0.4445$$
+
+#+caption: Number of swaps and fidelity difference relationship's
+#+NAME: fig:f_s_2qg_3000_0
+#+ATTR_LATEX: :width 0.7\textwidth
+[[file:f_s_2qg_3000_0.png]]
+
+**** Proportion of SWAPs
+
+
+#+BEGIN_EXPORT latex
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[b]{0.5\linewidth}
+\centering
+\includegraphics[width=0.75\linewidth]{f_sprop_3000_0}
+\caption{Number of two-qubit gates against fidelity}
+\label{fig:f_sprop_3000_0}
+\vspace{4ex}
+\end{subfigure}
+
+\begin{subfigure}[b]{0.5\linewidth}
+\centering
+\includegraphics[width=0.75\linewidth]{ps_sprop_3000_0}
+\caption{Number of two-qubit gates against fidelity}
+\label{fig:ps_sprop_3000_0}
+\end{subfigure}
+
+\label{fig:sprop_3000_0}
+\caption{Proportion of SWAPs analysis}
 \end{figure}
 
 #+END_EXPORT
